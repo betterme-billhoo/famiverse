@@ -6,7 +6,7 @@ I believe education is not just about grades; it's about awakening curiosity and
 
 <br/><br/><br/>
 
-## 🎯 项目愿景 | Vision
+## 🎯 愿景 | Vision
 
 - 它主要面向家庭教育。
 - 通过它，能够有效、稳定地培养孩子的内驱力、自学能力，以及德、智、体、美、劳全面均衡发展的能力。
@@ -47,10 +47,6 @@ I believe education is not just about grades; it's about awakening curiosity and
 
 <br/><br/><br/>
 
-## 项目状态 | Project Status
-
-<br/><br/><br/>
-
 ## 快速开始 | Getting Started
 
 目前项目尚在规划阶段，但你可以：
@@ -79,6 +75,13 @@ I believe education is not just about grades; it's about awakening curiosity and
 ## 开源协议 | License
 
 本项目基于 [Apache 2.0 License](LICENSE) 协议开源，支持商业使用、修改和再发布。
+
+<br/><br/><br/>
+
+## 项目发起人简介 | About me
+- 所在公司的全球项目总监。八年跨国工作经验，负责过众多国际项目的客户沟通、需求管理、项目管理、解决方案设计与落地、产品国际化与本地化、产品设计、UI/UX 设计、R&D 流程管理、发布与运维、客户支持与公关。我有能力也有热情把这个小宇宙的社区建设好。
+- C++ 软件工程师出身。具备丰富的 C++ 研发、测试和调试经验，推崇并亲身实践软件工程的各种先进理念。是一名拥有匠心的、务实的软件工程师。
+- 爱好阅读，喜欢思考。希望把一些经典书籍的思维模式和哲学有机地融合进这套小宇宙中。比如《毛选》、《非暴力沟通》、《高效能人士的七个习惯》、《卓有成效的管理者》、《亲密关系》、《穷查理宝典》等等。
 
 <br/><br/><br/>
 
