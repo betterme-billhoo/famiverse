@@ -7,6 +7,7 @@ I believe education is not just about grades; it's about awakening curiosity and
 <br/><br/><br/>
 
 ## 🎯 项目愿景 | Vision
+
 - 它主要面向家庭教育。
 - 通过它，能够有效、稳定地培养孩子的内驱力、自学能力，以及德、智、体、美、劳全面均衡发展的能力。
 - 它是一个宇宙，是一个真正的、无限延展的宇宙，这个系统没有尽头。这个系统给孩子给家长的感觉一定要是无限的、可以永无止尽进行探索的，只要你愿意，这个系统内的知识无限多、无限广阔。只要孩子一直探索，就一直有收获。
@@ -29,7 +30,7 @@ I believe education is not just about grades; it's about awakening curiosity and
 
 <br/><br/><br/>
   
-## 🌌 核心架构 | Architecture
+## 核心架构 | Architecture
 
 - **五大星系**：德行星系、智慧（不是智力）星系、身体星系、美育星系以及实践星系。
 - **星球系统**：每一个星系，拥有无数多的星球；每个星球可以是一个独立的知识点，也可以是一整套知识体系。
@@ -39,29 +40,29 @@ I believe education is not just about grades; it's about awakening curiosity and
 
 <br/><br/><br/>
 
-## 🧑‍🚀 用户群体 | Who Is It For?
+## 用户 | Who Is It For?
 
-- 🎒 **孩子**：自由学习，成长为自驱、自信的“知识航行者”
-- 👨‍👩‍👧‍👦 **家长**：与孩子共同学习、协作探索，形成良性亲子教育
-
-<br/><br/><br/>
-
-## 🏗️ 项目状态 | Project Status
+- **孩子**：自由学习，成长为自驱、自信的“知识航行者”
+- **家长**：与孩子共同学习、协作探索，形成良性亲子教育
 
 <br/><br/><br/>
 
-## 🚀 快速开始 | Getting Started
+## 项目状态 | Project Status
+
+<br/><br/><br/>
+
+## 快速开始 | Getting Started
 
 目前项目尚在规划阶段，但你可以：
 
-1. 🌱 阅读我们的 [项目愿景](docs/vision.md) 和 [路线图](roadmap.md)
-2. ✍️ 阅读 [贡献者协议](CONTRIBUTING.md)，准备加入开发或内容贡献
-3. ⭐ Star 本项目，保持关注
-4. 📬 提出 Issue 分享你的建议
+1. 阅读我们的 [项目愿景](docs/vision.md) 和 [路线图](roadmap.md)
+2. 阅读 [贡献者协议](CONTRIBUTING.md)，准备加入开发或内容贡献
+3. Star 本项目，保持关注
+4. 提出 Issue 分享你的建议
 
 <br/><br/><br/>
 
-## 🤝 贡献指南 | Contribution Guide
+## 贡献指南 | Contribution Guide
 
 我们欢迎来自各领域的贡献者：
 
@@ -75,21 +76,21 @@ I believe education is not just about grades; it's about awakening curiosity and
 
 <br/><br/><br/>
 
-## 🧾 开源协议 | License
+## 开源协议 | License
 
 本项目基于 [Apache 2.0 License](LICENSE) 协议开源，支持商业使用、修改和再发布。
 
 <br/><br/><br/>
 
-## 📬 联系我们 | Contact
+## 联系我们 | Contact
 
-- 发起人邮箱: `your_email@example.com`
-- 飞书/微信：请邮件申请加入
-- Notion 文档（路线图/课程规划）：待开放
+- 发起人邮箱: `betterme.billhoo@gmail.com`
+- 微信开发群：请邮件申请加入
+- 路线图/课程规划：待开放
 
 <br/><br/><br/>
 
-## 🌟 致所有未来的星际探索者
+## 致所有未来的星际探索者
 
 知识的宇宙是无尽的，  
 而孩子的成长，值得一个更自由、更有趣、更深远的空间。
