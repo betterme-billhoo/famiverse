@@ -1,8 +1,9 @@
 # 家教宇宙 | Famiverse
-这是一个专为家庭教育打造的现代教育平台，是一位准父亲用代码为孩子编织的家庭小宇宙。它致力于激发孩子的内驱力，培养他们自主探索和终身学习的能力。在德行、智慧、身体、美育与实践五大维度中，孩子将像星际探险者一样自由成长，全面、综合地发展。我相信，教育不只是为了分数，更应该是唤醒好奇与热爱，让孩子拥有追求幸福与面对未来的力量。
+这是一个专为家庭教育打造的现代化平台，是一位准父亲用代码为孩子编织的家庭小宇宙。
 
-This is a modern educational platform designed specifically for family learning — a small personal universe woven with code by a soon-to-be father, for his child. It aims to spark intrinsic motivation, foster self-driven exploration, and cultivate lifelong learning. Within five essential dimensions — Character, Wisdom, Body, Aesthetics, and Hands-On Practice — children grow freely like interstellar explorers, developing in a holistic and balanced way.
-I believe education is not just about grades; it's about awakening curiosity and love. It's about empowering children with the strength to pursue happiness and face the future with confidence.
+它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的习惯。在德行、智慧、身体、美育与实践五大星系中，孩子将像星际探险者一样自由探索，全面、综合地发展。  
+
+我始终相信，教育的目的不在于传授知识、内卷成绩；而在于当孩子把所学的知识都忘记之后，仍然留在他们心底里的那些东西——这些东西将赋予他们追求幸福、创造幸福、感知美好、面对未来的勇气、能力与决心。
 
 <br/><br/><br/>
 
