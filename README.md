@@ -63,10 +63,10 @@
 ## 快速开始 | Getting Started
 目前项目尚在规划和设计阶段，但你仍可以提前加入：
 
-1. 阅读我们的 [目标/愿景](README.md) 和 [路线图](README.md)。
-2. 阅读我们的 [贡献者协议](CONTRIBUTING.md)，准备加入开发或内容贡献。
-3. Star 本项目，保持关注。
-4. 提出 Issue 分享你的建议。
+1. 阅读我们的 [目标](README.md#目标--goal)、[愿景](README.md#功能愿景--feature-vision) 和 [路线图](README.md)。
+3. 阅读我们的 [贡献者协议](CONTRIBUTING.md)，准备加入开发或内容贡献。
+4. Star 本项目，保持关注。
+5. 提出 Issue 分享你的建议。
 
 <br/><br/><br/>
 
