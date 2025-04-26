@@ -1,14 +1,14 @@
 # Famiverse
 
-
+This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practicewoven from lines of code by loving parents.It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
 
 
 <br/>
 
-This is not just a platform—it is a home-spun galaxy, woven from lines of code by loving parents, a constellation built for the ones they cherish most.
+This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
-Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies — **Character, Wisdom, Body, Aesthetics, and Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
+Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
 
 <br/><br/><br/>
 
@@ -38,6 +38,11 @@ Born for family education, this universe invites children not just to learn, but
 ## Core Architecture
 
 - **The Five Galactic Systems**: This universe is built around five fundamental dimensions of growth: **Character**, **Wisdom** (not limited to intelligence), **Body**, **Aesthetics**, and **Practice**.Each dimension forms a unique **galactic system**, with final naming to be determined.
+  - 德行星系：包括但不限于谦逊、诚实、守信、礼让、廉洁等等。
+  - 智慧星系：包括但不限于智力提升、人际关系、学科知识、生活知识、常识、人生哲学、独处哲学等等。
+  - 身体星系：包括但不限于身体健康、心理健康、性格健全、人格健全等等。
+  - 美育星系：包括但不限于感知美、创造美、分享美、赞美美等等。
+  - 实践星系：包括但不限于动手实验、项目管理、家务、劳作等等。
 - **The Home Planet**: This is where every child begins their journey—a shared starting point for children and their parents. Families can return here at any time.It will become a private archive of the family's growth, memories, and reflections—a personal knowledge base and emotional treasure chest, like a privatized version of a family-only social space.
 - **The Infinite Planets**:
   - Each galactic system contains countless planets, where each planet represents a knowledge point, a practical task, or a structured learning module.Planets are connected to one another across and within systems through rich, interdisciplinary relationships and discovery-based challenges. This fosters habits of **cross-disciplinary thinking** and **creative exploration**.
