@@ -1,6 +1,6 @@
 # Contributor Agreement
 
-## Introduction
+## I. Introduction
 
 Thank you for your attention and support for the Famiver!
 
@@ -36,58 +36,59 @@ Create an open, sustainable, and unlimited family education platform.Fostering a
 
 ## IV. Types of Contributions
 
-Contributions may include, but are not limited to:
+Contributors may offer, but are not limited to, the following types of content:
 
-- 软件代码（前端、后端、AI 服务、工具脚本等）
-- 教学内容（课程文案、习题、项目设计等）
-- 设计素材（UI/UX 草图、动画、插画等）
-- 文档和翻译（用户手册、API 文档、国际化翻译等）
-- 其他（测试用例、性能优化建议、社区运营方案等）
-
-<br/><br/><br/>
-
-## 五、授权与版权
-
-- 开源协议：本项目采用 Apache License 2.0 进行开源授权。
-- 贡献授权：您提交的所有内容，均视为您同意将该内容以 Apache 2.0 协议授权给项目方及所有用户。
-- 署名权：您对自己创作的内容保留署名权，项目方将在相应位置（如代码注释、文档致谢、界面展示等）注明您的名称或用户名。
-- 专利授权：如您对贡献内容拥有任何专利权，您同时授予项目方及最终用户在 Apache 2.0 协议范围内的专利使用权。
+- Software Code (Frontend, Backend, AI services, tool scripts, etc.)
+- Educational Content (Course materials, exercises, project designs, etc.)
+- Design Assets (UI/UX sketches, animations, illustrations, etc.)
+- Documentation and Translation (User manuals, API documentation, internationalization/localization translations, etc.)
+- Others (Test cases, performance optimization suggestions, community management proposals, etc.)
 
 <br/><br/><br/>
 
-## 六、贡献者的权利与义务
+## V. Licensing and Copyright
 
-### 权利
-
-- 保留对原创贡献的著作权和署名权。
-- 在任何遵守 Apache 2.0 的场景中，自由使用自己所贡献的内容（包括商用）。
-- 查看和参与项目的所有讨论、决策和社区活动。
-
-### 义务
-
-- 遵守协议：在提交贡献前，确保您理解并同意本协议及 Apache 2.0 协议的所有条款。
-- 保证原创或许可：您保证对所提交内容拥有完整版权，或已获得必要授权（第三方素材需附带相应许可）。
-- 行为规范：遵守项目中的社区行为准则，尊重其他贡献者。
-- 质量与文档：提供清晰的说明文档、注释与测试，确保贡献能够顺利集成与维护。
-- 不可撤销授权：一旦贡献被合并，您不可撤销该贡献的 Apache 2.0 授权。
+- Open Source License: This project is licensed under the Apache License 2.0.
+- Contribution License: By submitting any content, you agree to license it under the Apache License 2.0 for use by the project maintainers and all users.
+- Attribution Rights: You retain the right of attribution for your original contributions. The project will acknowledge your name or username in appropriate places (such as code comments, documentation acknowledgments, UI displays, etc.).
+- Patent Grant: If your contributions include any patent rights, you also grant the project maintainers and end users a license to use those patents within the scope of the Apache License 2.0.
 
 <br/><br/><br/>
 
-## 七、法律声明与免责
+## VI. Rights and Obligations of Contributors
 
-- 您的贡献均“按原样” （AS IS）提供，项目方不对贡献内容的适用性、准确性或任何形式的保证负责（详见 Apache 2.0 Disclaimer）。
-- 项目方对因使用贡献内容而引起的任何直接或间接损失不承担责任。
-- 如因贡献内容侵犯第三方权利，贡献者需自行负责并承担所有相关法律责任。
+### Rights
+
+- Retain copyright and attribution rights for original contributions.
+- Freely use your contributed content (including for commercial use) in any scenario that complies with the Apache License 2.0.
+- Access and participate in all discussions, decisions, and community activities related to the project.
+
+### Obligations
+
+- Compliance with Agreements: Before submitting any contributions, you must ensure you understand and agree to this agreement and the terms of the Apache License 2.0.
+- Originality or Licensing: You guarantee that you hold full copyright for the content you submit, or you have obtained the necessary permissions (third-party materials must include the appropriate licenses).
+- Code of Conduct: Follow the project's community code of conduct and respect other contributors.
+- Quality and Documentation: Provide clear documentation, comments, and tests to ensure that your contributions can be smoothly integrated and maintained.
+- Irrevocable License: Once a contribution is merged, you cannot revoke the Apache 2.0 license granted for that contribution.
 
 <br/><br/><br/>
 
-## 八、生效与联系
+## VII. Legal Disclaimer and Liability
 
-- 本协议自贡献者提交任何形式的贡献之时起生效。
-- 如对本协议有任何疑问或建议，请发送邮件至 betterme.billhoo@gmail.com 或在项目仓库中提交 Issue。
+- Your contributions are provided "AS IS" without any warranty of suitability, accuracy, or any other form of guarantee (see the Apache 2.0 Disclaimer for details).
+- The project maintainers are not liable for any direct or indirect loss arising from the use of the contributed content.
+- If any contribution infringes third-party rights, the contributor is solely responsible and shall bear all related legal responsibilities.
 
 <br/><br/><br/>
 
-**再次感谢您的参与和贡献！让我们用技术，为自己的孩子和家人做些贡献，让他们获得更多幸福和机会！🌟**
+## VIII. Effectiveness and Contact
+
+- This agreement becomes effective as soon as the contributor submits any form of contribution.
+- If you have any questions or suggestions regarding this agreement, please send an email to betterme.billhoo@gmail.com or submit an issue in the project repository.
+
+<br/><br/><br/>
+
+**Thank you again for your participation and contribution! Let's use technology to contribute to our own children and families, giving them more happiness and opportunities!Let's use technology to contribute to our own children and families, giving them more happiness and opportunities!
+🌟**
 
 <br/><br/><br/>
