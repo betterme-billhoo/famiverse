@@ -1,11 +1,5 @@
 # Famiverse
 
-
-
-
-
-<br/>
-
 This is not just a platform—it is a home-spun galaxy, woven from lines of code by loving parents, a constellation built for the ones they cherish most.
 
 Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies — **Character, Wisdom, Body, Aesthetics, and Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
@@ -13,11 +7,6 @@ Born for family education, this universe invites children not just to learn, but
 <br/><br/><br/>
 
 ## Core Values
-
--
--
-
-<br/>
 
 - We often use technology to serve others and companies. But in our quiet hours, we can also use it to build something meaningful for our own children and families—something that brings them more happiness, more possibilities.
 - We believe that the true purpose of family education is not to cram knowledge or chase test scores, but to nurture the **courage**, **capacity**, and **conviction** to pursue happiness, appreciate beauty, and face the future. When all the facts and formulas are forgotten, what remains in a child's heart—the warmth, the values, the sense of wonder—that is what matters most, and what we strive to cultivate.
