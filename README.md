@@ -7,7 +7,7 @@
 
 This is not just a platform—it is a home-spun galaxy, woven from lines of code by loving parents, a constellation built for the ones they cherish most.
 
-Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies — **Character, Wisdom, Body, Aesthetics, and Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
+Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
 
 <br/><br/><br/>
 
