@@ -1,13 +1,13 @@
 # 家教宇宙 | Famiverse
-这是一个专为家庭教育打造的现代化平台，是一群有爱的父母用代码为孩子编织的家庭小宇宙。
+一个专注于德行、智慧（不仅仅是智力）、身体、美育、实践全面发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭小宇宙。帮助家长培养幸福的孩子，而不是教育内卷的牺牲品。
 
 它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在 **德行、智慧、身体、美育与实践** 五大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
 
 <br/>
 
-This is not just a platform—it is a home-spun galaxy, woven from lines of code by loving parents, a constellation built for the ones they cherish most.
+This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
-Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
+Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
 
 <br/><br/><br/>
 
