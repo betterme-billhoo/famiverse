@@ -88,6 +88,6 @@ Contributors may offer, but are not limited to, the following types of content:
 
 <br/><br/><br/>
 
-**Thank you again for your participation and contribution! Let's use technology to contribute to our own children and families, giving them more happiness and opportunities! Let's use technology to contribute to our own children and families, giving them more happiness and opportunities!🌟**
+**Thank you again for your participation and contribution! Let's use technology to contribute to our own children and families, giving them more happiness and opportunities!🌟**
 
 <br/><br/><br/>
