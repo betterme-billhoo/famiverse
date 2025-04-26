@@ -38,11 +38,11 @@ Born for family education, this universe invites children not only to learn, but
 ## Core Architecture
 
 - **The Five Galactic Systems**: This universe is built around five fundamental dimensions of growth: **Character**, **Wisdom** (not limited to intelligence), **Body**, **Aesthetics**, and **Practice**.Each dimension forms a unique **galactic system**, with final naming to be determined.
-  - 德行星系：包括但不限于谦逊、诚实、守信、礼让、廉洁等等。
-  - 智慧星系：包括但不限于智力提升、人际关系、学科知识、生活知识、常识、人生哲学、独处哲学等等。
-  - 身体星系：包括但不限于身体健康、心理健康、性格健全、人格健全等等。
-  - 美育星系：包括但不限于感知美、创造美、分享美、赞美美等等。
-  - 实践星系：包括但不限于动手实验、项目管理、家务、劳作等等。
+  - Character Galaxy: Encompassing virtues such as humility, honesty, trustworthiness, courtesy, integrity, and more.
+  - Wisdom Galaxy: A constellation of growth—intellectual sharpening, human connection, academic pursuit, life wisdom, common sense, and the quiet philosophies that guide both solitude and society.
+  - Physical Well-being Galaxy: Encompassing areas such as physical health, mental health, character integrity, personality development, and more.
+  - Aesthetics Galaxy: A universe of perceiving, creating, sharing, and celebrating beauty in all its forms.
+  - Hands-on Practice Galaxy: Encompassing hands-on experiments, project management, household tasks, manual work, and more.
 - **The Home Planet**: This is where every child begins their journey—a shared starting point for children and their parents. Families can return here at any time.It will become a private archive of the family's growth, memories, and reflections—a personal knowledge base and emotional treasure chest, like a privatized version of a family-only social space.
 - **The Infinite Planets**:
   - Each galactic system contains countless planets, where each planet represents a knowledge point, a practical task, or a structured learning module.Planets are connected to one another across and within systems through rich, interdisciplinary relationships and discovery-based challenges. This fosters habits of **cross-disciplinary thinking** and **creative exploration**.
