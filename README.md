@@ -1,4 +1,4 @@
-# 家教宇宙 | Famiverse
+# 家教宇宙 | Famiverse ([English](README-en.md))
 这是一个专为家庭教育打造的现代化平台，是一群有爱的父母用代码为孩子编织的家庭小宇宙。
 
 它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在德行、智慧、身体、美育与实践五大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
@@ -9,11 +9,9 @@ This is not just a platform—it is a home-spun galaxy, woven from lines of code
 
 Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies—Character, Wisdom, Body, Aesthetics, and Practice—children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
 
-**For more English description, please check [README-en.md](README-en.md)**
-
 <br/><br/><br/>
 
-## 核心价值观 | Core Values
+## 核心价值观 | Core Values ([English](README-en.md))
 - 我们常用技术服务于他人和公司。闲暇之余，其实也可以尝试用技术为自己的孩子和家人做些贡献，让他们拥有更多的幸福和机会。
 - 我们始终相信，家庭教育的目的不在于灌输知识、内卷成绩；而在于赋予孩子追求幸福、感知美好、面对未来的勇气、能力与决心。当孩子把所学的知识都忘记之后，那些仍然沉淀在他们心底里温暖的东西，才是家庭教育应该重视和培养的内容。
 
@@ -21,14 +19,12 @@ Born for family education, this universe invites children not just to learn, but
 
 - We often use technology to serve others and companies. But in our quiet hours, we can also use it to build something meaningful for our own children and families—something that brings them more happiness, more possibilities.
 - We believe that the true purpose of family education is not to cram knowledge or chase test scores, but to nurture the **courage**, **capacity**, and **conviction** to pursue happiness, appreciate beauty, and face the future. When all the facts and formulas are forgotten, what remains in a child's heart—the warmth, the values, the sense of wonder—that is what matters most, and what we strive to cultivate.
-
-**For more English description, please check [README-en.md](README-en.md)**
   
 <br/><br/><br/>
 
 
 
-## 目标 | Goal
+## 目标 | Goal ([English](README-en.md))
 
 - 这个平台专注于家庭教育和终身学习。
 - 这个平台的用户是：孩子（小学到大学，甚至到未来长大成人）和孩子的家长。
@@ -39,7 +35,7 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
   
-## 核心架构 | Core Architecture
+## 核心架构 | Core Architecture ([English](README-en.md))
 - **五大星系**：这个宇宙由五大维度组成：德行、智慧（包括但不只是智力）、身体、美育和实践。每个维度是一个星系，各星系的具体名称待定。
 - **家庭星球**：这是孩子进入这个宇宙的最初的地方，家长和孩子将在这里起航，并可以随时返回这里。这里将记录这个家庭的点点滴滴，成为家庭私有的知识库和记忆宝库，满藏家庭的私有数据、回忆和珍贵记录。类似私有化的 QQ 空间。
 - **无限星球**：
@@ -50,7 +46,7 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
 
-## 功能愿景 | Feature Vision
+## 功能愿景 | Feature Vision ([English](README-en.md))
 - 孩子在这个宇宙中，最开始从“家庭星球”出发，然后通过系统引导，获得自己的人工智能伙伴 MOSS。
 - “家庭星球”是这个系统至关重要的一部分，这个宇宙要负责保存和维护家庭的点点滴滴。家庭的照片、故事、成长经历、挫折、知识库等等。这个星球属于“美育星系”。孩子从这个星球出发，也会回到这个星球。
 - 在 MOSS 的帮助下，孩子得知这个宇宙存在五大星系，然后他将通过系统的引导以及自己的探索，逐步涉足每个星系，以及每个他感兴趣的星球，并在此期间完成相关内容的学习和实践。
@@ -66,18 +62,18 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
 
-## 用户 | Who Is It For?
+## 用户 | Who Is It For? ([English](README-en.md))
 - **孩子**：小学到高中阶段为主，大学以后依然可以继续使用宇宙进行更高阶的探索。
 - **家长**：与孩子共同进入宇宙，共同完成家庭任务和实践挑战，引导进行良性循环的亲子教育。
 
 <br/><br/><br/>
 
-## 项目路线图 | Roadmap
+## 项目路线图 | Roadmap ([English](README-en.md))
 [Famiverse 路线图](https://github.com/users/betterme-billhoo/projects/1)
 
 <br/><br/><br/>
 
-## 快速开始 | Getting Started
+## 快速开始 | Getting Started ([English](README-en.md))
 目前项目尚在规划和设计阶段，但你仍可以提前加入：
 
 1. 阅读我们的 [目标](README.md#目标--goal)、[愿景](README.md#功能愿景--feature-vision) 和 [路线图](https://github.com/users/betterme-billhoo/projects/1)。
@@ -87,7 +83,7 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
 
-## 贡献指南 | Contribution Guide
+## 贡献指南 | Contribution Guide ([English](README-en.md))
 
 我们欢迎来自各领域的贡献者：
 
@@ -101,7 +97,7 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
 
-## 开源协议 | License
+## 开源协议 | License ([English](README-en.md))
 
 本项目基于 [Apache 2.0 License](LICENSE) 协议开源，支持商业使用、修改和再发布。
 
