@@ -1,10 +1,6 @@
-"files": [
-  {
-    "source": '**/*.md',
-    "translation": '%original_path%/%file_name%-%two_letters_code%.%file_extension%',
-    "ignore": [
-      'README.md',
-      "CONTRIBUTING.md"
-    ]
-  }
-]
+files:
+  - source: '**/*.md'
+    ignore:
+      - README.md
+      - CONTRIBUTING.md
+    translation: '%original_path%/%file_name%-%two_letters_code%.%file_extension%'
