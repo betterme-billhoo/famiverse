@@ -39,7 +39,7 @@ Born for family education, this universe invites children not only to learn, but
 
 - **The Five Galactic Systems**: This universe is built around five fundamental dimensions of growth: **Character**, **Wisdom** (not limited to intelligence), **Body**, **Aesthetics**, and **Practice**.Each dimension forms a unique **galactic system**, with final naming to be determined.
   - Character Galaxy: Encompassing virtues such as humility, honesty, trustworthiness, courtesy, integrity, and more.
-  - Wisdom Galaxy: A constellation of growth—intellectual sharpening, human connection, academic pursuit, life wisdom, common sense, and the quiet philosophies that guide both solitude and society.
+  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、各学科知识、生活知识、常识、人生哲学、独处哲学等等。
   - Physical Well-being Galaxy: Encompassing areas such as physical health, mental health, character integrity, personality development, and more.
   - Aesthetics Galaxy: A universe of perceiving, creating, sharing, and celebrating beauty in all its forms.
   - Hands-on Practice Galaxy: Encompassing hands-on experiments, project management, household tasks, manual work, and more.
