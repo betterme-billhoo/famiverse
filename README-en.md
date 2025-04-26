@@ -49,61 +49,61 @@ Born for family education, this universe invites children not just to learn, but
 
 ## Feature Vision
 
-- 孩子在这个宇宙中，最开始从“家庭星球”出发，然后通过系统引导，获得自己的人工智能伙伴 MOSS。
-- “家庭星球”是这个系统至关重要的一部分，这个宇宙要负责保存和维护家庭的点点滴滴。家庭的照片、故事、成长经历、挫折、知识库等等。这个星球属于“美育星系”。孩子从这个星球出发，也会回到这个星球。
-- 在 MOSS 的帮助下，孩子得知这个宇宙存在五大星系，然后他将通过系统的引导以及自己的探索，逐步涉足每个星系，以及每个他感兴趣的星球，并在此期间完成相关内容的学习和实践。
-- 宇宙存在迷雾，根据孩子自己的学习进度和学科知识储备程度的不同，系统将动态地解锁相应的迷雾。比如，孩子已经学会了加减乘除法，那么系统可能会自适应地点亮最简单的一次方程星球，以此类推。只要他想学、学得会，这个宇宙永远为他准备着新东西，没有年龄、智力、阶级的门槛。如果他小学就通过自学掌握了软件工程的专业知识，并灵活运用于生活实际，那是他自己的才能，宇宙不会限制他进行探索和学习，只要他愿意，一切由他的学习进度来动态调节。
-- 迷雾系统会对某些敏感话题进行分级。比如“身体星系”将存在“性教育星球”，这个星球将需要等到适当的年龄后，才会让孩子注意到，以此类推。但其他的并不敏感的知识，比如软件工程、人工智能、高等数学等等，只要他自己想学、学得会，都是直接开放的。
-- MOSS 会根据孩子的学习进度和实践表现，智能地分析出孩子在五大维度（德、智、体、美、劳）上的综合评分表现，并分析出这个孩子的兴趣点所在。
-- 系统将按照我们设计的知识体系模板，通过 MOSS 自动生成新的星球（插件），很多知识互联网已经讲得非常清楚了，没有必要靠人工来制作。但互联网上的知识是杂乱无章的，我们需要设计一套稳定、规范的知识体系构建规则，让 MOSS 遵循这样的规则去生成对应的星球。
-- 家长作为宇宙中的另外一个参与方，与孩子始终保持互动。在一些特殊的学习环节、特别的知识点上共同作业，攻克难关，从而共同学习，解锁未知星球，获得星球上的奖励（比如系统的积分或者代币）。比如共同做实验、共同完成一个家务的挑战等等。
-- 系统拥有徽章、证书机制。孩子在宇宙中学习完相应的知识结构并通过检测后，系统将颁发基于区块链技术的证书。这些证书，我希望将来可以与现实世界的教育系统证书进行类比和对接，最终等价于现实世界的教育证书，从而优化甚至可能影响整个传统教育模式。
-- 宇宙的每个星球将作为一个插件，有 Famiverse 官方的插件、家庭自作的插件、专业教育人士提供的插件，甚至教育部门的官方插件。不同角色可以为不同年龄段的孩子做各种各样的插件扩展。插件的制作必须非常容易上手，要面向非技术人员。
-- 整个宇宙的探索进度也可以与现实的教育系统打通，让孩子在虚拟宇宙和现实传统教育模式中自由顺畅的切换。比如孩子在小学已经学习了加减乘除，那么宇宙中对应的星球将自动完成探索。
-- 支持的平台：Web、Android、iOS、AR 以及 VR。尤其是 VR 系统，将作为以后的主推系统之一。
+- A child's journey in this universe begins on the **Home Planet**, where they are guided by the system to meet their personal AI companion, **MOSS**.
+- The **Home Planet** is the heart of the system. It is the emotional and educational anchor of the universe—a private family hub where precious memories, stories, photos, struggles, and reflections are safely preserved.This planet belongs to the **Aesthetic Galaxy**,and the child will always start from here and return here.
+- With MOSS as their guide, the child learns of the existence of **five galactic systems**. They will be gently introduced to new planets within each system through a combination of structured guidance and free exploration. As they move between worlds, they learn, play, and apply their knowledge in meaningful ways.
+- A **Fog of Discovery** blankets unexplored areas of the universe. As the child's knowledge and skills grow, the fog lifts—revealing new, relevant planets.For instance, once a child masters basic arithmetic, the system may automatically unlock a simple algebra planet.This adaptive progression has no age, class, or intelligence barriers—if the child is curious and capable, the universe is ready for them.Even if a primary school child self-learns software engineering and applies it creatively, the system will encourage and support that exploration.
+- The fog system also handles **age-sensitive content** with care.For example, planets dealing with sex education within the Body Galaxy will only become visible once the child reaches a suitable developmental stage.Meanwhile, subjects like software engineering, artificial intelligence, or advanced mathematics are open to all who are ready to learn—regardless of age.
+- MOSS will analyze a child’s performance and behavior across the five dimensions (Character, Wisdom, Body, Aesthetics, and Practice) to provide a holistic developmental profile and highlight their unique interests.
+- Using a structured knowledge framework, MOSS can **auto-generate new planets (plugins)** based on existing open content.While the internet is rich in information, it is often chaotic and unstructured. By following a well-designed, modular system, MOSS can transform this content into meaningful, structured learning journeys.
+- **Parents** play an active role in the universe. Through collaborative quests and co-learning challenges—like science experiments or family chores—parents and children progress together, unlocking new planets and earning rewards (points, tokens, etc.).Education becomes a shared adventure.
+- The system will offer **badges and blockchain-based certificates** to recognize learning achievements.These certificates aim to one day be **interoperable with real-world education credentials**,helping to bridge the gap between traditional systems and next-generation learning.
+- Each planet in the universe will function as a plugin, including official plugins provided by Famiverse, custom plugins created by families, plugins contributed by professional educators, and even official plugins from educational authorities.Different contributors can create a variety of plugin extensions tailored for children of different age groups.Plugin creation will be **intuitive and accessible**, empowering non-technical users to contribute.
+- The universe will be **integrated with traditional education systems**. Progress made in real life (e.g., learning multiplication in school) will reflect in the universe (e.g., unlocking the multiplication planet), and vice versa. Children will move freely between physical and virtual learning spaces.
+- Supported platforms include **Web, Android, iOS, AR, and VR**.In particular, **VR** will become a key platform for immersive and experiential learning in the future.
 
 <br/><br/><br/>
 
-## 用户 | Who Is It For? ([English](README-en.md))
+## Who Is It For?
 
-- **孩子**：小学到高中阶段为主，大学以后依然可以继续使用宇宙进行更高阶的探索。
-- **家长**：与孩子共同进入宇宙，共同完成家庭任务和实践挑战，引导进行良性循环的亲子教育。
-
-<br/><br/><br/>
-
-## 项目路线图 | Roadmap ([English](README-en.md))
-
-[Famiverse 路线图](https://github.com/users/betterme-billhoo/projects/1)
+- **Children**: Primarily designed for learners from elementary to high school, though the universe continues to grow with them—supporting deeper exploration even through university and beyond.
+- **Parents**: Active companions on the journey. They enter the universe alongside their children, taking part in collaborative family missions and practical challenges, nurturing a cycle of positive, connected, and joyful parent-child learning.
 
 <br/><br/><br/>
 
-## 快速开始 | Getting Started ([English](README-en.md))
+## Roadmap
 
-目前项目尚在规划和设计阶段，但你仍可以提前加入：
-
-1. 阅读我们的 [目标](README.md#目标--goal)、[愿景](README.md#功能愿景--feature-vision) 和 [路线图](https://github.com/users/betterme-billhoo/projects/1)。
-2. 阅读我们的 [贡献者协议](CONTRIBUTOR_AGREEMENT.md)，准备加入开发或内容贡献。
-3. Star 本项目，保持关注。
-4. 提出 Issue 分享你的建议。
+[Famiverse Roadmap](https://github.com/users/betterme-billhoo/projects/1)
 
 <br/><br/><br/>
 
-## 贡献指南 | Contribution Guide ([English](README-en.md))
+## Getting Started
 
-我们欢迎来自各领域的贡献者：
+This project is still in its early planning and design phase — but you're warmly welcome to get involved from the very beginning:
 
-- 👨‍💻 前端/后端开发者
-- 📚 教育课程创作者
-- 🎨 UI/UX 设计师 & 插画师
-- 🌍 多语言翻译者
-- 👩‍🏫 家长、老师、教育部门
-
-请阅读完整的 [贡献者指南 (TO DO)](CONTRIBUTION.md) 了解如何参与进来。
+1. Read our [Goal](README-en.md#goal), [Feature Vision](README-en.md#feature-vision), and [Roadmap](https://github.com/users/betterme-billhoo/projects/1).
+2. Review our [Contributor Agreement](CONTRIBUTOR_AGREEMENT.md) to understand how to participate in development or contribute educational content.
+3. ⭐ Star this repository to stay updated.
+4. Open an issue to share your ideas or suggestions — we'd love to hear from you.
 
 <br/><br/><br/>
 
-## 开源协议 | License ([English](README-en.md))
+## Contribution Guide
 
-本项目基于 [Apache 2.0 License](LICENSE) 协议开源，支持商业使用、修改和再发布。
+We welcome contributors from all backgrounds and disciplines:
+
+- 👨‍💻 Frontend / Backend Developers
+- 📚 Educational Content Creators
+- 🎨 UI/UX Designers & Illustrators
+- 🌍 Multilingual Translators
+- 👩‍🏫 Parents, Teachers, and Education Professionals
+
+Please read the full [Contributor Guide](CONTRIBUTION-en.md) to learn how to get involved.
+
+<br/><br/><br/>
+
+## License
+
+This project is licensed under the [Apache 2.0 License](LICENSE), which allows for commercial use, modification, and redistribution.
 
 
