@@ -1,8 +1,8 @@
-# 家教宇宙 | Famiverse
+# Famiverse
 
-这是一个专为家庭教育打造的现代化平台，是一群有爱的父母用代码为孩子编织的家庭小宇宙。
 
-它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在 **德行、智慧、身体、美育与实践** 五大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。
+
+
 
 <br/>
 
@@ -12,10 +12,10 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
 
-## 核心价值观 | Core Values ([English](README-en.md))
+## Core Values
 
-- 我们常用技术服务于他人和公司。闲暇之余，其实也可以尝试用技术为自己的孩子和家人做些贡献，让他们拥有更多的幸福和机会。
-- 我们始终相信，家庭教育的目的不在于灌输知识、内卷成绩；而在于赋予孩子 **追求幸福、感知美好、面对未来的勇气、能力与决心**。当孩子把所学的知识都忘记之后，那些仍然沉淀在他们心底里温暖的东西，才是家庭教育应该重视和培养的内容。
+-
+-
 
 <br/>
 
@@ -24,30 +24,30 @@ Born for family education, this universe invites children not just to learn, but
 
 <br/><br/><br/>
 
-## 目标 | Goal ([English](README-en.md))
+## Goal
 
-- 这个平台专注于家庭教育和终身学习。
-- 这个平台的用户是：孩子（小学到大学，甚至到未来长大成人）和孩子的家长。
-- 这个平台能够有效地激发孩子的内驱力，培养孩子的自学能力，帮助他们养成终身学习的好习惯。
-- 这个平台能够有效地帮助孩子实现德、智、体、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
-- 这个平台能够有效地培养孩子全面的、综合的、跨学科的思维习惯和实践能力，引导他成长为一个全面的、综合发展的人。
-- 这个平台将是一个宇宙，一个真正的、无限延展的宇宙。这个宇宙带给孩子和家长的感觉是“无限的”，“充满未知的”，以及“始终想要继续探索、学习的”。
-
-<br/><br/><br/>
-
-## 核心架构 | Core Architecture ([English](README-en.md))
-
-- **五大星系**：这个宇宙由五大维度组成：德行、智慧（包括但不只是智力）、身体、美育和实践。每个维度是一个星系，各星系的具体名称待定。
-- **家庭星球**：这是孩子进入这个宇宙的最初的地方，家长和孩子将在这里起航，并可以随时返回这里。这里将记录这个家庭的点点滴滴，成为家庭私有的知识库和记忆宝库，满藏家庭的私有数据、回忆和珍贵记录。类似私有化的 QQ 空间。
-- **无限星球**：
-  - 每个星系中有无数的星球，每个星球代表一个知识点、实践内容或一套结构化的课程。星球与星球之间、星球与星系之间，有着千丝万缕的联系和谜题挑战，培养孩子进行跨学科思考的习惯。
-  - 技术上，每个星球都是一个插件。Famiverse 官方将标配最初的、最实用的一些星球插件。后续将开放插件系统，允许开发者，甚至是不懂技术的教育人士，自行提供教育内容。最终形成无限的、结构化的知识宇宙。
-- **人工智能 MOSS**：进入这个宇宙的孩子将获得一个人工智能伙伴 MOSS，它将陪伴孩子探索整个宇宙。
-- **探索系统**：包含迷雾系统和轨迹记录系统。记录孩子在宇宙中的探索轨迹、兴趣等，并进行科学的分析和评估。将报告及时反馈给孩子自己，也供家长参考。人工智能 MOSS 将通过对这些数据的分析，为孩子自己以及家长分别提供个性化建议。
+- This platform is dedicated to **family education** and **lifelong learning**.
+- It is designed for two core users: **children** (from K12 through adulthood) and their **parents**.
+- It aims to effectively **ignite a child's inner drive**, **nurture self-directed learning**, and help them build healthy, lifelong learning habits.
+- It empowers children to grow in a **balanced and holistic way**, across five essential dimensions: **Character**, **Wisdom**, **Body**, **Aesthetics**, and **Practice**—guiding them not just to become "outstanding in others' eyes," but to become **truly happy, grounded individuals**.
+- It encourages **interdisciplinary thinking** and **practical skills**, helping children develop a mind that is curious, connected, and creative.
+- This platform is a **universe**—a truly boundless, ever-expanding cosmos.It gives both children and parents the sense of **infinite possibility**, of **mystery waiting to be discovered**, and of a lifelong journey worth continuing.
 
 <br/><br/><br/>
 
-## 功能愿景 | Feature Vision ([English](README-en.md))
+## Core Architecture
+
+- **The Five Galactic Systems**: This universe is built around five fundamental dimensions of growth: **Character**, **Wisdom** (not limited to intelligence), **Body**, **Aesthetics**, and **Practice**.Each dimension forms a unique **galactic system**, with final naming to be determined.
+- **The Home Planet**: This is where every child begins their journey—a shared starting point for children and their parents. Families can return here at any time.It will become a private archive of the family's growth, memories, and reflections—a personal knowledge base and emotional treasure chest, like a privatized version of a family-only social space.
+- **The Infinite Planets**:
+  - Each galactic system contains countless planets, where each planet represents a knowledge point, a practical task, or a structured learning module.Planets are connected to one another across and within systems through rich, interdisciplinary relationships and discovery-based challenges. This fosters habits of **cross-disciplinary thinking** and **creative exploration**.
+  - Technically, **each planet is a plugin**.Famiverse will provide an initial collection of core educational planets,but over time the plugin system will be opened to the community—allowing developers, educators, and even non-technical contributors to create and share educational content.Together, we will co-create an ever-expanding, structured knowledge universe.
+- **MOSS, the AI Companion**: Every child who enters the universe will be accompanied by an intelligent, personal companion named **MOSS**—an AI partner that supports, responds, and grows with them throughout their journey.
+- **Exploration System**: Includes both a **fog of war** system and a **journey tracker**.It will track each child’s learning path, interests, and progress, providing meaningful, data-driven insights.These insights will be shared with the child to foster self-awareness, and with parents for thoughtful guidance.MOSS will offer **personalized recommendations** based on these insights, supporting both the learner and their family.
+
+<br/><br/><br/>
+
+## Feature Vision
 
 - 孩子在这个宇宙中，最开始从“家庭星球”出发，然后通过系统引导，获得自己的人工智能伙伴 MOSS。
 - “家庭星球”是这个系统至关重要的一部分，这个宇宙要负责保存和维护家庭的点点滴滴。家庭的照片、故事、成长经历、挫折、知识库等等。这个星球属于“美育星系”。孩子从这个星球出发，也会回到这个星球。
