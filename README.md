@@ -1,13 +1,13 @@
 # 家教宇宙 | Famiverse
 这是一个专为家庭教育打造的现代化平台，是一群有爱的父母用代码为孩子编织的家庭小宇宙。
 
-它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在德行、智慧、身体、美育与实践五大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
+它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在 **德行、智慧、身体、美育与实践** 五大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
 
 <br/>
 
 This is not just a platform—it is a home-spun galaxy, woven from lines of code by loving parents, a constellation built for the ones they cherish most.
 
-Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies—Character, Wisdom, Body, Aesthetics, and Practice—children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
+Born for family education, this universe invites children not just to learn, but to awaken—to kindle their inner drive, to wander freely through the cosmos of curiosity, and to grow roots of lifelong learning beneath stars of wonder. Across five luminous galaxies — **Character, Wisdom, Body, Aesthetics, and Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning, becoming whole not through pressure, but through play, purpose, and shared discovery.
 
 <br/><br/><br/>
 
