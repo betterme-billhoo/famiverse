@@ -81,7 +81,7 @@ Born for family education, this universe invites children not just to learn, but
 目前项目尚在规划和设计阶段，但你仍可以提前加入：
 
 1. 阅读我们的 [目标](README.md#目标--goal)、[愿景](README.md#功能愿景--feature-vision) 和 [路线图](https://github.com/users/betterme-billhoo/projects/1)。
-3. 阅读我们的 [贡献者协议](CONTRIBUTION.md)，准备加入开发或内容贡献。
+3. 阅读我们的 [贡献者协议](CONTRIBUTOR_AGREEMENT.md)，准备加入开发或内容贡献。
 4. Star 本项目，保持关注。
 5. 提出 Issue 分享你的建议。
 
@@ -97,7 +97,7 @@ Born for family education, this universe invites children not just to learn, but
 - 🌍 多语言翻译者
 - 👩‍🏫 家长、老师、教育部门
 
-请阅读完整的 [贡献者协议](CONTRIBUTION.md) 了解如何参与进来。
+请阅读完整的 [贡献者指南 (TO DO)](CONTRIBUTION.md) 了解如何参与进来。
 
 <br/><br/><br/>
 
