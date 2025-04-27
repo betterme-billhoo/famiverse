@@ -51,6 +51,12 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/><br/><br/>
 
+<p align="center">
+  <img src="https://www.mermaidchart.com/raw/9c7e3281-a7e4-4bc1-bf34-569479aec47d?theme=light&version=v0.1&format=svg" alt="Tree" width='80%' height='80%'/>
+</p>
+
+<br/><br/><br/>
+
 ## 功能愿景 | Feature Vision ([English](README-en.md#Feature-Vision))
 - 孩子在这个宇宙中，最开始从“家庭星球”出发，然后通过系统引导，获得自己的人工智能伙伴 MOSS。
 - “家庭星球”是这个系统至关重要的一部分，这个宇宙要负责保存和维护家庭的点点滴滴。家庭的照片、故事、成长经历、挫折、知识库等等。这个星球属于“美育星系”。孩子从这个星球出发，也会回到这个星球。
