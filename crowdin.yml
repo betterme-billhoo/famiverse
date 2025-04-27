@@ -1,5 +1,5 @@
 files:
-  - source: "README.md"
-    translation: "README-en.md"
-  - source: "CONTRIBUTOR_AGREEMENT.md"
-    translation: "CONTRIBUTOR_AGREEMENT-en.md"
+  - source: /README.md
+    translation: /README-%two_letters_code%.md
+  - source: /CONTRIBUTOR_AGREEMENT.md
+    translation: /CONTRIBUTOR_AGREEMENT-%two_letters_code%.md
