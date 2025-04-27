@@ -22,8 +22,6 @@ Born for family education, this universe invites children not only to learn, but
   
 <br/><br/><br/>
 
-
-
 ## 目标 | Goal ([English](README-en.md#Goal))
 
 - 这个平台专注于家庭教育和终身学习。
@@ -32,6 +30,13 @@ Born for family education, this universe invites children not only to learn, but
 - 这个平台能够有效地帮助孩子实现德、智、体、心、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
 - 这个平台能够有效地培养孩子全面的、综合的、跨学科的思维习惯和实践能力，引导他成长为一个全面的、综合发展的人。
 - 这个平台将是一个宇宙，一个真正的、无限延展的宇宙。这个宇宙带给孩子和家长的感觉是“无限的”，“充满未知的”，以及“始终想要继续探索、学习的”。
+
+<br/><br/><br/>
+
+## 项目状态 | Project Status
+
+- [X] #4
+- [ ] #29 
 
 <br/><br/><br/>
   
@@ -89,9 +94,9 @@ Born for family education, this universe invites children not only to learn, but
 目前项目尚在规划和设计阶段，但你仍可以提前加入：
 
 1. 阅读我们的 [目标](README.md#目标--goal)、[愿景](README.md#功能愿景--feature-vision) 和 [路线图](https://github.com/users/betterme-billhoo/projects/1)。
-3. 阅读我们的 [贡献者协议](CONTRIBUTOR_AGREEMENT.md)，准备加入开发或内容贡献。
-4. Star 本项目，保持关注。
-5. 提出 Issue 分享你的建议。
+2. 阅读我们的 [贡献者协议](CONTRIBUTOR_AGREEMENT.md)，准备加入开发或内容贡献。
+3. Star 本项目，保持关注。
+4. 提出 Issue 分享你的建议。
 
 <br/><br/><br/>
 
