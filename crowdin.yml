@@ -1,5 +1,7 @@
 files:
   - source: /README.md
-    translation: /README-%two_letters_code%.md
+    translation: /%original_path%/%file_name%-%two_letters_code%.%file_extension%
   - source: /CONTRIBUTOR_AGREEMENT.md
-    translation: /CONTRIBUTOR_AGREEMENT-%two_letters_code%.md
+    translation: /%original_path%/%file_name%-%two_letters_code%.%file_extension%
+  - source: /blueprint/family_letters/what-should-children-truly-learn-in-elementary-school.md
+    translation: /%original_path%/%file_name%-%two_letters_code%.%file_extension%
