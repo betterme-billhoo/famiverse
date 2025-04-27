@@ -8,7 +8,13 @@
 
 因此，我们小学阶段的主要目标，是通过多方面的学习与实践，让自己的理论基础更加扎实（根系深深扎进土地）、知识更加均衡（多方面汲取养分）、动手实践能力更强（勇于直面风雨）...... 努力使自己成长为一个德、智、体、美、劳全面而综合发展的好学生。
 
-![Tree](/blueprint/family_letters/img/primary001.png)
+<br/><br/>
+
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary001.png" alt="Tree" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 你可能会问：“爸爸，那成绩呢？考出好成绩才是我现在的主要目标吧？” 其实不是的。孩子，你要记住：考试成绩很重要，但它是方法，不是目标。要理解这一点，我们首先需要弄清楚考试成绩的意义所在。
 
@@ -30,15 +36,31 @@
 
 我们不妨继续以大树来作比喻。假设把我们自己比喻成一棵大树，让我们来看看德、智、体、美、劳全面而综合地发展是如何使我们的人生大树健康、正直、坚韧不拔、郁郁葱葱的。
 
-----
+<br/><br/>
 
-![Character](/blueprint/family_letters/img/primary002.png)
+---
+
+<br/><br/>
+
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary002.png" alt="Character" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 首先是德行。德行是我们的立身之本，是要摆在第一位的，无德不成人。在德行修养方面，我们应重点培养的品质包括但不限于：谦逊、自律、自省、严谨、敬畏、宽容、诚实、守信、节俭等。这些美德不仅是我们个人修养与魅力的基石，更是维系人际关系和社会和谐的重要纽带。一个人未来成就的上限，往往受制于德行的高度。走得越高，越需要品德端正；若德不配位，则容易引发种种问题，甚至带来祸端。
 
-----
+<br/><br/>
 
-![Wisdom](/blueprint/family_letters/img/primary003.png)
+---
+
+<br/><br/>
+
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary003.png" alt="Wisdom" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 其次是智慧。“智慧”与“智力”是两个不同的概念。智慧包含智力——有智慧的人智力一定不低，但智力高的人未必拥有智慧。关于智慧的培养，我们需要重点关注以下几个方面：
 
@@ -60,15 +82,31 @@
 - 计算机——在前人工智能时代，计算机知识不可或缺。掌握计算机能力，特别是与人工智能工程相关的能力，可以提高我们的知识获取效率、学习质量，并拓宽我们的视野。与软件工程、人工智能工程相关的课程，还能进一步提高我们的逻辑思维、推理分析和抽象思维能力，为我们更深入地观察和理解这个数字化世界提供理论基础和思维框架。
 - 英语——英语作为语言拓展的一部分，也是重要课程之一。我们生活在一个全球化的时代，英语是与其他重要国家进行思想交流的重要工具。学习英语的目的是为了应对国际化问题，在国际舞台上与他人平等对话，学习、吸收他国的优秀知识和文化为己用。虽然未来人工智能可以消除语言交流的障碍，但掌握并能够熟练使用这门外语对于当下仍然是必要的。需要注意的是，英语只是众多外语中最常用的一种，随着世界格局的变化，我们未来可能也需要学习其他国家的语言。
 
-----
+<br/><br/>
 
-![Physical Well-being](/blueprint/family_letters/img/primary004.png)
+---
+
+<br/><br/>
+
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary004.png" alt="Physical Well-being" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 第三是强健的体魄。身体是革命的本钱，这一点很容易理解。如果我们总是体弱多病，就很难拥有足够的精力去学习、实践和成长。我们的一切思想和行动都必须以我们的生命和健康的身体为大前提。生命和身体是我们思想和智慧的物质载体，我们的意志无法脱离身体而独立存在。未来的人工智能和脑机接口技术也许可以帮助我们实现大脑智慧的迁移，但那一天还很遥远。所以，我们必须确保自己的生命安全以及身体健康。
 
-----
+<br/><br/>
 
-![Aesthetics](/blueprint/family_letters/img/primary005.png)
+---
+
+<br/><br/>
+
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary005.png" alt="Aesthetics" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 第四是对美的感知和表达。能够感知“美”并表达“美”，是通往幸福生活的重要能力之一。美无处不在：外表的颜值之美；强大精神力量的坚韧之美；健硕体格的健康之美；受人尊敬的品德之美；海纳百川的磅礴之美；小桥流水的温柔之美；音乐的旋律之美；书画的艺术之美；诗词的意境之美...... 美无处不在。
 
@@ -76,9 +114,17 @@
 
 对美的感知与表达，不仅能让我们在成长过程中更深刻地体会生活的美好和幸福，从而使我们更快乐地成长，也能让这个世界因我们的存在和成长而更加绚丽多彩。
 
-----
+<br/><br/>
 
-![Hands-on Practice](/blueprint/family_letters/img/primary006.png)
+---
+
+<br/><br/>
+
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary006.png" alt="Hands-on Practice" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 第五是劳动和实践。狭义上讲，“劳”指劳动。在小学阶段，我们要积极参与家庭、班级和学校的各种劳动活动，比如做家务、打扫教室、搬运书本等。孩子，养成勤快、热爱劳动的好习惯，不仅会对你未来的学习、工作以及家庭生活大有裨益，更是提升人生幸福感的秘诀之一。
 
@@ -86,20 +132,59 @@
 
 没有理论的支撑，实践就像盲人摸象；没有实践的验证，理论只能纸上谈兵。因此，我们既需要扎实的理论知识作为基础，也需要强有力的执行力去做事，去把事情做好。这将使我们的成长更加稳重、扎实，实事求是而不是浮于表面。
 
-----
+<br/><br/>
+
+---
+
+<br/><br/>
 
 你可能已经注意到啦，上图中树干的中央还缺了一块拼图——孩子，我们的世界是变化发展的，因此我们的人生大树也需要不断成长和进步来适应变化的世界。如果我们的各项能力始终停留在某一阶段而不随时间一起成长进步，那么我们这棵人生大树的成长就会逐渐放缓，甚至停止。我们就很难应对变化的世界带来的种种挑战。因此，我们要怀揣一颗向上的心，保持一种终身学习、不断成长的力量。而这股推动我们持续向上的力量，就是——内驱力。
 
-![Intrinsic Motivation](/blueprint/family_letters/img/primary007.png)
+<p align="center">
+  <img src="/blueprint/family_letters/img/primary007.png" alt="Intrinsic Motivation" width='50%' height='50%'/>
+</p>
+
+<br/><br/>
 
 记住，内驱力是人生大树的核心拼图。它是自我驱动、自我激励的源泉，赋予我们在德、智、体、美、劳各方面持续进步的动力。正因为有了内驱力，我们的人生大树才能在时光的浇灌下枝繁叶茂、生机盎然。关于如何培养和锻炼这股内驱力，我们以后再慢慢探讨。
 
-----
+<br/><br/>
+
+---
+
+<br/><br/>
 
 孩子，将德、智、体、美、劳的全面、综合发展作为我们成长的主要目标，并加之以持续向上的内驱力作为成长的动力，是我们在小学阶段就需要刻进骨子里的重要意识。
 
 这些道理听起来或许有些抽象，希望我上边的插图能让你更形象地理解它们。我和妈妈也会努力在各个方面成为你的榜样，也期待你能超越我们。让我们一起以全面、综合的发展为目标，怀揣积极向上、终身学习的心，让内驱力成为我们成长的源泉，使我们的人生大树坚韧挺拔，生机盎然，枝繁叶茂！
 
-爱你的父亲
+<br/><br/>
 
+<p align=right>
+爱你的父亲
+</p>
+<p align=right>
 2025年1月6日 晚
+</p>
+
+<br/><br/>
+
+---
+
+<br/><br/>
+
+   Copyright 2025 Famiverse Team
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+   
