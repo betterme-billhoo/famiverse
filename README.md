@@ -1,13 +1,13 @@
 # 家教宇宙 | Famiverse
-一个专注于德行、智慧（不仅仅是智力）、身体、美育、实践全面发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭小宇宙。帮助家长培养幸福的孩子，而不是教育内卷的牺牲品。
+一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭小宇宙。帮助家长培养幸福的孩子，而不是教育内卷的牺牲品。
 
-它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在 **德行、智慧、身体、美育与实践** 五大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
+它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
 
 <br/>
 
 This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
-Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
+Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
 
 <br/><br/><br/>
 
@@ -29,17 +29,18 @@ Born for family education, this universe invites children not only to learn, but
 - 这个平台专注于家庭教育和终身学习。
 - 这个平台的用户是：孩子（小学到大学，甚至到未来长大成人）和孩子的家长。
 - 这个平台能够有效地激发孩子的内驱力，培养孩子的自学能力，帮助他们养成终身学习的好习惯。
-- 这个平台能够有效地帮助孩子实现德、智、体、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
+- 这个平台能够有效地帮助孩子实现德、智、体、心、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
 - 这个平台能够有效地培养孩子全面的、综合的、跨学科的思维习惯和实践能力，引导他成长为一个全面的、综合发展的人。
 - 这个平台将是一个宇宙，一个真正的、无限延展的宇宙。这个宇宙带给孩子和家长的感觉是“无限的”，“充满未知的”，以及“始终想要继续探索、学习的”。
 
 <br/><br/><br/>
   
 ## 核心架构 | Core Architecture ([English](README-en.md#Core-Architecture))
-- **五大星系**：这个宇宙由五大维度组成：德行、智慧（包括但不只是智力）、身体、美育和实践。每个维度是一个星系，各星系的具体名称待定。
+- **六大星系**：这个宇宙由六大维度组成：德行、智慧（包括但不只是智力）、身体、心灵、美育和实践。每个维度是一个星系，各星系的具体名称待定。
   - 德行星系：包括但不限于谦逊、诚实、守信、礼让、廉洁等等。
-  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、各学科知识、生活知识、常识、人生哲学、独处哲学等等。
-  - 身体星系：包括但不限于身体健康、心理健康、性格健全、人格健全等等。
+  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、各学科知识、生活知识、常识、人生哲学等等。
+  - 身体星系：包括但不限于身体健康、体格健硕等等。
+  - 心灵星系：包括但不限于心理健康、性格健康、人格健全、与自己相处等等。
   - 美育星系：包括但不限于感知美、创造美、分享美、赞美美等等。
   - 实践星系：包括但不限于动手实验、项目管理、家务、劳作等等。
 - **家庭星球**：这是孩子进入这个宇宙的最初的地方，家长和孩子将在这里起航，并可以随时返回这里。这里将记录这个家庭的点点滴滴，成为家庭私有的知识库和记忆宝库，满藏家庭的私有数据、回忆和珍贵记录。类似私有化的 QQ 空间。
@@ -51,13 +52,19 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/><br/><br/>
 
+<p align="center">
+  <img src="https://www.mermaidchart.com/raw/9c7e3281-a7e4-4bc1-bf34-569479aec47d?theme=light&version=v0.1&format=svg" alt="Tree" width='80%' height='80%'/>
+</p>
+
+<br/><br/><br/>
+
 ## 功能愿景 | Feature Vision ([English](README-en.md#Feature-Vision))
 - 孩子在这个宇宙中，最开始从“家庭星球”出发，然后通过系统引导，获得自己的人工智能伙伴 MOSS。
 - “家庭星球”是这个系统至关重要的一部分，这个宇宙要负责保存和维护家庭的点点滴滴。家庭的照片、故事、成长经历、挫折、知识库等等。这个星球属于“美育星系”。孩子从这个星球出发，也会回到这个星球。
 - 在 MOSS 的帮助下，孩子得知这个宇宙存在五大星系，然后他将通过系统的引导以及自己的探索，逐步涉足每个星系，以及每个他感兴趣的星球，并在此期间完成相关内容的学习和实践。
 - 宇宙存在迷雾，根据孩子自己的学习进度和学科知识储备程度的不同，系统将动态地解锁相应的迷雾。比如，孩子已经学会了加减乘除法，那么系统可能会自适应地点亮最简单的一次方程星球，以此类推。只要他想学、学得会，这个宇宙永远为他准备着新东西，没有年龄、智力、阶级的门槛。如果他小学就通过自学掌握了软件工程的专业知识，并灵活运用于生活实际，那是他自己的才能，宇宙不会限制他进行探索和学习，只要他愿意，一切由他的学习进度来动态调节。
 - 迷雾系统会对某些敏感话题进行分级。比如“身体星系”将存在“性教育星球”，这个星球将需要等到适当的年龄后，才会让孩子注意到，以此类推。但其他的并不敏感的知识，比如软件工程、人工智能、高等数学等等，只要他自己想学、学得会，都是直接开放的。
-- MOSS 会根据孩子的学习进度和实践表现，智能地分析出孩子在五大维度（德、智、体、美、劳）上的综合评分表现，并分析出这个孩子的兴趣点所在。
+- MOSS 会根据孩子的学习进度和实践表现，智能地分析出孩子在六大维度（德、智、体、心、美、劳）上的综合评分表现，并分析出这个孩子的兴趣点所在。
 - 系统将按照我们设计的知识体系模板，通过 MOSS 自动生成新的星球（插件），很多知识互联网已经讲得非常清楚了，没有必要靠人工来制作。但互联网上的知识是杂乱无章的，我们需要设计一套稳定、规范的知识体系构建规则，让 MOSS 遵循这样的规则去生成对应的星球。
 - 家长作为宇宙中的另外一个参与方，与孩子始终保持互动。在一些特殊的学习环节、特别的知识点上共同作业，攻克难关，从而共同学习，解锁未知星球，获得星球上的奖励（比如系统的积分或者代币）。比如共同做实验、共同完成一个家务的挑战等等。
 - 系统拥有徽章、证书机制。孩子在宇宙中学习完相应的知识结构并通过检测后，系统将颁发基于区块链技术的证书。这些证书，我希望将来可以与现实世界的教育系统证书进行类比和对接，最终等价于现实世界的教育证书，从而优化甚至可能影响整个传统教育模式。
