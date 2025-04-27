@@ -1,7 +1,5 @@
 files:
   - source: "README.md"
-    ignore: "/**/*-%two_letters_code%.md"
     translation: "README-en.md"
   - source: "CONTRIBUTOR_AGREEMENT.md"
-    ignore: "/**/*-%two_letters_code%.md"
     translation: "CONTRIBUTOR_AGREEMENT-en.md"
