@@ -1,14 +1,14 @@
 # Famiverse
 
-This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practicewoven from lines of code by loving parents.It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
+一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面发展的家庭教育开源平台。woven from lines of code by loving parents.It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
-
+在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。
 
 <br/>
 
 This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
-Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
+Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
 
 <br/><br/><br/>
 
@@ -29,7 +29,7 @@ Born for family education, this universe invites children not only to learn, but
 - This platform is dedicated to **family education** and **lifelong learning**.
 - It is designed for two core users: **children** (from K12 through adulthood) and their **parents**.
 - It aims to effectively **ignite a child's inner drive**, **nurture self-directed learning**, and help them build healthy, lifelong learning habits.
-- It empowers children to grow in a **balanced and holistic way**, across five essential dimensions: **Character**, **Wisdom**, **Body**, **Aesthetics**, and **Practice**—guiding them not just to become "outstanding in others' eyes," but to become **truly happy, grounded individuals**.
+- 这个平台能够有效地帮助孩子实现德、智、体、心、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
 - It encourages **interdisciplinary thinking** and **practical skills**, helping children develop a mind that is curious, connected, and creative.
 - This platform is a **universe**—a truly boundless, ever-expanding cosmos.It gives both children and parents the sense of **infinite possibility**, of **mystery waiting to be discovered**, and of a lifelong journey worth continuing.
 
@@ -37,10 +37,11 @@ Born for family education, this universe invites children not only to learn, but
 
 ## Core Architecture
 
-- **The Five Galactic Systems**: This universe is built around five fundamental dimensions of growth: **Character**, **Wisdom** (not limited to intelligence), **Body**, **Aesthetics**, and **Practice**.Each dimension forms a unique **galactic system**, with final naming to be determined.
+- **六大星系**：这个宇宙由六大维度组成：德行、智慧（包括但不只是智力）、身体、心灵、美育和实践。Each dimension forms a unique **galactic system**, with final naming to be determined.
   - Character Galaxy: Encompassing virtues such as humility, honesty, trustworthiness, courtesy, integrity, and more.
-  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、各学科知识、生活知识、常识、人生哲学、独处哲学等等。
-  - Physical Well-being Galaxy: Encompassing areas such as physical health, mental health, character integrity, personality development, and more.
+  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、各学科知识、生活知识、常识、人生哲学等等。
+  - 身体星系：包括但不限于身体健康、体格健硕等等。
+  - 心灵星系：包括但不限于心理健康、性格健康、人格健全、与自己相处等等。
   - Aesthetics Galaxy: A universe of perceiving, creating, sharing, and celebrating beauty in all its forms.
   - Hands-on Practice Galaxy: Encompassing hands-on experiments, project management, household tasks, manual work, and more.
 - **The Home Planet**: This is where every child begins their journey—a shared starting point for children and their parents. Families can return here at any time.It will become a private archive of the family's growth, memories, and reflections—a personal knowledge base and emotional treasure chest, like a privatized version of a family-only social space.
@@ -52,6 +53,12 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/><br/><br/>
 
+<p align="center">
+  <img src="https://www.mermaidchart.com/raw/9c7e3281-a7e4-4bc1-bf34-569479aec47d?theme=light&version=v0.1&format=svg" alt="Tree" width='80%' height='80%'/>
+</p>
+
+<br/><br/><br/>
+
 ## Feature Vision
 
 - A child's journey in this universe begins on the **Home Planet**, where they are guided by the system to meet their personal AI companion, **MOSS**.
@@ -59,7 +66,7 @@ Born for family education, this universe invites children not only to learn, but
 - With MOSS as their guide, the child learns of the existence of **five galactic systems**. They will be gently introduced to new planets within each system through a combination of structured guidance and free exploration. As they move between worlds, they learn, play, and apply their knowledge in meaningful ways.
 - A **Fog of Discovery** blankets unexplored areas of the universe. As the child's knowledge and skills grow, the fog lifts—revealing new, relevant planets.For instance, once a child masters basic arithmetic, the system may automatically unlock a simple algebra planet.This adaptive progression has no age, class, or intelligence barriers—if the child is curious and capable, the universe is ready for them.Even if a primary school child self-learns software engineering and applies it creatively, the system will encourage and support that exploration.
 - The fog system also handles **age-sensitive content** with care.For example, planets dealing with sex education within the Body Galaxy will only become visible once the child reaches a suitable developmental stage.Meanwhile, subjects like software engineering, artificial intelligence, or advanced mathematics are open to all who are ready to learn—regardless of age.
-- MOSS will analyze a child’s performance and behavior across the five dimensions (Character, Wisdom, Body, Aesthetics, and Practice) to provide a holistic developmental profile and highlight their unique interests.
+- MOSS 会根据孩子的学习进度和实践表现，智能地分析出孩子在六大维度（德、智、体、心、美、劳）上的综合评分表现，并分析出这个孩子的兴趣点所在。
 - Using a structured knowledge framework, MOSS can **auto-generate new planets (plugins)** based on existing open content.While the internet is rich in information, it is often chaotic and unstructured. By following a well-designed, modular system, MOSS can transform this content into meaningful, structured learning journeys.
 - **Parents** play an active role in the universe. Through collaborative quests and co-learning challenges—like science experiments or family chores—parents and children progress together, unlocking new planets and earning rewards (points, tokens, etc.).Education becomes a shared adventure.
 - The system will offer **badges and blockchain-based certificates** to recognize learning achievements.These certificates aim to one day be **interoperable with real-world education credentials**,helping to bridge the gap between traditional systems and next-generation learning.
