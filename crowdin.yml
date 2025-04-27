@@ -1,7 +1,8 @@
 files:
-  - source:
-      - README.md
-      - CONTRIBUTOR_AGREEMENT.md
-    ignore:
-      - /**/*-%two_letters_code%.md
-    translation: /%original_path%/%file_name%-%two_letters_code%.%file_extension%
+  - source: 'README.md'
+    ignore: '/**/*-%two_letters_code%.md'
+    translation: '/%original_path%/%file_name%-%two_letters_code%.%file_extension%'
+
+  - source: 'CONTRIBUTOR_AGREEMENT.md'
+    ignore: '/**/*-%two_letters_code%.md'
+    translation: '/%original_path%/%file_name%-%two_letters_code%.%file_extension%'
