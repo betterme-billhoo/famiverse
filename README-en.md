@@ -40,7 +40,7 @@ Born for family education, this universe invites children not only to learn, but
 - **六大星系**：这个宇宙由六大维度组成：德行、智慧（包括但不只是智力）、身体、心灵、美育和实践。Each dimension forms a unique **galactic system**, with final naming to be determined.
   - Character Galaxy: Encompassing virtues such as humility, honesty, trustworthiness, courtesy, integrity, and more.
   - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、各学科知识、生活知识、常识、人生哲学等等。
-  - 身体星系：包括但不限于身体健康、体格健硕等等。
+  - 身体星系：包括但不限于身体健康、体格健硕、性教育、性健康等等。
   - 心灵星系：包括但不限于心理健康、性格健康、人格健全、与自己相处等等。
   - Aesthetics Galaxy: A universe of perceiving, creating, sharing, and celebrating beauty in all its forms.
   - Hands-on Practice Galaxy: Encompassing hands-on experiments, project management, household tasks, manual work, and more.
