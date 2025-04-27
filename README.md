@@ -35,8 +35,11 @@ Born for family education, this universe invites children not only to learn, but
 
 ## 项目状态 | Project Status
 
-- [X] #4
-- [ ] #29 
+- [X] [立项，完成基本的 Git 配置和项目结构组织 | Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
+- [ ] [头脑风暴：家庭教育中，如何才能系统地将德、智、体、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
+- [ ] 原型设计
+- [ ] 技术架构确定
+- [ ] MVP 开发
 
 <br/><br/><br/>
   
@@ -57,9 +60,53 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/><br/><br/>
 
-<p align="center">
-  <img src="https://www.mermaidchart.com/raw/9c7e3281-a7e4-4bc1-bf34-569479aec47d?theme=light&version=v0.1&format=svg" alt="Tree" width='80%' height='80%'/>
-</p>
+```mermaid
+---
+config:
+  theme: mc
+---
+mindmap
+  root((Famiverse))
+    德行 Character
+      谦逊
+      诚实
+      守信
+      礼让
+      廉洁
+      ...
+    智慧 Wisdom
+      智力
+      人际关系
+      学科知识
+      生活知识
+      常识
+      人生哲学
+      独处哲学
+      ...
+    身体 Physical Well-being
+      身体健康
+      体格健硕
+      性教育/性健康
+      ...
+    心灵 Inner Well-being
+      心理健康
+      性格健全
+      人格健全
+      与自己相处
+      ...
+    美育 Aesthetics
+      感知美
+      创造美
+      分享美
+      赞美美
+      ...
+    实践 Hands-on Practice
+      动手实验
+      项目管理
+      家务
+      劳作
+      ...
+```
 
 <br/><br/><br/>
 
