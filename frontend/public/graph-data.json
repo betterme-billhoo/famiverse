@@ -1,28 +1,50 @@
 {
   "nodes": [
-    { "id": "Character", "name": "德行", "color": "#ff6666", "info": "专注于谦虚、诚实、值得信赖..." },
-    { "id": "Wisdom", "name": "智慧", "color": "#66ccff", "info": "智力发展、人际关系、知识..." },
-    { "id": "Physical Well-being", "name": "身体", "color": "#66ff66", "info": "身心健康、强健的身体和心灵..." },
-    { "id": "Aesthetics", "name": "美育", "color": "#ffcc66", "info": "对美的感知、创造和欣赏..." },
-    { "id": "Practice", "name": "实践", "color": "#cc99ff", "info": "动手实验、项目、劳动、实践..." },
-    { "id": "Inner Well-being", "name": "心灵", "color": "#ffffff", "info": "心理健康、性格健康、内心平静、人格修养、韧性..." }
+    { "id": "home-planet", "name": "我的家庭", "color": "#666666", "info": "根节点" },
+
+    { "id": "root-0", "name": "德行", "color": "#ff6666", "info": "德行星系：谦逊、诚实 ..." },
+    { "id": "root-1", "name": "智慧", "color": "#66ccff", "info": "智慧星系：智力、人际关系、学科知识 ..." },
+    { "id": "root-2", "name": "身体", "color": "#66ff66", "info": "身体星系：身体健康、性教育、性健康 ..." },
+    { "id": "root-3", "name": "心灵", "color": "#66ff66", "info": "心灵星系：心理健康、性格健康、人格健全 ..." },
+    { "id": "root-4", "name": "美育", "color": "#66ff66", "info": "美育星系：感知美、创造美、诠释美、赞美美 ..." },
+    { "id": "root-5", "name": "实践", "color": "#66ff66", "info": "实践星系：身体力行、实验、家务、劳作 ..." },
+
+    { "id": "root-0-1", "name": "诚实", "color": "#ff6666", "info": "" },
+    { "id": "root-0-2", "name": "谦虚", "color": "#ff6666", "info": "" },
+    { "id": "root-0-3", "name": "谨慎", "color": "#ff6666", "info": "" },
+    { "id": "root-0-4", "name": "节约", "color": "#ff6666", "info": "" },
+    { "id": "root-0-5", "name": "信用", "color": "#ff6666", "info": "" },
+
+    { "id": "root-1-0", "name": "智力", "color": "#66ccff", "info": "" },
+    { "id": "root-1-1", "name": "学习", "color": "#66ccff", "info": "" },
+    { "id": "root-1-2", "name": "人际关系", "color": "#66ccff", "info": "" }, 
+    { "id": "root-1-3", "name": "学科知识", "color": "#66ccff", "info": "" },
+
+    { "id": "root-2-0", "name": "健康", "color": "#66ff66", "info": "" },
+    { "id": "root-2-1", "name": "性教育", "color": "#66ff66", "info": "" },
+    { "id": "root-2-3", "name": "运动", "color": "#66ff66", "info": "" },
+
+    { "id": "root-3-0", "name": "心理健康", "color": "#66ff66", "info": "" },
+    { "id": "root-3-1", "name": "人格健全", "color": "#66ff66", "info": "" },
+    { "id": "root-3-2", "name": "性格健康", "color": "#66ff66", "info": "" },
+
+    { "id": "root-4-0", "name": "感知美", "color": "#66ff66", "info": "" },
+    { "id": "root-4-1", "name": "创造美", "color": "#66ff66", "info": "" },
+    { "id": "root-4-2", "name": "诠释美", "color": "#66ff66", "info": "" },
+    { "id": "root-4-3", "name": "赞美美", "color": "#66ff66", "info": "" },
+
+    { "id": "root-5-0", "name": "身体力行", "color": "#66ff66", "info": "" },
+    { "id": "root-5-1", "name": "实验", "color": "#66ff66", "info": "" },
+    { "id": "root-5-2", "name": "家务", "color": "#66ff66", "info": "" },
+    { "id": "root-5-3", "name": "劳作", "color": "#66ff66", "info": "" }
   ],
   
   "links": [
-    { "source": "Character", "target": "Wisdom" },
-    { "source": "Character", "target": "Physical Well-being" },
-    { "source": "Character", "target": "Aesthetics" },
-    { "source": "Character", "target": "Practice" },
-    { "source": "Character", "target": "Inner Well-being" },
-    { "source": "Wisdom", "target": "Physical Well-being" },
-    { "source": "Wisdom", "target": "Aesthetics" },
-    { "source": "Wisdom", "target": "Practice" },
-    { "source": "Wisdom", "target": "Inner Well-being" },
-    { "source": "Physical Well-being", "target": "Aesthetics" },
-    { "source": "Physical Well-being", "target": "Practice" },
-    { "source": "Physical Well-being", "target": "Inner Well-being" },
-    { "source": "Aesthetics", "target": "Practice" },
-    { "source": "Aesthetics", "target": "Inner Well-being" },
-    { "source": "Practice", "target": "Inner Well-being" }
+    { "source": "home-planet", "target": "root-0" },
+    { "source": "home-planet", "target": "root-1" },
+    { "source": "home-planet", "target": "root-2" },
+    { "source": "home-planet", "target": "root-3" },
+    { "source": "home-planet", "target": "root-4" },
+    { "source": "home-planet", "target": "root-5" } 
   ]
 }

@@ -236,12 +236,11 @@ export default function FamiverseGraph() {
         onNodeClick={(node: NodeObject<NodeData>) => setSelectedNode(node as NodeData)}
         // Keep the specific NodeObject type for the callback parameter
         nodeLabel={(node: NodeObject<NodeData>) => `${node.name}`}
-        linkWidth={1}
-        linkOpacity={0.5}
+        linkWidth={0.1}
+        linkOpacity={0.4}
         nodeRelSize={6}
         linkDirectionalParticles={2}
-        linkDirectionalParticleWidth={1.5}
-        controlType="orbit"
+        linkDirectionalParticleWidth={0.12}
         enableNodeDrag={false}
       />
     </div>
