@@ -22,6 +22,11 @@ interface GraphData {
   links: LinkData[];
 }
 
+// Helper type for accessing internal _scene property without 'any'
+type ForceGraphRefWithInternal = ForceGraphMethods<NodeObject<NodeData>, LinkObject<NodeData, LinkData>> & {
+  _scene?: THREE.Scene;
+};
+
 // No need for a custom ForceGraphMethods interface if the import works
 
 export default function FamiverseGraph() {
@@ -148,10 +153,11 @@ export default function FamiverseGraph() {
         requestAnimationFrame(animate);
       };
       animate();
-    } else if (fgRef.current && (fgRef.current as any)._scene) {
+    } else if (fgRef.current && (fgRef.current as ForceGraphRefWithInternal)._scene) { // Use helper type here
        // Fallback logic remains the same
        console.warn('Using internal _scene property. Consider checking ForceGraphMethods type.');
-       const scene = (fgRef.current as any)._scene as THREE.Scene;
+       // Use helper type here and assert _scene exists and is a THREE.Scene
+       const scene = (fgRef.current as ForceGraphRefWithInternal)._scene as THREE.Scene;
 
       if (!scene) {
         console.error('Could not access the scene from ForceGraph3D');
