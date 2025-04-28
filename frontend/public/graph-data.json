@@ -1,28 +1,28 @@
 {
   "nodes": [
-    { "id": "home-planet", "name": "我的家庭", "color": "#666666", "info": "根节点" },
+    { "id": "home-planet", "name": "我的家庭", "color": "#FFFFFF", "info": "根节点" },
 
-    { "id": "root-0", "name": "德行", "color": "#CF1322", "info": "德行星系：谦逊、诚实 ..." },
+    { "id": "root-0", "name": "德行", "color": "#FF7875", "info": "德行星系：谦逊、诚实 ..." },
     { "id": "root-1", "name": "智慧", "color": "#40A9FF", "info": "智慧星系：智力、人际关系、学科知识 ..." },
-    { "id": "root-2", "name": "身体", "color": "#D46B08", "info": "身体星系：身体健康、性教育、性健康 ..." },
+    { "id": "root-2", "name": "身体", "color": "#AD4E00", "info": "身体星系：身体健康、性教育、性健康 ..." },
     { "id": "root-3", "name": "心灵", "color": "#FF9C6E", "info": "心灵星系：心理健康、性格健康、人格健全 ..." },
     { "id": "root-4", "name": "美育", "color": "#D3F261", "info": "美育星系：感知美、创造美、诠释美、赞美美 ..." },
     { "id": "root-5", "name": "实践", "color": "#B37FEB", "info": "实践星系：身体力行、实验、家务、劳作 ..." },
 
-    { "id": "root-0-1", "name": "诚实", "color": "#CF1322", "info": "" },
-    { "id": "root-0-2", "name": "谦虚", "color": "#CF1322", "info": "" },
-    { "id": "root-0-3", "name": "谨慎", "color": "#CF1322", "info": "" },
-    { "id": "root-0-4", "name": "节约", "color": "#CF1322", "info": "" },
-    { "id": "root-0-5", "name": "信用", "color": "#CF1322", "info": "" },
+    { "id": "root-0-1", "name": "诚实", "color": "#FF7875", "info": "" },
+    { "id": "root-0-2", "name": "谦虚", "color": "#FF7875", "info": "" },
+    { "id": "root-0-3", "name": "谨慎", "color": "#FF7875", "info": "" },
+    { "id": "root-0-4", "name": "节约", "color": "#FF7875", "info": "" },
+    { "id": "root-0-5", "name": "信用", "color": "#FF7875", "info": "" },
 
     { "id": "root-1-0", "name": "智力", "color": "#40A9FF", "info": "" },
     { "id": "root-1-1", "name": "学习", "color": "#40A9FF", "info": "" },
     { "id": "root-1-2", "name": "人际关系", "color": "#40A9FF", "info": "" }, 
     { "id": "root-1-3", "name": "学科知识", "color": "#40A9FF", "info": "" },
 
-    { "id": "root-2-0", "name": "健康", "color": "#D46B08", "info": "" },
-    { "id": "root-2-1", "name": "性教育", "color": "#D46B08", "info": "" },
-    { "id": "root-2-3", "name": "运动", "color": "#D46B08", "info": "" },
+    { "id": "root-2-0", "name": "健康", "color": "#AD4E00", "info": "" },
+    { "id": "root-2-1", "name": "性教育", "color": "#AD4E00", "info": "" },
+    { "id": "root-2-3", "name": "运动", "color": "#AD4E00", "info": "" },
 
     { "id": "root-3-0", "name": "心理健康", "color": "#FF9C6E", "info": "" },
     { "id": "root-3-1", "name": "人格健全", "color": "#FF9C6E", "info": "" },
