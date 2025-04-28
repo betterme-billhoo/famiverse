@@ -5,35 +5,35 @@ import * as THREE from 'three';
 import ForceGraph3D from 'react-force-graph-3d';
 
 export default function FamiverseGraph() {
-  const fgRef = useRef<any>();
+  const fgRef = useRef<any>(null);
   const [selectedNode, setSelectedNode] = useState<any>(null);
 
   // 星球数据
   const graphData = {
     nodes: [
-      { id: 'Character', name: '品格', color: '#ff6666', info: '专注于谦虚、诚实、值得信赖...' },
+      { id: 'Character', name: '德行', color: '#ff6666', info: '专注于谦虚、诚实、值得信赖...' },
       { id: 'Wisdom', name: '智慧', color: '#66ccff', info: '智力发展、人际关系、知识...' },
-      { id: 'Physical', name: '身心健康', color: '#66ff66', info: '身心健康、强健的身体和心灵...' },
-      { id: 'Aesthetics', name: '审美', color: '#ffcc66', info: '对美的感知、创造和欣赏...' },
+      { id: 'Physical Well-being', name: '身体', color: '#66ff66', info: '身心健康、强健的身体和心灵...' },
+      { id: 'Aesthetics', name: '美育', color: '#ffcc66', info: '对美的感知、创造和欣赏...' },
       { id: 'Practice', name: '实践', color: '#cc99ff', info: '动手实验、项目、劳动、实践...' },
-      { id: 'Mindfulness', name: '正念', color: '#ffffff', info: '内心平静、人格修养、韧性...' }
+      { id: 'Inner Well-being', name: '正念', color: '#ffffff', info: '内心平静、人格修养、韧性...' }
     ],
     links: [
       { source: 'Character', target: 'Wisdom' },
-      { source: 'Character', target: 'Physical' },
+      { source: 'Character', target: 'Physical Well-being' },
       { source: 'Character', target: 'Aesthetics' },
       { source: 'Character', target: 'Practice' },
-      { source: 'Character', target: 'Mindfulness' },
-      { source: 'Wisdom', target: 'Physical' },
+      { source: 'Character', target: 'Inner Well-being' },
+      { source: 'Wisdom', target: 'Physical Well-being' },
       { source: 'Wisdom', target: 'Aesthetics' },
       { source: 'Wisdom', target: 'Practice' },
-      { source: 'Wisdom', target: 'Mindfulness' },
-      { source: 'Physical', target: 'Aesthetics' },
-      { source: 'Physical', target: 'Practice' },
-      { source: 'Physical', target: 'Mindfulness' },
+      { source: 'Wisdom', target: 'Inner Well-being' },
+      { source: 'Physical Well-being', target: 'Aesthetics' },
+      { source: 'Physical Well-being', target: 'Practice' },
+      { source: 'Physical Well-being', target: 'Inner Well-being' },
       { source: 'Aesthetics', target: 'Practice' },
-      { source: 'Aesthetics', target: 'Mindfulness' },
-      { source: 'Practice', target: 'Mindfulness' }
+      { source: 'Aesthetics', target: 'Inner Well-being' },
+      { source: 'Practice', target: 'Inner Well-being' }
     ]
   };
 
@@ -61,7 +61,7 @@ export default function FamiverseGraph() {
       // 创建星空背景
       const starsGeometry = new THREE.BufferGeometry();
       const starsVertices = [];
-      const starsSizes = [];
+      const starsSizes: number[] = [];
       const starsOpacities: number[] = [];
       const starsFlickerSpeeds: number[] = [];
       
