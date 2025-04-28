@@ -4,7 +4,6 @@ import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import ForceGraph3D, { NodeObject, LinkObject, ForceGraphMethods } from 'react-force-graph-3d';
 
-// Define types for our nodes and links (Keep these as they define your base data structure)
 interface NodeData {
   id: string;
   name: string;
@@ -33,35 +32,18 @@ export default function FamiverseGraph() {
   // Initialize useRef with undefined as the initial value
   const fgRef = useRef<ForceGraphMethods<NodeObject<NodeData>, LinkObject<NodeData, LinkData>> | undefined>(undefined);
   const [selectedNode, setSelectedNode] = useState<NodeData | null>(null);
+  // State to hold graph data, initialized as empty
+  const [graphData, setGraphData] = useState<GraphData>({ nodes: [], links: [] });
 
-  // 星球数据
-  const graphData: GraphData = {
-    nodes: [
-      { id: 'Character', name: '德行', color: '#ff6666', info: '专注于谦虚、诚实、值得信赖...' },
-      { id: 'Wisdom', name: '智慧', color: '#66ccff', info: '智力发展、人际关系、知识...' },
-      { id: 'Physical Well-being', name: '身体', color: '#66ff66', info: '身心健康、强健的身体和心灵...' },
-      { id: 'Aesthetics', name: '美育', color: '#ffcc66', info: '对美的感知、创造和欣赏...' },
-      { id: 'Practice', name: '实践', color: '#cc99ff', info: '动手实验、项目、劳动、实践...' },
-      { id: 'Inner Well-being', name: '心灵', color: '#ffffff', info: '心理健康、性格健康、内心平静、人格修养、韧性...' }
-    ],
-    links: [
-      { source: 'Character', target: 'Wisdom' },
-      { source: 'Character', target: 'Physical Well-being' },
-      { source: 'Character', target: 'Aesthetics' },
-      { source: 'Character', target: 'Practice' },
-      { source: 'Character', target: 'Inner Well-being' },
-      { source: 'Wisdom', target: 'Physical Well-being' },
-      { source: 'Wisdom', target: 'Aesthetics' },
-      { source: 'Wisdom', target: 'Practice' },
-      { source: 'Wisdom', target: 'Inner Well-being' },
-      { source: 'Physical Well-being', target: 'Aesthetics' },
-      { source: 'Physical Well-being', target: 'Practice' },
-      { source: 'Physical Well-being', target: 'Inner Well-being' },
-      { source: 'Aesthetics', target: 'Practice' },
-      { source: 'Aesthetics', target: 'Inner Well-being' },
-      { source: 'Practice', target: 'Inner Well-being' }
-    ]
-  };
+  // Fetch data on component mount
+  useEffect(() => {
+    fetch('/graph-data.json') // Fetch from the public directory
+      .then(res => res.json())
+      .then(data => {
+        setGraphData(data);
+      })
+      .catch(error => console.error('Error fetching graph data:', error));
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   // 自定义节点对象
   const nodeObject = (node: NodeData) => {
@@ -230,7 +212,7 @@ export default function FamiverseGraph() {
     } else if (fgRef.current) {
         console.error('Could not access the scene from ForceGraph3D ref.');
     }
-  }, []);
+  }, []); // Keep this useEffect for the star background
 
 
   return (
@@ -247,7 +229,7 @@ export default function FamiverseGraph() {
       <ForceGraph3D
         // Pass the ref directly. The type should now align better.
         ref={fgRef}
-        graphData={graphData}
+        graphData={graphData} // Use the state variable here
         nodeThreeObject={nodeObject}
         backgroundColor="#000000"
         // Keep the specific NodeObject type for the callback parameter

@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    { "id": "Character", "name": "德行", "color": "#ff6666", "info": "专注于谦虚、诚实、值得信赖..." },
+    { "id": "Wisdom", "name": "智慧", "color": "#66ccff", "info": "智力发展、人际关系、知识..." },
+    { "id": "Physical Well-being", "name": "身体", "color": "#66ff66", "info": "身心健康、强健的身体和心灵..." },
+    { "id": "Aesthetics", "name": "美育", "color": "#ffcc66", "info": "对美的感知、创造和欣赏..." },
+    { "id": "Practice", "name": "实践", "color": "#cc99ff", "info": "动手实验、项目、劳动、实践..." },
+    { "id": "Inner Well-being", "name": "心灵", "color": "#ffffff", "info": "心理健康、性格健康、内心平静、人格修养、韧性..." }
+  ],
+  
+  "links": [
+    { "source": "Character", "target": "Wisdom" },
+    { "source": "Character", "target": "Physical Well-being" },
+    { "source": "Character", "target": "Aesthetics" },
+    { "source": "Character", "target": "Practice" },
+    { "source": "Character", "target": "Inner Well-being" },
+    { "source": "Wisdom", "target": "Physical Well-being" },
+    { "source": "Wisdom", "target": "Aesthetics" },
+    { "source": "Wisdom", "target": "Practice" },
+    { "source": "Wisdom", "target": "Inner Well-being" },
+    { "source": "Physical Well-being", "target": "Aesthetics" },
+    { "source": "Physical Well-being", "target": "Practice" },
+    { "source": "Physical Well-being", "target": "Inner Well-being" },
+    { "source": "Aesthetics", "target": "Practice" },
+    { "source": "Aesthetics", "target": "Inner Well-being" },
+    { "source": "Practice", "target": "Inner Well-being" }
+  ]
+}
