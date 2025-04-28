@@ -237,7 +237,7 @@ export default function FamiverseGraph() {
         // Keep the specific NodeObject type for the callback parameter
         nodeLabel={(node: NodeObject<NodeData>) => `${node.name}`}
         linkWidth={0.1}
-        linkOpacity={0.5}
+        linkOpacity={0.35}
         nodeRelSize={6}
         linkDirectionalParticles={2}
         linkDirectionalParticleWidth={0.12}
