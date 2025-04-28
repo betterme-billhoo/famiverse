@@ -1,5 +1,7 @@
 # Famiverse
 
+[![访问 Demo](https://img.shields.io/badge/演示-Demo-green?style=for-the-badge)](https://famiverse.vercel.app/)
+
 一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面发展的家庭教育开源平台。woven from lines of code by loving parents.It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
 
 在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。
