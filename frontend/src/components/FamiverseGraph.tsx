@@ -215,6 +215,37 @@ export default function FamiverseGraph() {
   }, []); // Keep this useEffect for the star background
 
 
+  // --- 修改 onNodeClick 处理函数 ---
+  const handleNodeClick = (node: NodeObject<NodeData>) => {
+    // 1. 更新选中节点状态以显示信息面板
+    setSelectedNode(node as NodeData);
+
+    // 2. 计算相机目标位置
+    // 确保节点的 x, y, z 坐标存在且为数字
+    if (typeof node.x === 'number' && typeof node.y === 'number' && typeof node.z === 'number') {
+      const distance = 40; // 相机距离节点的距离，可以调整
+      const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
+
+      const newPos = {
+        x: node.x * distRatio,
+        y: node.y * distRatio,
+        z: node.z * distRatio
+      };
+
+      // 3. 调用 cameraPosition 方法聚焦
+      if (fgRef.current) {
+        fgRef.current.cameraPosition(
+          newPos, // 相机的新位置
+          { x: node.x, y: node.y, z: node.z }, // 相机看向的目标点（节点中心）
+          3000  // 过渡动画时间（毫秒）
+        );
+      }
+    } else {
+      console.warn('Node coordinates are not available yet for focusing.');
+    }
+  };
+
+
   return (
     <div className="w-full h-screen relative">
       <div className={`absolute top-5 left-5 p-3 bg-white/95 dark:bg-black/90 rounded-lg shadow-lg z-10 ${selectedNode ? 'block' : 'hidden'}`}>
@@ -227,14 +258,11 @@ export default function FamiverseGraph() {
       </div>
 
       <ForceGraph3D
-        // Pass the ref directly. The type should now align better.
         ref={fgRef}
         graphData={graphData} // Use the state variable here
         nodeThreeObject={nodeObject}
         backgroundColor="#000000"
-        // Keep the specific NodeObject type for the callback parameter
-        onNodeClick={(node: NodeObject<NodeData>) => setSelectedNode(node as NodeData)}
-        // Keep the specific NodeObject type for the callback parameter
+        onNodeClick={handleNodeClick}
         nodeLabel={(node: NodeObject<NodeData>) => `${node.name}`}
         linkWidth={0.1}
         linkOpacity={0.35}
