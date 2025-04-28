@@ -242,6 +242,7 @@ export default function FamiverseGraph() {
         linkDirectionalParticles={2}
         linkDirectionalParticleWidth={1.5}
         controlType="orbit"
+        enableNodeDrag={false}
       />
     </div>
   );
