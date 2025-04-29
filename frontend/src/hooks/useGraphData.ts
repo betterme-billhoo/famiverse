@@ -18,20 +18,19 @@ export function useGraphData(url: string): GraphData {
       .then((data: GraphData) => {
         const homePlanetId = 'home-planet';
         const homePlanetPos = { x: 0, y: 0, z: 0 }; // 中心节点位置
-        const rootDistributionRadius = 2048; // root-* 节点围绕中心的分布半径
-        const clusterRadius = 80; // 簇内节点的分布半径
+        const rootDistributionRadius = 1024; // root-* 节点围绕中心的分布半径
+        const clusterRadius = 1024; // 簇内节点的分布半径
         const defaultSpread = 500; // 其他节点的 XY 平面分布范围
         const defaultZSpread = 100; // 其他节点的 Z 轴分布范围 (保持相对扁平)
 
         // 定义每个 root 节点的倾斜角度 (单位：度)
         const clusterTiltsInDegrees: { [key: string]: number } = {
-          'root-character': 15,
-          'root-wisdom': -20,
-          'root-physical': 30,
-          'root-inner': -10,
-          'root-aesthetic': 45,
-          'root-practice': -35,
-          // 可以为其他 root-* 节点添加角度
+          'root-character': 360 * (Math.random() - 0.5), // 随机倾斜角度
+          'root-wisdom': 360 * (Math.random() - 0.5),
+          'root-physical': 360 * (Math.random() - 0.5),
+          'root-inner': 360 * (Math.random() - 0.5),
+          'root-aesthetic': 360 * (Math.random() - 0.5),
+          'root-practice': 360 * (Math.random() - 0.5)
         };
 
         // 将角度转换为弧度
