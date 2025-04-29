@@ -18,7 +18,7 @@ export default function FamiverseGraph() {
   useStarBackground(fgRef);
 
   const nodeObject = useCallback((node: NodeData) => {
-    const geometry = new THREE.SphereGeometry(3, 32, 32);
+    const geometry = new THREE.SphereGeometry(8, 32, 32);
     const material = new THREE.MeshLambertMaterial({
       color: node.color
     });

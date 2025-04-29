@@ -7,6 +7,10 @@ export interface NodeData {
   name: string;
   color: string;
   info: string;
+
+  x?: number;
+  y?: number;
+  z?: number;
 }
 
 // 链接数据接口
