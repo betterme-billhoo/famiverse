@@ -18,11 +18,13 @@ export function useGraphData(url: string): GraphData {
       .then((data: GraphData) => {
         const homePlanetId = 'home-planet';
         const homePlanetPos = { x: 0, y: 0, z: 0 }; // 中心节点位置
-        const rootDistributionRadius = 1024; // root-* 节点围绕中心的分布半径
-        const clusterRadius = 512; // 簇内节点在盘面上的分布半径
-        const clusterThickness = 32; // 簇的厚度 (垂直于盘面)
-        const defaultSpread = 500; // 其他节点的 XY 平面分布范围
-        const defaultZSpread = 100; // 其他节点的 Z 轴分布范围
+        const rootDistributionRadius = 4096; // root-* 节点围绕中心的分布半径
+        const clusterRadiusX = 4096; // 簇内节点在盘面上的 X 方向分布半径 (椭圆长轴)
+        const clusterRadiusZ = 512; // 簇内节点在盘面上的 Z 方向分布半径 (椭圆短轴)
+        const clusterThickness = 200;  // 簇的厚度 (垂直于盘面)
+        const spiralFactor = 8;       // 螺旋因子，值越大螺旋越紧密
+        const defaultSpread = 600;    // 其他节点的 XY 平面分布范围
+        const defaultZSpread = 100;   // 其他节点的 Z 轴分布范围
 
         // 定义每个 root 节点的倾斜角度 (单位：度) - 使用随机角度
         const clusterTiltsInDegrees: { [key: string]: number } = {};
@@ -71,6 +73,7 @@ export function useGraphData(url: string): GraphData {
           }
           // 3. 处理簇节点
           else {
+            // --- 确定节点属于哪个簇 ---
             if (node.id.startsWith('character-')) {
               rootNodeId = 'root-character';
             } else if (node.id.startsWith('wisdom-')) {
@@ -84,35 +87,50 @@ export function useGraphData(url: string): GraphData {
             } else if (node.id.startsWith('practice-')) {
               rootNodeId = 'root-practice';
             }
+            // ... 可以继续添加其他簇的判断
+            // --- 结束 确定节点属于哪个簇 ---
 
-            // 如果是簇成员，并且其根节点位置已计算，则围绕根节点按倾斜角度和厚度分布
+
+            // 如果是簇成员，并且其根节点位置已计算，则围绕根节点按椭圆、螺旋、倾斜、厚度分布
             if (rootNodeId && calculatedRootPositions[rootNodeId]) {
               const rootPos = calculatedRootPositions[rootNodeId];
               const tiltAngle = clusterTilts[rootNodeId] || 0; // 获取倾斜角度，默认为0
 
-              // 在簇的局部 XZ 平面内生成随机偏移
-              const dx = (Math.random() - 0.5) * clusterRadius * 2;
-              const dz_initial = (Math.random() - 0.5) * clusterRadius * 2;
+              // 在基础椭圆内生成随机点 (使用 sqrt 使点更集中于中心)
+              const randomRadiusScale = Math.sqrt(Math.random()); // 半径比例 [0, 1]
+              const randomAngle = Math.random() * 2 * Math.PI;    // 随机角度 [0, 2*PI]
+
+              const baseX = clusterRadiusX * randomRadiusScale * Math.cos(randomAngle);
+              const baseZ = clusterRadiusZ * randomRadiusScale * Math.sin(randomAngle);
+
+              // 计算螺旋角度偏移 (基于半径比例)
+              const spiralAngleOffset = randomRadiusScale * spiralFactor;
+
+              // 将基础点按螺旋角度旋转
+              const cosSpiral = Math.cos(spiralAngleOffset);
+              const sinSpiral = Math.sin(spiralAngleOffset);
+              const dx_initial = baseX * cosSpiral - baseZ * sinSpiral;
+              const dz_initial = baseX * sinSpiral + baseZ * cosSpiral;
 
               // 应用倾斜（绕X轴旋转）
-              const rotated_dy = -dz_initial * Math.sin(tiltAngle);
-              const rotated_dz = dz_initial * Math.cos(tiltAngle);
+              const sinTilt = Math.sin(tiltAngle);
+              const cosTilt = Math.cos(tiltAngle);
+              const rotated_dy = -dz_initial * sinTilt;
+              const rotated_dz = dz_initial * cosTilt;
 
               // 计算垂直于倾斜平面的偏移（厚度）
               const thicknessRandom = (Math.random() - 0.5) * clusterThickness;
-
               // 法向量 (0, cos(tiltAngle), sin(tiltAngle))
-              const thickness_dy = thicknessRandom * Math.cos(tiltAngle);
-              const thickness_dz = thicknessRandom * Math.sin(tiltAngle);
+              const thickness_dy = thicknessRandom * cosTilt;
+              const thickness_dz = thicknessRandom * sinTilt;
 
               // 合并所有偏移量并加到根节点位置上
               position = {
-                x: rootPos.x + dx,                     // X 偏移
+                x: rootPos.x + dx_initial,                 // 螺旋旋转后的 X 偏移
                 y: rootPos.y + rotated_dy + thickness_dy, // 倾斜后的Y + 厚度引起的Y偏移
                 z: rootPos.z + rotated_dz + thickness_dz  // 倾斜后的Z + 厚度引起的Z偏移
               };
             }
-
             // 4. 其他节点使用默认随机位置 (position 变量已在开始时初始化)
           }
 
