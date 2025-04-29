@@ -2,12 +2,12 @@
   "nodes": [
     { "id": "home-planet", "name": "我的家庭", "color": "#FFFFFF", "info": "我的家庭", "x": 0, "y": 0 , "z": 0 },
 
-    { "id": "character", "name": "德行", "color": "#FF7875", "info": "德行星系：谦逊、诚实 ..." },
-    { "id": "wisdom", "name": "智慧", "color": "#40A9FF", "info": "智慧星系：智力、人际关系、学科知识 ..." },
-    { "id": "physical", "name": "身体", "color": "#AD4E00", "info": "身体星系：身体健康、性教育、性健康 ..." },
-    { "id": "inner", "name": "心灵", "color": "#FF9C6E", "info": "心灵星系：心理健康、性格健康、人格健全 ..." },
-    { "id": "aesthetic", "name": "美育", "color": "#D3F261", "info": "美育星系：感知美、创造美、诠释美、赞美美 ..." },
-    { "id": "practice", "name": "实践", "color": "#B37FEB", "info": "实践星系：身体力行、实验、家务、劳作 ..." },
+    { "id": "root-character", "name": "德行", "color": "#FF7875", "info": "德行星系：谦逊、诚实 ..." },
+    { "id": "root-wisdom", "name": "智慧", "color": "#40A9FF", "info": "智慧星系：智力、人际关系、学科知识 ..." },
+    { "id": "root-physical", "name": "身体", "color": "#AD4E00", "info": "身体星系：身体健康、性教育、性健康 ..." },
+    { "id": "root-inner", "name": "心灵", "color": "#FF9C6E", "info": "心灵星系：心理健康、性格健康、人格健全 ..." },
+    { "id": "root-aesthetic", "name": "美育", "color": "#D3F261", "info": "美育星系：感知美、创造美、诠释美、赞美美 ..." },
+    { "id": "root-practice", "name": "实践", "color": "#B37FEB", "info": "实践星系：身体力行、实验、家务、劳作 ..." },
 
     { "id": "character-1", "name": "诚实", "color": "#FF7875", "info": "" },
     { "id": "character-2", "name": "谦虚", "color": "#FF7875", "info": "" },
@@ -162,11 +162,6 @@
   ],
   
   "links": [
-    { "source": "home-planet", "target": "character" },
-    { "source": "home-planet", "target": "wisdom" },
-    { "source": "home-planet", "target": "physical" },
-    { "source": "home-planet", "target": "inner" },
-    { "source": "home-planet", "target": "aesthetic" },
-    { "source": "home-planet", "target": "practice" }
+
   ]
 }
