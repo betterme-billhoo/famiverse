@@ -26,8 +26,13 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/>
 
-- We often use technology to serve others and companies. But in our quiet hours, we can also use it to build something meaningful for our own children and families—something that brings them more happiness, more possibilities.
-- We believe that the true purpose of family education is not to cram knowledge or chase test scores, but to nurture the **courage**, **capacity**, and **conviction** to pursue happiness, appreciate beauty, and face the future. When all the facts and formulas are forgotten, what remains in a child's heart—the warmth, the values, the sense of wonder—that is what matters most, and what we strive to cultivate.
+- **Powering Our Loved Ones**: We spend our days building for clients, companies, and strangers. But the greatest gift our skills can offer isn't to the world — it's to the ones waiting at home.
+
+- **Education Is Not About Grades**: We believe that the true purpose of education at home isn't to cram knowledge or chase test scores — it's to nurture in children the ability, courage, confidence, and strength to seek happiness, appreciate beauty, and face the future. Long after all knowledge fades, it's the quiet truths, the sense of beauty, and the lasting warmth in a child's heart that reveal the true purpose of family education.
+
+- **Co-Creating an Educational Univers**: We believe that every family is a shining, one-of-a-kind planet. In the Famiverse, we learn together, build together, and grow together. You're free to draw from the lived experiences of other families — and contribute your own parenting wisdom to light the way for others. When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
+
+- **Absolute Privacy**: We believe that an educational ecosystem should be open, transparent, and fair — where every family's privacy is sacred and fully respected. We are fully committed to safeguarding your family's privacy. The Famiverse does not collect or sell any private data from your family. The privacy data is always encrypted and stored on your own device and is not shared with any third parties. We ensure the privacy and data security of each family with the highest standards. Education can be co-built and shared, but privacy must be safeguarded.
 
 <br/><br/><br/>
 
@@ -122,6 +127,9 @@ mindmap
 
 ## Feature Vision
 
+- 这是一个无限宇宙。每个家庭都是宇宙中的一颗星球。每个知识点，也是这个宇宙中的星球。家庭成员在这个宇宙中共建共享教育知识和理念。
+- 所有人都有权利创建自己的星球或者星链（系统学习路径），也有权利投票选出先进的、实用的、被验证可靠的星球或星链。
+- 每个星球将作为一个插件接入宇宙。有 Famiverse 官方的插件、家庭自作的插件、专业教育人士提供的插件，甚至教育部门的官方插件。Different contributors can create a variety of plugin extensions tailored for children of different age groups.插件的制作非常容易上手，面向非技术人员。
 - A child's journey in this universe begins on the **Home Planet**, where they are guided by the system to meet their personal AI companion, **MOSS**.
 - The **Home Planet** is the heart of the system. It is the emotional and educational anchor of the universe—a private family hub where precious memories, stories, photos, struggles, and reflections are safely preserved.This planet belongs to the **Aesthetic Galaxy**,and the child will always start from here and return here.
 - With MOSS as their guide, the child learns of the existence of **five galactic systems**. They will be gently introduced to new planets within each system through a combination of structured guidance and free exploration. As they move between worlds, they learn, play, and apply their knowledge in meaningful ways.
@@ -131,7 +139,6 @@ mindmap
 - Using a structured knowledge framework, MOSS can **auto-generate new planets (plugins)** based on existing open content.While the internet is rich in information, it is often chaotic and unstructured. By following a well-designed, modular system, MOSS can transform this content into meaningful, structured learning journeys.
 - **Parents** play an active role in the universe. Through collaborative quests and co-learning challenges—like science experiments or family chores—parents and children progress together, unlocking new planets and earning rewards (points, tokens, etc.).Education becomes a shared adventure.
 - The system will offer **badges and blockchain-based certificates** to recognize learning achievements.These certificates aim to one day be **interoperable with real-world education credentials**,helping to bridge the gap between traditional systems and next-generation learning.
-- Each planet in the universe will function as a plugin, including official plugins provided by Famiverse, custom plugins created by families, plugins contributed by professional educators, and even official plugins from educational authorities.Different contributors can create a variety of plugin extensions tailored for children of different age groups.Plugin creation will be **intuitive and accessible**, empowering non-technical users to contribute.
 - The universe will be **integrated with traditional education systems**. Progress made in real life (e.g., learning multiplication in school) will reflect in the universe (e.g., unlocking the multiplication planet), and vice versa. Children will move freely between physical and virtual learning spaces.
 - Supported platforms include **Web, Android, iOS, AR, and VR**.In particular, **VR** will become a key platform for immersive and experiential learning in the future.
 
