@@ -25,7 +25,7 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/>
 
-- **Powering Our Loved Ones**: We spend our days building for clients, companies, and strangers.But the greatest gift our skills can offer isn't to the world — it's to the ones waiting at home.
+- **Powering Our Loved Ones**: We spend our days building for clients, companies, and strangers. But the greatest gift our skills can offer isn't to the world — it's to the ones waiting at home.
 
 - **Education Is Not About Grades**: We believe that the true purpose of education at home isn't to cram knowledge or chase test scores — it's to nurture in children the ability, courage, confidence, and strength to seek happiness, appreciate beauty, and face the future.Long after all knowledge fades, it's the quiet truths, the sense of beauty, and the lasting warmth in a child's heart that reveal the true purpose of family education.
 
