@@ -2,7 +2,7 @@
 
 [![访问 Demo](https://img.shields.io/badge/演示-Demo-green?style=for-the-badge)](https://famiverse.vercel.app/)
 
-一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面发展的家庭教育开源平台。woven from lines of code by loving parents.It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
+This is not just a platform—it's a home-spun galaxy, an open-source family education universe designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice**,woven from lines of code by loving parents.与家长一起培养幸福的孩子，而不是教育内卷的牺牲品。
 
 在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。
 
@@ -16,13 +16,13 @@ Born for family education, this universe invites children not only to learn, but
 
 ## Core Values
 
-- **为家人发电：** 我们常用技术服务公司、服务他人，但其实，技术同样可以回馈我们最亲爱的人。在为孩子和家人创造更多幸福与机会的过程中，技术可以成为一束温暖有爱的光。
+- **Powering Our Loved Ones:** We spend our days building for clients, companies, and strangers.But the greatest gift our skills can offer isn't to the world — it's to the ones waiting at home.
 
-- **教育的目的不是分数** 我们坚信，家庭教育的目的不是灌输知识，也不是内卷成绩，而是赋予孩子：**追求幸福、感知美好以及面对未来的勇气、能力与信心**。当所有的知识都被遗忘，那些仍然沉淀在孩子心底的真实、美好和温暖，才是家庭教育的真正意义。
+- **Education Is Not About Grades:** We believe that the true purpose of education at home isn't to cram knowledge or chase test scores — it's to nurture in children the **ability, courage, confidence, and strength to seek happiness, appreciate beauty, and face the future**.Long after all knowledge fades, it's the quiet truths, the sense of beauty, and the lasting warmth in a child's heart that reveal the true purpose of family education.
 
-- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在“家教宇宙（Famiverse）”，我们共建、共学、共享。你可以学习、借鉴其他家庭的宝贵经验，也可以贡献自己家的教育智慧。让我们用每个家庭的微光，照亮自己及更多家庭的未来。
+- **Co-Creating an Educational Univers:** We believe that every family is a shining, one-of-a-kind planet. In the Famiverse, we learn together, build together, and grow together.In the Famiverse, you're free to draw from the lived experiences of other families — and contribute your own parenting wisdom to light the way for others.When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
 
-- **绝对隐私：** 我们坚信，教育生态应当开源、透明、公正。“家教宇宙（Famiverse）” 不收集或出售任何家庭的隐私数据。隐私数据始终存储在您自己的设备上，不与任何第三方共享。我们以最严苛的方式保障每个家庭的隐私和数据安全。教育可以共建共享，隐私必须得到守护。
+- **Absolute Privacy:** We believe that an educational ecosystem should be open, transparent, and fair — where every family's privacy is sacred and fully respected.We are fully committed to safeguarding your family's privacy. The Famiverse does not collect or sell any private data from your family.The privacy data is always stored on your own device and is not shared with any third parties.We ensure the privacy and data security of each family with the highest standards.Education can be co-built and shared, but privacy must be safeguarded.
 
 <br/>
 
@@ -36,19 +36,19 @@ Born for family education, this universe invites children not only to learn, but
 - This platform is dedicated to **family education** and **lifelong learning**.
 - It is designed for two core users: **children** (from K12 through adulthood) and their **parents**.
 - It aims to effectively **ignite a child's inner drive**, **nurture self-directed learning**, and help them build healthy, lifelong learning habits.
-- 这个平台能够有效地帮助孩子实现德、智、体、心、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
+- This platform effectively helps children achieve a comprehensive and balanced development in **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice**, guiding them to grow into a happy person, rather than just someone who is considered "excellent" in the eyes of others.
 - It encourages **interdisciplinary thinking** and **practical skills**, helping children develop a mind that is curious, connected, and creative.
 - This platform is a **universe**—a truly boundless, ever-expanding cosmos.It gives both children and parents the sense of **infinite possibility**, of **mystery waiting to be discovered**, and of a lifelong journey worth continuing.
 
 <br/><br/><br/>
 
-## 项目状态 | Project Status ([English](README-en.md#Project-Status))
+## Project Status
 
-- [x] [立项，完成基本的 Git 配置和项目结构组织 | Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
-- [ ] [头脑风暴：家庭教育中，如何才能系统地将德、智、体、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
-- [ ] 原型设计
-- [ ] 技术架构确定
-- [ ] MVP 开发
+- [x] [Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
+- [ ] Brainstorming](https://github.com/betterme-billhoo/famiverse/discussions/20)
+- [ ] Prototype
+- [ ] Architecture
+- [ ] MVP development.
 
 <br/><br/><br/>
 
