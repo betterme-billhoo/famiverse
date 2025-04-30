@@ -25,9 +25,14 @@ Born for family education, this universe invites children not only to learn, but
 
 <br/>
 
-- We often use technology to serve others and companies. But in our quiet hours, we can also use it to build something meaningful for our own children and families—something that brings them more happiness, more possibilities.
-- We believe that the true purpose of family education is not to cram knowledge or chase test scores, but to nurture the **courage**, **capacity**, and **conviction** to pursue happiness, appreciate beauty, and face the future. When all the facts and formulas are forgotten, what remains in a child's heart—the warmth, the values, the sense of wonder—that is what matters most, and what we strive to cultivate.
-  
+- **Powering Our Loved Ones**: We spend our days building for clients, companies, and strangers.But the greatest gift our skills can offer isn't to the world — it's to the ones waiting at home.
+
+- **Education Is Not About Grades**: We believe that the true purpose of education at home isn't to cram knowledge or chase test scores — it's to nurture in children the ability, courage, confidence, and strength to seek happiness, appreciate beauty, and face the future.Long after all knowledge fades, it's the quiet truths, the sense of beauty, and the lasting warmth in a child's heart that reveal the true purpose of family education.
+
+- **Co-Creating an Educational Univers**: We believe that every family is a shining, one-of-a-kind planet. In the Famiverse, we learn together, build together, and grow together.In the Famiverse, you're free to draw from the lived experiences of other families — and contribute your own parenting wisdom to light the way for others.When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
+
+- **Absolute Privacy**: We believe that an educational ecosystem should be open, transparent, and fair — where every family's privacy is sacred and fully respected.We are fully committed to safeguarding your family's privacy. The Famiverse does not collect or sell any private data from your family.The privacy data is always stored on your own device and is not shared with any third parties.We ensure the privacy and data security of each family with the highest standards.Education can be co-built and shared, but privacy must be safeguarded.
+
 <br/><br/><br/>
 
 ## 目标 | Goal ([English](README-en.md#Goal))
