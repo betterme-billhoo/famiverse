@@ -4,10 +4,12 @@ import * as THREE from 'three';
 import React, { useRef, useState, useCallback } from 'react';
 import ForceGraph3D, { NodeObject } from 'react-force-graph-3d';
 
-import { useGraphData } from '../hooks/useGraphData';
 import { useStarBackground } from '../hooks/useStarBackground';
 import NodeInfoPanel from './NodeInfoPanel';
-import { NodeData, LinkData, ForceGraphRef } from '../types/graph';
+import { GraphData, NodeData, LinkData, ForceGraphRef } from '../types/graph';
+import { getGalaxies } from '../services/galaxyDAO';
+import { getPlanets } from '../services/planetDAO';
+import { useEffect } from 'react';
 
 export default function FamiverseGraph() {
   const fgRef: ForceGraphRef = useRef(undefined);
@@ -15,7 +17,8 @@ export default function FamiverseGraph() {
   const [initialFocusDone, setInitialFocusDone] = useState(false);
   const [isInteractingDisabled, setIsInteractingDisabled] = useState(true);
 
-  const graphData = useGraphData('/graph-data.json');
+  // const graphData = useGraphData('/graph-data.json');
+  const graphData = useFamiverseGraphData();
 
   useStarBackground(fgRef);
 
@@ -117,4 +120,72 @@ export default function FamiverseGraph() {
       />
     </div>
   );
+}
+
+// 新增：自定义 Hook，动态获取并组装 GraphData
+function useFamiverseGraphData(): GraphData {
+  const [graphData, setGraphData] = useState<GraphData>({ nodes: [], links: [] });
+
+  useEffect(() => {
+    async function fetchData() {
+      // 获取所有星系和行星
+      const galaxies = await getGalaxies();
+      const planets = await getPlanets();
+
+      // 组装节点
+      const nodes: NodeData[] = [];
+      // home-planet 节点
+      nodes.push({
+        id: 'home-planet',
+        name: '我的家庭',
+        color: '#FFFFFF',
+        info: '我的家庭',
+        x: 0, y: 0, z: 0
+      });
+
+      // 星系节点
+      galaxies.forEach(galaxy => {
+        nodes.push({
+          id: `galaxy-${galaxy.id}`,
+          name: galaxy.attributes.name,
+          color: '#69C0FF',
+          info: galaxy.attributes.description || ''
+        });
+      });
+
+      // 行星节点
+      planets.forEach(planet => {
+        nodes.push({
+          id: `planet-${planet.id}`,
+          name: planet.attributes.name,
+          color: '#FF7875',
+          info: planet.attributes.description || ''
+        });
+      });
+
+      // 组装 links
+      const links: LinkData[] = [];
+      // home-planet -> 各星系
+      galaxies.forEach(galaxy => {
+        links.push({
+          source: 'home-planet',
+          target: `galaxy-${galaxy.id}`
+        });
+      });
+      // 星系 -> 行星
+      planets.forEach(planet => {
+        if (planet.attributes.galaxy?.id) {
+          links.push({
+            source: `galaxy-${planet.attributes.galaxy.id}`,
+            target: `planet-${planet.id}`
+          });
+        }
+      });
+
+      setGraphData({ nodes, links });
+    }
+    fetchData();
+  }, []);
+
+  return graphData;
 }
