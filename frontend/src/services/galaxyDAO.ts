@@ -1,66 +1,28 @@
 import apiClient from './strapiClient';
 
-// 定义 Strapi 返回的嵌套类型
-interface StrapiPlanet {
-  id: string;
-  attributes: {
-    name: string;
-  };
-}
-
-interface StrapiGalaxyAttributes {
-  name: string;
-  description: string;
-  planets: {
-    data: StrapiPlanet[];
-  };
-}
-
-interface StrapiGalaxy {
-  id: string;
-  attributes: StrapiGalaxyAttributes;
-}
-
-interface StrapiFindResponse {
-  data: StrapiGalaxy[];
-}
-
-interface StrapiFindOneResponse {
-  data: StrapiGalaxy;
-}
-
 // 定义返回的 Galaxy 数据类型
 export interface Galaxy {
   id: string;
-  attributes: {
-    name: string;
-    description: string;
-    planets: { id: string; attributes: { name: string } }[];
-  };
+  name: string;
+  description: string;
+  // planets: { id: string; attributes: { name: string } }[];
 }
 
 // 获取所有 Galaxy
 export const getGalaxies = async (): Promise<Galaxy[]> => {
   try {
     const response = await apiClient.collection('galaxies').find();
-    const typedResponse = response as unknown as StrapiFindResponse;
+    const galaxies: Galaxy[] = [];
 
-    // 映射 Strapi 返回的数据到 Galaxy 类型
-    return typedResponse.data.map(galaxy => ({
-      id: galaxy.id,
-      attributes: {
-        name: galaxy.attributes.name,
-        description: galaxy.attributes.description,
-        planets: galaxy.attributes.planets?.data
-          ? galaxy.attributes.planets.data.map((planet) => ({
-              id: planet.id,
-              attributes: {
-                name: planet.attributes.name
-              }
-            }))
-          : []
-      }
-    }));
+    for (const item of response.data) {
+      galaxies.push({
+        id: item.id,
+        name: item.name,
+        description: item.description
+      })
+    }
+
+    return galaxies;
   } catch (error) {
     console.error('Error fetching galaxies:', error);
     throw error;
@@ -71,24 +33,14 @@ export const getGalaxies = async (): Promise<Galaxy[]> => {
 export const getGalaxyById = async (id: string): Promise<Galaxy> => {
   try {
     const response = await apiClient.collection('galaxies').findOne(id);
-    const typedResponse = response as unknown as StrapiFindOneResponse;
 
-    // 映射 Strapi 返回的数据到 Galaxy 类型
-    return {
-      id: typedResponse.data.id,
-      attributes: {
-        name: typedResponse.data.attributes.name,
-        description: typedResponse.data.attributes.description,
-        planets: typedResponse.data.attributes.planets?.data
-          ? typedResponse.data.attributes.planets.data.map((planet) => ({
-              id: planet.id,
-              attributes: {
-                name: planet.attributes.name
-              }
-            }))
-          : []
-      }
-    };
+    const galaxy = {
+      id: id,
+      name: response.data.name,
+      description: response.data.description
+    }
+
+    return galaxy;
   } catch (error) {
     console.error(`Error fetching galaxy with id ${id}:`, error);
     throw error;
