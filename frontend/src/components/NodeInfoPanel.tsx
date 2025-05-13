@@ -12,7 +12,7 @@ export default function NodeInfoPanel({ selectedNode }: NodeInfoPanelProps) {
       {selectedNode && ( // 内部仍然需要条件渲染内容
         <>
           <h3 className="text-lg font-bold mb-2">{selectedNode.name}</h3>
-          <p className="text-sm">{selectedNode.info}</p>
+          <p className="text-sm">{selectedNode.description}</p>
         </>
       )}
     </div>

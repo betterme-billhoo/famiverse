@@ -5,7 +5,7 @@ export interface Galaxy {
   id: string;
   name: string;
   description: string;
-  // planets: { id: string; attributes: { name: string } }[];
+  planets: { id: string }[];
 }
 
 // 获取所有 Galaxy
@@ -18,7 +18,8 @@ export const getGalaxies = async (): Promise<Galaxy[]> => {
       galaxies.push({
         id: item.id,
         name: item.name,
-        description: item.description
+        description: item.description,
+        planets: []
       })
     }
 
@@ -37,7 +38,8 @@ export const getGalaxyById = async (id: string): Promise<Galaxy> => {
     const galaxy = {
       id: id,
       name: response.data.name,
-      description: response.data.description
+      description: response.data.description,
+      planets: []
     }
 
     return galaxy;

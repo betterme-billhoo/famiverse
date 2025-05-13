@@ -6,7 +6,7 @@ export interface NodeData {
   id: string;
   name: string;
   color: string;
-  info: string;
+  description: string;
 
   x?: number;
   y?: number;
