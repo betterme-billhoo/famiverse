@@ -6,17 +6,48 @@ export interface Topic {
   attributes: {
     name: string;
     description: string;
-    content: any;
+    content: string;
     planet: { id: string; attributes: { name: string } };
   };
+}
+
+// 定义 Strapi 返回的嵌套类型
+interface StrapiPlanet {
+  id: string;
+  attributes: {
+    name: string;
+  };
+}
+
+interface StrapiTopicAttributes {
+  name: string;
+  description: string;
+  content: string;
+  planet: {
+    data: StrapiPlanet | null;
+  };
+}
+
+interface StrapiTopic {
+  id: string;
+  attributes: StrapiTopicAttributes;
+}
+
+interface StrapiFindResponse {
+  data: StrapiTopic[];
+}
+
+interface StrapiFindOneResponse {
+  data: StrapiTopic;
 }
 
 // 获取所有 Topic
 export const getTopics = async (): Promise<Topic[]> => {
   try {
     const response = await apiClient.collection('topics').find();
-    // 映射 Strapi 返回的数据到 Topic 类型
-    return (response.data as any[]).map((topic) => ({
+    const typedResponse = response as unknown as StrapiFindResponse;
+
+    return typedResponse.data.map(topic => ({
       id: topic.id,
       attributes: {
         name: topic.attributes.name,
@@ -42,18 +73,19 @@ export const getTopics = async (): Promise<Topic[]> => {
 export const getTopicById = async (id: string): Promise<Topic> => {
   try {
     const response = await apiClient.collection('topics').findOne(id);
-    // 映射 Strapi 返回的数据到 Topic 类型
+    const typedResponse = response as unknown as StrapiFindOneResponse;
+
     return {
-      id: response.data.id,
+      id: typedResponse.data.id,
       attributes: {
-        name: response.data.attributes.name,
-        description: response.data.attributes.description,
-        content: response.data.attributes.content,
-        planet: response.data.attributes.planet?.data
+        name: typedResponse.data.attributes.name,
+        description: typedResponse.data.attributes.description,
+        content: typedResponse.data.attributes.content,
+        planet: typedResponse.data.attributes.planet?.data
           ? {
-              id: response.data.attributes.planet.data.id,
+              id: typedResponse.data.attributes.planet.data.id,
               attributes: {
-                name: response.data.attributes.planet.data.attributes.name
+                name: typedResponse.data.attributes.planet.data.attributes.name
               }
             }
           : { id: '', attributes: { name: '' } }
@@ -66,7 +98,7 @@ export const getTopicById = async (id: string): Promise<Topic> => {
 };
 
 // 创建 Topic
-export const createTopic = async (topicData: { name: string; description: string; content: any; planet: string }): Promise<Topic> => {
+export const createTopic = async (topicData: { name: string; description: string; content: string; planet: string }): Promise<Topic> => {
   try {
     const response = await apiClient.collection('topics').create({ data: topicData });
     return {
@@ -80,7 +112,7 @@ export const createTopic = async (topicData: { name: string; description: string
 };
 
 // 更新 Topic
-export const updateTopic = async (id: string, topicData: { name: string; description: string; content: any; planet: string }): Promise<Topic> => {
+export const updateTopic = async (id: string, topicData: { name: string; description: string; content: string; planet: string }): Promise<Topic> => {
   try {
     const response = await apiClient.collection('topics').update(id, { data: topicData });
     return {

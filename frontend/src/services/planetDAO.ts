@@ -11,12 +11,52 @@ export interface Planet {
   };
 }
 
+// 定义 Strapi 返回的嵌套类型
+interface StrapiTopic {
+  id: string;
+  attributes: {
+    name: string;
+  };
+}
+
+interface StrapiGalaxy {
+  id: string;
+  attributes: {
+    name: string;
+  };
+}
+
+interface StrapiPlanetAttributes {
+  name: string;
+  description: string;
+  galaxy: {
+    data: StrapiGalaxy | null;
+  };
+  topics: {
+    data: StrapiTopic[];
+  };
+}
+
+interface StrapiPlanet {
+  id: string;
+  attributes: StrapiPlanetAttributes;
+}
+
+interface StrapiFindResponse {
+  data: StrapiPlanet[];
+}
+
+interface StrapiFindOneResponse {
+  data: StrapiPlanet;
+}
+
 // 获取所有 Planet
 export const getPlanets = async (): Promise<Planet[]> => {
   try {
     const response = await apiClient.collection('planets').find();
-    // 映射 Strapi 返回的数据到 Planet 类型
-    return (response.data as any[]).map((planet) => ({
+    const typedResponse = response as unknown as StrapiFindResponse;
+
+    return typedResponse.data.map(planet => ({
       id: planet.id,
       attributes: {
         name: planet.attributes.name,
@@ -30,7 +70,7 @@ export const getPlanets = async (): Promise<Planet[]> => {
             }
           : { id: '', attributes: { name: '' } },
         topics: planet.attributes.topics?.data
-          ? planet.attributes.topics.data.map((topic: any) => ({
+          ? planet.attributes.topics.data.map(topic => ({
               id: topic.id,
               attributes: {
                 name: topic.attributes.name
@@ -49,22 +89,23 @@ export const getPlanets = async (): Promise<Planet[]> => {
 export const getPlanetById = async (id: string): Promise<Planet> => {
   try {
     const response = await apiClient.collection('planets').findOne(id);
-    // 映射 Strapi 返回的数据到 Planet 类型
+    const typedResponse = response as unknown as StrapiFindOneResponse;
+
     return {
-      id: response.data.id,
+      id: typedResponse.data.id,
       attributes: {
-        name: response.data.attributes.name,
-        description: response.data.attributes.description,
-        galaxy: response.data.attributes.galaxy?.data
+        name: typedResponse.data.attributes.name,
+        description: typedResponse.data.attributes.description,
+        galaxy: typedResponse.data.attributes.galaxy?.data
           ? {
-              id: response.data.attributes.galaxy.data.id,
+              id: typedResponse.data.attributes.galaxy.data.id,
               attributes: {
-                name: response.data.attributes.galaxy.data.attributes.name
+                name: typedResponse.data.attributes.galaxy.data.attributes.name
               }
             }
           : { id: '', attributes: { name: '' } },
-        topics: response.data.attributes.topics?.data
-          ? response.data.attributes.topics.data.map((topic: any) => ({
+        topics: typedResponse.data.attributes.topics?.data
+          ? typedResponse.data.attributes.topics.data.map(topic => ({
               id: topic.id,
               attributes: {
                 name: topic.attributes.name
