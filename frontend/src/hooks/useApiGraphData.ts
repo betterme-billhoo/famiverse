@@ -21,12 +21,15 @@ export function useApiGraphData(): GraphData {
             const thePlanet = planets.find(p => p.id === planet.id);
 
             if(thePlanet) {
+
+              // Push planet to nodes
               nodes.push({
                 id: thePlanet.id,
                 name: thePlanet.name,
                 description: thePlanet.description,
                 color: '#FFFFFF'
               });
+              
             } else {
               console.error(`Planet with id ${planet.id} not found.`);
             }

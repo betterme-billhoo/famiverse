@@ -11,7 +11,14 @@ export interface Galaxy {
 // 获取所有 Galaxy
 export const getGalaxies = async (): Promise<Galaxy[]> => {
   try {
-    const response = await apiClient.collection('galaxies').find();
+    const response = await apiClient.collection('galaxies').find({
+      populate: {
+        planets : {
+          fields: ['id', 'name']
+        }
+      }
+    });
+
     const galaxies: Galaxy[] = [];
 
     for (const item of response.data) {
@@ -19,7 +26,7 @@ export const getGalaxies = async (): Promise<Galaxy[]> => {
         id: item.id,
         name: item.name,
         description: item.description,
-        planets: []
+        planets: item.planets
       })
     }
 
@@ -39,6 +46,8 @@ export const getGalaxyById = async (id: string): Promise<Galaxy> => {
       id: id,
       name: response.data.name,
       description: response.data.description,
+
+      // Fixme: Implement later
       planets: []
     }
 
