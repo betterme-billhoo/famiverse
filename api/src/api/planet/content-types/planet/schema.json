@@ -48,6 +48,11 @@
       "relation": "oneToMany",
       "target": "api::topic.topic",
       "mappedBy": "planet"
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "default": "#FFFFFF"
     }
   }
 }

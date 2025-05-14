@@ -43,6 +43,16 @@
       "relation": "oneToMany",
       "target": "api::planet.planet",
       "mappedBy": "galaxy"
+    },
+    "color": {
+      "type": "string",
+      "default": "#FFFFFF",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
