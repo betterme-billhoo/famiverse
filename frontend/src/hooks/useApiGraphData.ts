@@ -13,38 +13,9 @@ export function useApiGraphData(): GraphData {
   useEffect(() => {
     async function fetchData() {
       try {
-        const nodes: NodeData[] = [];
-        const links: LinkData[] = [];
-
-        const galaxies: Galaxy[] = await getGalaxies();
-        const planets: Planet[] = await getPlanets();
-
-        galaxies.forEach((galaxy, index) => {
-          for(const planet of galaxy.planets) {
-            const thePlanet = planets.find(p => p.id === planet.id);
-
-            if(thePlanet) {
-              if(index === 0) {
-                // 如果是每个星系的第一个星球，设置为 root 节点
-                thePlanet.id = 'root-' + thePlanet.id;
-              } 
-
-               // Push planet to nodes
-              nodes.push({
-                id: thePlanet.id,
-                name: thePlanet.name,
-                description: thePlanet.description,
-                color: '#FFFFFF'
-              });
-            } else {
-              console.error(`Planet with id ${planet.id} not found.`);
-            }
-          } // for planets
-        }); // for galaxies
-
-        // 计算其他节点
         const homePlanetId = 'home-planet';
         const homePlanetPos = { x: 0, y: 0, z: 0 }; // 中心节点位置
+
         const rootDistributionRadius = 4096; // root-* 节点围绕中心的分布半径
         const clusterRadiusX = 4096; // 簇内节点在盘面上的 X 方向分布半径 (椭圆长轴)
         const clusterRadiusZ = 512; // 簇内节点在盘面上的 Z 方向分布半径 (椭圆短轴)
@@ -53,13 +24,54 @@ export function useApiGraphData(): GraphData {
         const defaultSpread = 600;    // 其他节点的 XY 平面分布范围
         const defaultZSpread = 100;   // 其他节点的 Z 轴分布范围
 
-        // 定义每个 root 节点的倾斜角度 (单位：度) - 使用随机角度
-        const clusterTiltsInDegrees: { [key: string]: number } = {};
-        const rootNodeIds = nodes.filter(node => node.id.startsWith('root-')).map(node => node.id);
-        rootNodeIds.forEach(id => {
-            clusterTiltsInDegrees[id] = 360 * (Math.random() - 0.5); // 为每个找到的 root 节点生成随机倾斜
+        const nodes: NodeData[] = [];
+        const links: LinkData[] = [];
+
+        // 添加 Home Planet
+        nodes.push({
+          id: homePlanetId,
+          name: 'Home Planet',
+          description: 'The home planet of the universe.',
+          color: '#FFFFFF',
+          galaxyId: 'none',
+          galaxyName: 'none',
+          isCentralNode: false
         });
 
+        const galaxies: Galaxy[] = await getGalaxies();
+        const planets: Planet[] = await getPlanets();
+
+        for(const galaxy of galaxies) {
+          galaxy.planets.forEach((planet, index) => {
+            const thePlanet = planets.find(p => p.id === planet.id);
+
+            if(thePlanet) {
+              // Push planet to nodes
+              nodes.push({
+                id: thePlanet.id,
+                name: thePlanet.name,
+                description: thePlanet.description,
+                color: '#FFFFFF',
+                galaxyId: galaxy.id,
+                galaxyName: galaxy.name,
+                isCentralNode: index === 0 // 每个星系的第一个星球，我们设定为该星系的中心，后续所有星球都围绕该中心进行分布
+              });
+            } else {
+              console.error(`Planet with id ${planet.id} not found.`);
+            }
+          }); // for planets
+        } // for galaxies
+
+        // 将六大星系的中心星球筛选出来
+        const rootNodes = nodes.filter(node => node.isCentralNode);
+
+        // 定义每个中心星球的倾斜角度 (单位：度) - 使用随机角度
+        const clusterTiltsInDegrees: { [key: string]: number } = {};
+
+        // 为每个中心节点随机一个倾斜角度
+        rootNodes.forEach(planet => {
+            clusterTiltsInDegrees[planet.id] = 360 * (Math.random() - 0.5);
+        });
 
         // 将角度转换为弧度
         const clusterTilts: { [key: string]: number } = {};
@@ -67,8 +79,7 @@ export function useApiGraphData(): GraphData {
           clusterTilts[key] = degreesToRadians(clusterTiltsInDegrees[key]);
         }
 
-        // 动态计算 root-* 节点的位置 (保持在 XZ 平面分布)
-        const rootNodes = nodes.filter(node => node.id.startsWith('root-'));
+        // 动态计算中心节点的位置 (保持在 XZ 平面分布)
         const calculatedRootPositions: { [key: string]: { x: number; y: number; z: number } } = {};
         const angleStep = rootNodes.length > 0 ? (2 * Math.PI) / rootNodes.length : 0; // 计算角度步长（弧度），处理 rootNodes 为空的情况
 
@@ -76,7 +87,7 @@ export function useApiGraphData(): GraphData {
           const angle = index * angleStep;
           calculatedRootPositions[node.id] = {
             x: homePlanetPos.x + rootDistributionRadius * Math.cos(angle),
-            y: homePlanetPos.y, // Root 节点本身保持在 y=0 平面
+            y: homePlanetPos.y, // 中心本身保持在 y=0 平面
             z: homePlanetPos.z + rootDistributionRadius * Math.sin(angle),
           };
         });
@@ -94,31 +105,28 @@ export function useApiGraphData(): GraphData {
           if (node.id === homePlanetId) {
             position = homePlanetPos;
           }
-          // 2. 处理 root-* 节点
+          // 2. 处理中心星球
           else if (calculatedRootPositions[node.id]) {
             position = calculatedRootPositions[node.id];
           }
-          // 3. 处理簇节点
+          // 3. 处理其余同星系的星球
           else {
-            // --- 确定节点属于哪个簇 ---
-            if (node.id.startsWith('character-')) {
+            // 确定星球属于哪个星系
+            if (node.galaxyName.startsWith('德行')) {
               rootNodeId = 'root-character';
-            } else if (node.id.startsWith('wisdom-')) {
+            } else if (node.galaxyName.startsWith('智慧')) {
               rootNodeId = 'root-wisdom';
-            } else if (node.id.startsWith('physical-')) {
+            } else if (node.galaxyName.startsWith('身体')) {
               rootNodeId = 'root-physical';
-            } else if (node.id.startsWith('inner-')) {
+            } else if (node.galaxyName.startsWith('心灵')) {
               rootNodeId = 'root-inner';
-            } else if (node.id.startsWith('aesthetic-')) {
+            } else if (node.galaxyName.startsWith('美育')) {
               rootNodeId = 'root-aesthetic';
-            } else if (node.id.startsWith('practice-')) {
+            } else if (node.galaxyName.startsWith('实践')) {
               rootNodeId = 'root-practice';
             }
-            // ... 可以继续添加其他簇的判断
-            // --- 结束 确定节点属于哪个簇 ---
 
-
-            // 如果是簇成员，并且其根节点位置已计算，则围绕根节点按椭圆、螺旋、倾斜、厚度分布
+            // 如果同星系，并且其中心星球位置已计算，则围绕中心按椭圆、螺旋、倾斜、厚度分布
             if (rootNodeId && calculatedRootPositions[rootNodeId]) {
               const rootPos = calculatedRootPositions[rootNodeId];
               const tiltAngle = clusterTilts[rootNodeId] || 0; // 获取倾斜角度，默认为0
@@ -158,7 +166,8 @@ export function useApiGraphData(): GraphData {
                 z: rootPos.z + rotated_dz + thickness_dz  // 倾斜后的Z + 厚度引起的Z偏移
               };
             }
-            // 4. 其他节点使用默认随机位置 (position 变量已在开始时初始化)
+
+            // 4. 其他星球使用默认随机位置 (position 变量已在开始时初始化)
           }
 
           return {
