@@ -581,6 +581,15 @@ export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
       }>;
     planet: Schema.Attribute.Relation<'manyToOne', 'api::planet.planet'>;
     publishedAt: Schema.Attribute.DateTime;
+    resources: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

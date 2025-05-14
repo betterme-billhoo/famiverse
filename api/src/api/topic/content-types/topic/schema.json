@@ -50,6 +50,21 @@
       "relation": "manyToOne",
       "target": "api::planet.planet",
       "inversedBy": "topics"
+    },
+    "resources": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
