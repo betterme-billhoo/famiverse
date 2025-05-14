@@ -4,10 +4,10 @@ import * as THREE from 'three';
 import React, { useRef, useState, useCallback } from 'react';
 import ForceGraph3D, { NodeObject } from 'react-force-graph-3d';
 
-import { useGraphData } from '../hooks/useGraphData';
 import { useStarBackground } from '../hooks/useStarBackground';
 import NodeInfoPanel from './NodeInfoPanel';
 import { NodeData, LinkData, ForceGraphRef } from '../types/graph';
+import { useApiGraphData } from '@/hooks/useApiGraphData';
 
 export default function FamiverseGraph() {
   const fgRef: ForceGraphRef = useRef(undefined);
@@ -15,7 +15,7 @@ export default function FamiverseGraph() {
   const [initialFocusDone, setInitialFocusDone] = useState(false);
   const [isInteractingDisabled, setIsInteractingDisabled] = useState(true);
 
-  const graphData = useGraphData('/graph-data.json');
+  const graphData = useApiGraphData();
 
   useStarBackground(fgRef);
 

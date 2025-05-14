@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "planets",
+  "info": {
+    "singularName": "planet",
+    "pluralName": "planets",
+    "displayName": "Planet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 64,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "unique": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "maxLength": 4096
+    },
+    "galaxy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::galaxy.galaxy",
+      "inversedBy": "planets"
+    },
+    "topics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::topic.topic",
+      "mappedBy": "planet"
+    },
+    "color": {
+      "type": "string",
+      "required": false,
+      "default": "#FFFFFF"
+    }
+  }
+}

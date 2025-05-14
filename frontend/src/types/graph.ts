@@ -6,7 +6,10 @@ export interface NodeData {
   id: string;
   name: string;
   color: string;
-  info: string;
+  description: string;
+  galaxyId: string; 
+  galaxyName: string;
+  isCentre: boolean;
 
   x?: number;
   y?: number;

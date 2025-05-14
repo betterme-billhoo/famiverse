@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galaxies",
+  "info": {
+    "singularName": "galaxy",
+    "pluralName": "galaxies",
+    "displayName": "Galaxy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 32,
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "unique": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "maxLength": 4096
+    },
+    "planets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::planet.planet",
+      "mappedBy": "galaxy"
+    },
+    "color": {
+      "type": "string",
+      "default": "#FFFFFF",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    }
+  }
+}
