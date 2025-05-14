@@ -49,10 +49,10 @@ Born for family education, this universe invites children not only to learn, but
 ## 项目状态 | Project Status ([English](README-en.md#Project-Status))
 
 - [X] [立项，完成基本的 Git 配置和项目结构组织 | Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
-- [ ] [头脑风暴：家庭教育中，如何才能系统地将德、智、体、心、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
-- [ ] 原型设计
-- [ ] 技术架构确定
-- [ ] MVP 开发
+- [ ] WIP: [头脑风暴：家庭教育中，如何才能系统地将德、智、体、心、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
+- [X] 技术架构确定
+- [ ] WIP: 原型设计
+- [ ] WIP: MVP 开发
 
 <br/><br/><br/>
   
