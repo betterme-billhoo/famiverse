@@ -4,6 +4,7 @@ import apiClient from './strapiClient';
 export interface Galaxy {
   id: string;
   name: string;
+  color: string;
   description: string;
   planets: { id: string }[];
 }
@@ -14,7 +15,7 @@ export const getGalaxies = async (): Promise<Galaxy[]> => {
     const response = await apiClient.collection('galaxies').find({
       populate: {
         planets : {
-          fields: ['id', 'name']
+          fields: ['id', 'name', 'color']
         }
       }
     });
@@ -25,6 +26,7 @@ export const getGalaxies = async (): Promise<Galaxy[]> => {
       galaxies.push({
         id: item.id,
         name: item.name,
+        color: item.color,
         description: item.description,
         planets: item.planets
       })
@@ -40,11 +42,20 @@ export const getGalaxies = async (): Promise<Galaxy[]> => {
 // 获取单个 Galaxy
 export const getGalaxyById = async (id: string): Promise<Galaxy> => {
   try {
-    const response = await apiClient.collection('galaxies').findOne(id);
+    const response = await apiClient.collection('galaxies').findOne(id,
+      {
+        populate: {
+          planets : {
+            fields: ['id', 'name', 'color']
+          }
+        }
+      }
+    );
 
     const galaxy = {
       id: id,
       name: response.data.name,
+      color: response.data.color,
       description: response.data.description,
 
       // Fixme: Implement later

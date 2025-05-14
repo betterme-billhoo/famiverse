@@ -51,7 +51,7 @@ export function useApiGraphData(): GraphData {
                 id: thePlanet.id,
                 name: thePlanet.name,
                 description: thePlanet.description,
-                color: '#FFFFFF',
+                color: galaxy.color, // TODO: Use galaxy color as the main color and generate variations.
                 galaxyId: galaxy.id,
                 galaxyName: galaxy.name,
                 isCentre: index === 0 // 每个星系的第一个星球，我们设定为该星系的中心，后续所有星球都围绕该中心进行分布
