@@ -51,7 +51,7 @@
     },
     "color": {
       "type": "string",
-      "required": true,
+      "required": false,
       "default": "#FFFFFF"
     }
   }

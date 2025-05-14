@@ -496,9 +496,7 @@ export interface ApiPlanetPlanet extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    color: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'#FFFFFF'>;
+    color: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#FFFFFF'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
