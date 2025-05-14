@@ -9,7 +9,7 @@ export interface NodeData {
   description: string;
   galaxyId: string; 
   galaxyName: string;
-  isCentralNode: boolean;
+  isCentre: boolean;
 
   x?: number;
   y?: number;

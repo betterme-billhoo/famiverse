@@ -35,7 +35,7 @@ export function useApiGraphData(): GraphData {
           color: '#FFFFFF',
           galaxyId: 'none',
           galaxyName: 'none',
-          isCentralNode: false
+          isCentre: false
         });
 
         const galaxies: Galaxy[] = await getGalaxies();
@@ -54,7 +54,7 @@ export function useApiGraphData(): GraphData {
                 color: '#FFFFFF',
                 galaxyId: galaxy.id,
                 galaxyName: galaxy.name,
-                isCentralNode: index === 0 // 每个星系的第一个星球，我们设定为该星系的中心，后续所有星球都围绕该中心进行分布
+                isCentre: index === 0 // 每个星系的第一个星球，我们设定为该星系的中心，后续所有星球都围绕该中心进行分布
               });
             } else {
               console.error(`Planet with id ${planet.id} not found.`);
@@ -63,13 +63,13 @@ export function useApiGraphData(): GraphData {
         } // for galaxies
 
         // 将六大星系的中心星球筛选出来
-        const rootNodes = nodes.filter(node => node.isCentralNode);
+        const centreNodes = nodes.filter(node => node.isCentre);
 
         // 定义每个中心星球的倾斜角度 (单位：度) - 使用随机角度
         const clusterTiltsInDegrees: { [key: string]: number } = {};
 
         // 为每个中心节点随机一个倾斜角度
-        rootNodes.forEach(planet => {
+        centreNodes.forEach(planet => {
             clusterTiltsInDegrees[planet.id] = 360 * (Math.random() - 0.5);
         });
 
@@ -81,9 +81,9 @@ export function useApiGraphData(): GraphData {
 
         // 动态计算中心节点的位置 (保持在 XZ 平面分布)
         const calculatedRootPositions: { [key: string]: { x: number; y: number; z: number } } = {};
-        const angleStep = rootNodes.length > 0 ? (2 * Math.PI) / rootNodes.length : 0; // 计算角度步长（弧度），处理 rootNodes 为空的情况
+        const angleStep = centreNodes.length > 0 ? (2 * Math.PI) / centreNodes.length : 0; // 计算角度步长（弧度），处理 rootNodes 为空的情况
 
-        rootNodes.forEach((node, index) => {
+        centreNodes.forEach((node, index) => {
           const angle = index * angleStep;
           calculatedRootPositions[node.id] = {
             x: homePlanetPos.x + rootDistributionRadius * Math.cos(angle),
@@ -111,19 +111,11 @@ export function useApiGraphData(): GraphData {
           }
           // 3. 处理其余同星系的星球
           else {
-            // 确定星球属于哪个星系
-            if (node.galaxyName.startsWith('德行')) {
-              rootNodeId = 'root-character';
-            } else if (node.galaxyName.startsWith('智慧')) {
-              rootNodeId = 'root-wisdom';
-            } else if (node.galaxyName.startsWith('身体')) {
-              rootNodeId = 'root-physical';
-            } else if (node.galaxyName.startsWith('心灵')) {
-              rootNodeId = 'root-inner';
-            } else if (node.galaxyName.startsWith('美育')) {
-              rootNodeId = 'root-aesthetic';
-            } else if (node.galaxyName.startsWith('实践')) {
-              rootNodeId = 'root-practice';
+            for(const galaxy of galaxies) {
+              if(node.galaxyId === galaxy.id){
+                rootNodeId = galaxy.planets[0].id;
+                break;
+              }
             }
 
             // 如果同星系，并且其中心星球位置已计算，则围绕中心按椭圆、螺旋、倾斜、厚度分布
