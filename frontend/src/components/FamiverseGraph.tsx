@@ -5,9 +5,9 @@ import React, { useRef, useState, useCallback } from 'react';
 import ForceGraph3D, { NodeObject } from 'react-force-graph-3d';
 
 import { useStarBackground } from '../hooks/useStarBackground';
-import NodeInfoPanel from './NodeInfoPanel';
 import { NodeData, LinkData, ForceGraphRef } from '../types/graph';
 import { useApiGraphData } from '@/hooks/useApiGraphData';
+import MOSS from './MOSS';
 
 export default function FamiverseGraph() {
   const fgRef: ForceGraphRef = useRef(undefined);
@@ -74,11 +74,20 @@ export default function FamiverseGraph() {
   }, []);
 
   // Hnadle the click event for nodes
+  const [mossVisible, setMossVisible] = useState(false); // 新增：MOSS 显示状态
+  const [mossPlanetInfo, setMossPlanetInfo] = useState<{ name: string; description: string } | undefined>(undefined); // 新增：MOSS 展示内容
+
   const handleNodeClick = useCallback((node: NodeObject<NodeData>) => {
     if (isInteractingDisabled) return; // 如果交互被禁用，则不处理点击
 
     const nodeData = node as NodeData;
     setSelectedNode(nodeData);
+
+    // 新增：如果是星球节点，弹出 MOSS
+    if (nodeData && nodeData.name && nodeData.description !== undefined) {
+        setMossPlanetInfo({ name: nodeData.name, description: nodeData.description });
+        setMossVisible(true);
+    }
 
     // Focus on the node
     if (typeof node.x === 'number' && typeof node.y === 'number' && typeof node.z === 'number') {
@@ -96,9 +105,19 @@ export default function FamiverseGraph() {
     }
   }, [isInteractingDisabled]); // 添加 isInteractingDisabled 作为依赖
 
+  // 新增：关闭 MOSS 的方法
+  const handleMossClose = () => {
+      setMossVisible(false);
+  };
+
   return (
     <div className="w-full h-screen relative overflow-hidden">
-      <NodeInfoPanel selectedNode={selectedNode} />
+      <MOSS 
+        visible={mossVisible} 
+        planetInfo={mossPlanetInfo} 
+        onClose={handleMossClose}
+        onOpen={() => setMossVisible(true)} 
+      />
 
       <ForceGraph3D<NodeData, LinkData>
         ref={fgRef}
