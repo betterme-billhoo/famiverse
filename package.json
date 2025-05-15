@@ -16,7 +16,7 @@
 
   "build": {
     "appId": "com.famiverse.app",
-    "icon": "logo.png",
+    "icon": "logo.ico",
     "files": [
       "electron-main.js",
       "frontend/**",
