@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
+const http = require('http');
 
 let mainWindow;
 let apiProcess;
@@ -18,37 +19,51 @@ function createWindow() {
 
   mainWindow.maximize();
   mainWindow.show();
-
-  // 这里假设前端启动在 http://localhost:3000
   mainWindow.loadURL('http://localhost:3000');
 }
 
 function startApi() {
-  // 启动 Strapi
   apiProcess = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'dev'], {
     cwd: path.join(__dirname, 'api'),
     env: process.env,
     stdio: 'inherit',
-    shell: true,
+    //shell: true
   });
 }
 
 function startFrontend() {
-  // 启动 Next.js
   frontendProcess = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'dev'], {
     cwd: path.join(__dirname, 'frontend'),
     env: process.env,
     stdio: 'inherit',
-    shell: true,
+    //shell: true
   });
+}
+
+// 轮询端口是否可用
+function waitForPort(port, callback) {
+  const tryConnect = () => {
+    const req = http.get({ hostname: 'localhost', port, timeout: 1000 }, (res) => {
+      res.destroy();
+      callback();
+    });
+    req.on('error', () => setTimeout(tryConnect, 1000));
+    req.on('timeout', () => {
+      req.destroy();
+      setTimeout(tryConnect, 1000);
+    });
+  };
+  tryConnect();
 }
 
 app.whenReady().then(() => {
   startApi();
-  startFrontend();
-
-  // 等待前端服务启动后再创建窗口（简单延时，生产建议用端口探测）
-  setTimeout(createWindow, 2000);
+  waitForPort(1337, () => {
+    startFrontend();
+    waitForPort(3000, () => {
+      createWindow();
+    });
+  });
 });
 
 app.on('window-all-closed', () => {
@@ -56,8 +71,13 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 
-  if (apiProcess) apiProcess.kill();
-  if (frontendProcess) frontendProcess.kill();
+  if (apiProcess) {
+    apiProcess.kill();
+  }
+
+  if (frontendProcess) {
+    frontendProcess.kill();
+  }
 });
 
 app.on('before-quit', () => {
