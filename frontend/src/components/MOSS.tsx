@@ -28,8 +28,8 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => 
             ? `fixed top-1/2 left-1/2 z-50 transition-all duration-300 ${
                 visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
               }`
-            : `fixed top-0 right-0 h-full z-50 transition-transform duration-300 ${
-                visible ? 'translate-x-0' : 'translate-x-full pointer-events-none'
+            : `fixed left-0 bottom-0 w-full z-50 transition-transform duration-300 ${
+                visible ? 'translate-y-0' : 'translate-y-full pointer-events-none'
               }`
         }
         style={
@@ -39,15 +39,15 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => 
                 height: '80vh',
                 maxWidth: 800,
                 maxHeight: 700,
-                transform: visible ? 'translate(-50%, -50%) scale(1)' : 'translate(100%, -50%) scale(0.8)',
+                transform: visible ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, 100%) scale(0.8)',
                 borderRadius: 24,
                 background: 'rgba(255,255,255,0.95)',
                 boxShadow: '0 8px 40px rgba(0,0,0,0.25)'
               }
-            : { width: 400, maxWidth: '90vw' }
+            : { height: '60%', maxHeight: '90vh' }
         }
       >
-        <div className={`relative bg-white dark:bg-black/90 h-full rounded-l-xl shadow-2xl border-l border-gray-200 dark:border-gray-700 p-6 flex flex-col items-start ${isMaximized ? 'rounded-2xl border-l-0' : ''}`}>
+        <div className={`relative bg-white dark:bg-black/90 w-full h-full rounded-t-xl shadow-2xl border-t border-gray-200 dark:border-gray-700 p-6 flex flex-col items-start ${isMaximized ? 'rounded-2xl border-t-0' : ''}`}>
           {/* 右上角按钮 */}
           <div className="absolute top-3 right-3 flex gap-2">
             {!isMaximized && (

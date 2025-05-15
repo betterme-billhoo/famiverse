@@ -81,7 +81,6 @@ export default function FamiverseGraph() {
 
     const nodeData = node as NodeData;
 
-    // 新增：如果是星球节点，弹出 MOSS
     if (nodeData && nodeData.name && nodeData.description !== undefined) {
         setMossPlanetInfo({ name: nodeData.name, description: nodeData.description });
         setMossVisible(true);
@@ -89,7 +88,7 @@ export default function FamiverseGraph() {
 
     // Focus on the node
     if (typeof node.x === 'number' && typeof node.y === 'number' && typeof node.z === 'number') {
-      const distance = 30;
+      const distance = 50;
       const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
       const newPos = { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio };
 
