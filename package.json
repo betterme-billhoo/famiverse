@@ -1,4 +1,14 @@
 {
+  "name": "家教宇宙 Famiverse",
+  "version": "0.3.0",
+  "description": "家教宇宙 Famiverse",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bill Hoo",
+  "license": "Apache-2.0",
   "devDependencies": {
     "electron": "^36.2.0"
   }
