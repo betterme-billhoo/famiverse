@@ -1,15 +1,74 @@
 {
-  "name": "家教宇宙 Famiverse",
+
+  "name": "famiverse",
+
   "version": "0.3.0",
+
   "description": "家教宇宙 Famiverse",
+
   "main": "electron-main.js",
+
   "scripts": {
+
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "pack": "electron-builder --dir",
+
+    "dist": "electron-builder --win --mac",
+
+    "dist:win": "electron-builder --win",
+
+    "dist:mac": "electron-builder --mac"
+
   },
+
+  "build": {
+
+    "appId": "com.famiverse.app",
+
+    "files": [
+
+      "electron-main.js",
+
+      "frontend/**",
+
+      "api/**",
+
+      "node_modules/**",
+
+      "package.json"
+
+    ],
+
+    "extraResources": [
+
+      {
+
+        "from": "api/public/uploads",
+
+        "to": "uploads"
+
+      }
+
+    ]
+
+  },
+
   "author": "Bill Hoo",
+
   "license": "Apache-2.0",
+
   "devDependencies": {
-    "electron": "^36.2.0"
+
+    "cross-env": "^7.0.3",
+
+    "electron": "^36.2.0",
+
+    "electron-builder": "^26.0.12"
+
   }
+
 }
+
