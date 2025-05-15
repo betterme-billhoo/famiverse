@@ -8,12 +8,15 @@ let frontendProcess;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    fullscreen: true,
+    show: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
     },
   });
+
+  mainWindow.maximize();
+  mainWindow.show();
 
   // 这里假设前端启动在 http://localhost:3000
   mainWindow.loadURL('http://localhost:3000');
@@ -21,7 +24,7 @@ function createWindow() {
 
 function startApi() {
   // 启动 Strapi
-  apiProcess = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'start'], {
+  apiProcess = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'dev'], {
     cwd: path.join(__dirname, 'api'),
     env: process.env,
     stdio: 'inherit',
@@ -31,7 +34,7 @@ function startApi() {
 
 function startFrontend() {
   // 启动 Next.js
-  frontendProcess = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'start'], {
+  frontendProcess = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'dev'], {
     cwd: path.join(__dirname, 'frontend'),
     env: process.env,
     stdio: 'inherit',
@@ -44,13 +47,14 @@ app.whenReady().then(() => {
   startFrontend();
 
   // 等待前端服务启动后再创建窗口（简单延时，生产建议用端口探测）
-  setTimeout(createWindow, 8000);
+  setTimeout(createWindow, 2000);
 });
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+
   if (apiProcess) apiProcess.kill();
   if (frontendProcess) frontendProcess.kill();
 });
