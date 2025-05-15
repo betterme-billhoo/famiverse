@@ -13,6 +13,7 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true,
     },
+    autoHideMenuBar: true
   });
 
   mainWindow.maximize();
