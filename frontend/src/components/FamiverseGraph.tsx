@@ -11,7 +11,6 @@ import MOSS from './MOSS';
 
 export default function FamiverseGraph() {
   const fgRef: ForceGraphRef = useRef(undefined);
-  const [selectedNode, setSelectedNode] = useState<NodeData | null>(null);
   const [initialFocusDone, setInitialFocusDone] = useState(false);
   const [isInteractingDisabled, setIsInteractingDisabled] = useState(true);
 
@@ -81,7 +80,6 @@ export default function FamiverseGraph() {
     if (isInteractingDisabled) return; // 如果交互被禁用，则不处理点击
 
     const nodeData = node as NodeData;
-    setSelectedNode(nodeData);
 
     // 新增：如果是星球节点，弹出 MOSS
     if (nodeData && nodeData.name && nodeData.description !== undefined) {
