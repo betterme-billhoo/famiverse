@@ -2,13 +2,13 @@
 
 [![访问 Demo](https://img.shields.io/badge/演示-Demo-green?style=for-the-badge)](https://famiverse.vercel.app/)
 
-一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面、综合发展的家庭教育开源平台。woven from lines of code by loving parents.与家长一起培养幸福的孩子，而不是教育内卷的牺牲品。
+一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面、综合发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭教育小宇宙。与家长一起培养幸福的孩子。
 
 在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。
 
 <br/>
 
-This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
+This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children.
 
 Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
 
@@ -20,7 +20,7 @@ Born for family education, this universe invites children not only to learn, but
 
 - **Education Is Not About Grades:** We believe that the true purpose of education at home isn't to cram knowledge or chase test scores — it's to nurture in children the **ability, courage, confidence, and strength to seek happiness, appreciate beauty, and face the future**.当所有的知识都被遗忘，那些仍然沉淀在孩子心底的真实、美好和温暖，才是家庭教育真正的意义。
 
-- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在 “家教宇宙（Famiverse）” ，我们共建、共学、共享。In the Famiverse, you're free to draw from the lived experiences of other families — and contribute your own parenting wisdom to light the way for others.When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
+- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在 “家教宇宙（Famiverse）” ，我们共建、共学、共享。你可以学习、借鉴其他家庭的宝贵经验，也可以贡献自己的教育智慧。When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
 
 - **Absolute Privacy:** We believe that an educational ecosystem should be open, transparent, and fair — where every family's privacy is sacred and fully respected.We are fully committed to safeguarding your family's privacy. The Famiverse does not collect or sell any private data from your family.隐私数据始终存储在您的个人设备上，不与任何第三方共享。We ensure the privacy and data security of each family with the highest standards.Education can be co-built and shared, but privacy must be safeguarded.
 
@@ -42,8 +42,8 @@ Born for family education, this universe invites children not only to learn, but
 - 这个平台的用户是：孩子（主要是小学到高中毕业前）和孩子的家长。
 - It aims to effectively **ignite a child's inner drive**, **nurture self-directed learning**, and help them build healthy, lifelong learning habits.
 - This platform effectively helps children achieve a comprehensive and balanced development in **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice**, guiding them to grow into a happy person, rather than just someone who is considered "excellent" in the eyes of others.
-- It encourages **interdisciplinary thinking** and **practical skills**, helping children develop a mind that is curious, connected, and creative.
-- 这个平台是一个宇宙，一个真正的、无限延展的宇宙。It gives both children and parents the sense of **infinite possibility**, of **mystery waiting to be discovered**, and of a lifelong journey worth continuing.
+- 这个平台能够有效地培养孩子全面、综合的，跨学科的思维习惯和实践能力。
+- 这个平台是一个真正的、无限延展的宇宙。It gives both children and parents the sense of **infinite possibility**, of **mystery waiting to be discovered**, and of a lifelong journey worth continuing.
 
 <br/><br/><br/>
 
@@ -51,7 +51,7 @@ Born for family education, this universe invites children not only to learn, but
 
 - [x] [Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
 - [ ] WIP: [头脑风暴：家庭教育中，如何才能系统地将德、智、体、心、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
-- [x] 技术架构确定
+- [ ] 技术架构确定
 - [ ] WIP: 原型设计
 - [ ] WIP: MVP 开发
 
