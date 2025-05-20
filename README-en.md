@@ -51,7 +51,7 @@ Born for family education, this universe invites children not only to learn, but
 
 - [x] [Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
 - [ ] WIP: [头脑风暴：家庭教育中，如何才能系统地将德、智、体、心、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
-- [ ] 技术架构确定
+- [ ] WIP：技术架构
 - [ ] WIP: 原型设计
 - [ ] WIP: MVP 开发
 
@@ -59,20 +59,21 @@ Born for family education, this universe invites children not only to learn, but
 
 ## Core Architecture
 
-- **六大星系**：这个宇宙由六大星系组成：德行、智慧（包括但限于智力）、身体、心灵、美育和实践。各星系的具体名称待定。
+- **六大星系**：这个宇宙由六大星系组成：德行、智慧、身体、心灵、美育和实践。各星系的具体名称待定。
   - Character Galaxy: Encompassing virtues such as humility, honesty, trustworthiness, courtesy, integrity, and more.
-  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、跨学科思维、生活知识、常识、人生哲学等等。
-  - 身体星系：包括但不限于身体健康、体格健硕、性教育、性健康等等。
+  - 智慧星系：包括但不限于智力、沟通能力、迁移能力、人际关系、跨学科思维、时间管理、生活常识、人生哲学等等。
+  - 身体星系：包括但不限于身体健康、性教育、性健康等等。
   - 心灵星系：包括但不限于心理健康、性格健康、人格健全、认识自己、与自己独处等等。
   - Aesthetics Galaxy: A universe of perceiving, creating, sharing, and celebrating beauty in all its forms.
-  - 实践星系：包括但不限于动手实验、家务、劳作、项目管理等等。
-- **家庭星球**：这是孩子进入这个宇宙的起点，家长和孩子将在这里起航，并可以随时返回。It will become a private archive of the family's growth, memories, and reflections—a personal knowledge base and emotional treasure chest, like a privatized version of a family-only social space.
+  - 实践星系：包括但不限于智慧星系中所有需要实践落地的内容、实验、劳作、家务、项目管理、时间管理等等。
+- **家庭星球**：这是孩子进入这个宇宙的起点，家长和孩子将在这里起航，并可以随时返回。这里将记录这个家庭的点点滴滴，成为家庭私有的知识库和记忆宝库，满藏家庭的私有数据、成长回忆和珍贵记录。—a personal knowledge base and emotional treasure chest, like a privatized version of a family-only social space.
 - **The Infinite Planets**:
   - 每个星系中有无数的星球，每个星球代表一个知识点、实践内容、亲子互动或一套结构化的课程。Planets are connected to one another across and within systems through rich, interdisciplinary relationships and discovery-based challenges. This fosters habits of **cross-disciplinary thinking** and **creative exploration**.
-  - 技术上，每个星球是一个插件。Famiverse 官方将标配最初的、最实用的一些插件。but over time the plugin system will be opened to the community—allowing developers, educators, and even non-technical contributors to create and share educational content.Together, we will co-create an ever-expanding, structured knowledge universe.
-  - 星球与星球之间存在星链。星链是相关的知识、实践之间的跃迁路线，用于对相关性以及顺序性进行有效地抽象。
-- **MOSS, the AI Companion**: Every child who enters the universe will be accompanied by an intelligent, personal companion named **MOSS**—an AI partner that supports, responds, and grows with them throughout their journey.
-- **Exploration System**: Includes both a **fog of war** system and a **journey tracker**.It will track each child’s learning path, interests, and progress, providing meaningful, data-driven insights.These insights will be shared with the child to foster self-awareness, and with parents for thoughtful guidance.MOSS will offer **personalized recommendations** based on these insights, supporting both the learner and their family.
+  - 每个星球是一个独立的包。每个人都可以在自己的电脑上轻松制作自己的星球并放进宇宙。如果愿意，每个人，不论是普通家长、开发者、教育人士，还是官方机构，都可以上传自己的星球到 Famiverse 服务器，将教育经验共享给其他家庭。
+  - 每个人都可以在 Famiverse 的星球市场搜索并下载自己感兴趣的星球放进自己的家教宇宙。可以在市场中查看该星球的评分和其他家庭的实际使用感受，也可以分享自己对该星球的实际体验感受并打分供其他家庭参考。
+  - 星球与星球之间存在星链。星链是相关知识、实践之间的跃迁路线，用于对知识的相关性以及顺序性进行抽象。
+- **人工智能 MOSS**：进入这个宇宙的家长和孩子将获得一个人工智能伙伴 MOSS，它将是解读整个宇宙的入口，也是促进家庭教育落地和有效化的关键所在。
+- **探索度系统**：包含迷雾系统和轨迹系统等。记录孩子在宇宙中的探索轨迹、兴趣等，并由 MOSS 进行科学的分析和评估。These insights will be shared with the child to foster self-awareness, and with parents for thoughtful guidance.MOSS 还将通过对这些数据的分析，为孩子自己以及家长分别提供个性化建议。
 
 <br/><br/><br/>
 
@@ -147,8 +148,8 @@ mindmap
 
 ## Who Is It For?
 
-- **Children**: Primarily designed for learners from elementary to high school, though the universe continues to grow with them—supporting deeper exploration even through university and beyond.
-- **Parents**: Active companions on the journey. They enter the universe alongside their children, taking part in collaborative family missions and practical challenges, nurturing a cycle of positive, connected, and joyful parent-child learning.
+- **孩子**：小学到高中阶段为主，但仍支持成年后继续使用宇宙进行更高阶知识的探索。
+- **家长**：与孩子共同进入宇宙，共同完成家庭任务和实践挑战，引导家庭进行良性循环的亲子教育。
 
 <br/><br/><br/>
 
