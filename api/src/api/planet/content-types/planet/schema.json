@@ -43,16 +43,37 @@
       "target": "api::galaxy.galaxy",
       "inversedBy": "planets"
     },
-    "topics": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::topic.topic",
-      "mappedBy": "planet"
-    },
     "color": {
       "type": "string",
       "required": false,
       "default": "#FFFFFF"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "sequential",
+        "free-net"
+      ],
+      "default": "sequential",
+      "required": true
+    },
+    "phases": {
+      "type": "enumeration",
+      "enum": [
+        "na",
+        "first",
+        "second",
+        "third",
+        "fourth"
+      ],
+      "required": true,
+      "default": "na"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "planet"
     }
   }
 }
