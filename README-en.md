@@ -2,7 +2,7 @@
 
 [![访问 Demo](https://img.shields.io/badge/演示-Demo-green?style=for-the-badge)](https://famiverse.vercel.app/)
 
-一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面、综合发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭教育小宇宙。与家长一起培养幸福的孩子。
+This is not just a platform—it's a home-spun galaxy, an open-source family education universe designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice**,woven from lines of code by loving parents.Nurturing a happy child with the parents.
 
 在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。
 
@@ -50,10 +50,10 @@ Born for family education, this universe invites children not only to learn, but
 ## Project Status
 
 - [x] [Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
-- [ ] WIP: [头脑风暴：家庭教育中，如何才能系统地将德、智、体、心、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
-- [ ] WIP：技术架构
-- [ ] WIP: 原型设计
-- [ ] WIP: MVP 开发
+- [ ] WIP: Brainstorming](https://github.com/betterme-billhoo/famiverse/discussions/20)
+- [ ] WIP: Technical Architecture
+- [ ] WIP: Prototype Design
+- [ ] WIP: MVP Development
 
 <br/><br/><br/>
 
@@ -181,6 +181,15 @@ We welcome contributors from all backgrounds and disciplines:
 - 👩‍🏫 Parents, Teachers, and Education Professionals
 
 Please read the full [Contributor Guide](CONTRIBUTION-en.md) to learn how to get involved.
+
+<br/><br/><br/>
+
+## 贡献者列表
+
+<div align="center"><a href="https://github.com/betterme-billhoo/famiverse/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=betterme-billhoo/famiverse" />
+    </a>
+</div>
 
 <br/><br/><br/>
 

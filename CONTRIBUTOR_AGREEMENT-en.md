@@ -24,7 +24,7 @@ Create an open, sustainable, and unlimited family education platform.Create an o
 - The platform focuses on family education and lifelong learning.
 - The users of this platform: Children (from elementary school through university, and even into adulthood) and their parents.
 - This platform is designed to effectively ignite children's intrinsic motivation, foster their ability for self-directed learning, and help them develop lifelong learning habits.
-- 这个平台能够有效地帮助孩子实现德、智、体、心、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
+- This platform effectively helps children achieve a comprehensive and balanced development in **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice**, guiding them to grow into a happy person, rather than just someone who is considered "excellent" in the eyes of others.
 - This platform effectively fosters children's holistic, interdisciplinary thinking habits and practical abilities, guiding them to grow into well-rounded and comprehensively developed individuals.
 - his platform will be a universe — a true, ever-expanding cosmos.This universe will evoke a sense of infinity, mystery, and an endless desire to explore and learn in both children and parents.
 
