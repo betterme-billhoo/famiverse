@@ -178,6 +178,16 @@ mindmap
 
 <br/><br/><br/>
 
+## 贡献者列表
+
+<div align="center">
+    <a href="https://github.com/betterme-billhoo/famiverse/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=betterme-billhoo/famiverse" />
+    </a>
+</div>
+
+<br/><br/><br/>
+
 ## 开源协议 | License ([English](README-en.md#License))
 
 本项目基于 [Apache 2.0 License](LICENSE) 协议开源，支持商业使用、修改和再发布。
