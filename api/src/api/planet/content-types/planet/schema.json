@@ -53,6 +53,25 @@
       "type": "string",
       "required": false,
       "default": "#FFFFFF"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "What",
+        "Where",
+        "When",
+        "Who",
+        "Why",
+        "How",
+        "Free"
+      ],
+      "default": "Free",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
