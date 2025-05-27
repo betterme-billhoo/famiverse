@@ -41,13 +41,13 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => 
                 maxHeight: 700,
                 transform: visible ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, 100%) scale(0.8)',
                 borderRadius: 24,
-                background: 'rgba(255,255,255,0.95)',
+                background: 'rgba(51, 51, 51, 0.8)', // 修改为深灰色半透明，透明度80%
                 boxShadow: '0 8px 40px rgba(0,0,0,0.25)'
               }
             : { height: '60%', maxHeight: '90vh' }
         }
       >
-        <div className={`relative bg-white dark:bg-black/90 w-full h-full rounded-t-xl shadow-2xl border-t border-gray-200 dark:border-gray-700 p-6 flex flex-col items-start ${isMaximized ? 'rounded-2xl border-t-0' : ''}`}>
+        <div className={`relative bg-gray-800/80 w-full h-full rounded-t-xl shadow-2xl border-t border-gray-700 p-6 flex flex-col items-start ${isMaximized ? 'rounded-2xl border-t-0' : ''}`}>
           {/* 右上角按钮 */}
           <div className="absolute top-3 right-3 flex gap-2">
             {!isMaximized && (
