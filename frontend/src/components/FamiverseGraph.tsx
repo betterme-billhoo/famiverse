@@ -13,6 +13,7 @@ export default function FamiverseGraph() {
   const fgRef: ForceGraphRef = useRef(undefined);
   const [initialFocusDone, setInitialFocusDone] = useState(false);
   const [isInteractingDisabled, setIsInteractingDisabled] = useState(true);
+  const [currentFocusedNodeId, setCurrentFocusedNodeId] = useState<string | null>(null);
 
   const graphData = useApiGraphData();
 
@@ -42,6 +43,8 @@ export default function FamiverseGraph() {
         // 动画结束后启用交互
         setTimeout(() => {
           setIsInteractingDisabled(false);
+          // 设置当前对准的星球为 home-planet
+          setCurrentFocusedNodeId('home-planet');
         }, animationDuration + 100); // 稍微延迟一点确保动画完成
 
         setInitialFocusDone(true);
@@ -72,27 +75,37 @@ export default function FamiverseGraph() {
     return mesh;
   }, []);
 
-  // Hnadle the click event for nodes
-  const [mossVisible, setMossVisible] = useState(false); // 新增：MOSS 显示状态
+  const [mossVisible, setMossVisible] = useState(false);
   const [mossPlanetInfo, setMossPlanetInfo] = useState<{ name: string; description: string } | undefined>(undefined); // 新增：MOSS 展示内容
 
   const handleNodeClick = useCallback((node: NodeObject<NodeData>) => {
-    if (isInteractingDisabled) return; // 如果交互被禁用，则不处理点击
+    if (isInteractingDisabled)
+      return;
 
     const nodeData = node as NodeData;
+    const nodeId = nodeData.id as string;
 
     // 先保存节点信息，但不立即显示 MOSS
     if (nodeData && nodeData.name && nodeData.description !== undefined) {
         setMossPlanetInfo({ name: nodeData.name, description: nodeData.description });
-
     }
 
-    // Focus on the node
+    // 检查是否点击的是当前已对准的星球
+    if (nodeId === currentFocusedNodeId) {
+      // 如果是同一个星球，直接显示MOSS弹窗，无需动画
+      setMossVisible(true);
+      return;
+    }
+
+    // 如果是不同的星球，需要进行动画
     if (typeof node.x === 'number' && typeof node.y === 'number' && typeof node.z === 'number') {
       const distance = 50;
       const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
       const newPos = { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio };
       const animationDuration = 3000; // 点击星球的动画时长
+
+      // 禁用交互，防止动画过程中的操作
+      setIsInteractingDisabled(true);
 
       fgRef.current?.cameraPosition(
         newPos,
@@ -100,18 +113,23 @@ export default function FamiverseGraph() {
         animationDuration
       );
       
-      // 在动画完成后显示 MOSS 弹窗
+      // 在动画完成后显示 MOSS 弹窗，并更新当前对准的星球
       if (nodeData && nodeData.name && nodeData.description !== undefined) {
         setTimeout(() => {
           setMossVisible(true);
+          setIsInteractingDisabled(false); // 重新启用交互
+          setCurrentFocusedNodeId(nodeId); // 更新当前对准的星球ID
         }, animationDuration + 100); // 稍微延迟一点确保动画完成
       }
     } else {
       console.warn('Node coordinates are not available yet for focusing.');
+      // 如果无法获取坐标，直接显示 MOSS 弹窗
+      if (nodeData && nodeData.name && nodeData.description !== undefined) {
+        setMossVisible(true);
+      }
     }
-  }, [isInteractingDisabled]); // 添加 isInteractingDisabled 作为依赖
+  }, [isInteractingDisabled, currentFocusedNodeId]); // 添加 currentFocusedNodeId 作为依赖
 
-  // 新增：关闭 MOSS 的方法
   const handleMossClose = () => {
       setMossVisible(false);
   };
