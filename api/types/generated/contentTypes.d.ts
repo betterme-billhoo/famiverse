@@ -525,6 +525,16 @@ export interface ApiPlanetPlanet extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     topics: Schema.Attribute.Relation<'oneToMany', 'api::topic.topic'>;
+    Type: Schema.Attribute.Enumeration<
+      ['What', 'Where', 'When', 'Who', 'Why', 'How', 'Free']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'Free'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
