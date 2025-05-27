@@ -1,4 +1,4 @@
-# Famiverse
+# 家庭星球 | Famiverse
 
 [![访问 Demo](https://img.shields.io/badge/演示-Demo-green?style=for-the-badge)](https://famiverse.vercel.app/)
 
@@ -20,9 +20,9 @@ Born for family education, this universe invites children not only to learn, but
 
 - **Education Is Not About Grades:** We believe that the true purpose of education at home isn't to cram knowledge or chase test scores — it's to nurture in children the **ability, courage, confidence, and strength to seek happiness, appreciate beauty, and face the future**.当所有的知识都被遗忘，那些仍然沉淀在孩子心底的真实、美好和温暖，才是家庭教育真正的意义。
 
-- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在 “家教宇宙（Famiverse）” ，我们共建、共学、共享。你可以学习、借鉴其他家庭的宝贵经验，也可以贡献自己的教育智慧。When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
+- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在 “家庭星球（Famiverse）” ，我们共建、共学、共享。你可以学习、借鉴其他家庭的宝贵经验，也可以贡献自己的教育智慧。When each family dares to shine, we create a galaxy of hope — lighting the future for generations to come.
 
-- **Absolute Privacy:** We believe that an educational ecosystem should be open, transparent, and fair — where every family's privacy is sacred and fully respected.We are fully committed to safeguarding your family's privacy. The Famiverse does not collect or sell any private data from your family.隐私数据始终存储在您的个人设备上，不与任何第三方共享。We ensure the privacy and data security of each family with the highest standards.Education can be co-built and shared, but privacy must be safeguarded.
+- **Absolute Privacy:** We believe that an educational ecosystem should be open, transparent, and fair — where every family's privacy is sacred and fully respected.“家庭星球（Famiverse）” 不收集或出售任何家庭的隐私数据。隐私数据始终存储在您的个人设备上，不与任何第三方共享。We ensure the privacy and data security of each family with the highest standards.Education can be co-built and shared, but privacy must be safeguarded.
 
 <br/>
 
@@ -70,7 +70,7 @@ Born for family education, this universe invites children not only to learn, but
 - **The Infinite Planets**:
   - 每个星系中有无数的星球，每个星球代表一个知识点、实践内容、亲子互动或一套结构化的课程。Planets are connected to one another across and within systems through rich, interdisciplinary relationships and discovery-based challenges. This fosters habits of **cross-disciplinary thinking** and **creative exploration**.
   - 每个星球是一个独立的包。每个人都可以在自己的电脑上轻松制作自己的星球并放进宇宙。如果愿意，每个人，不论是普通家长、开发者、教育人士，还是官方机构，都可以上传自己的星球到 Famiverse 服务器，将教育经验共享给其他家庭。
-  - 每个人都可以在 Famiverse 的星球市场搜索并下载自己感兴趣的星球放进自己的家教宇宙。可以在市场中查看该星球的评分和其他家庭的实际使用感受，也可以分享自己对该星球的实际体验感受并打分供其他家庭参考。
+  - 每个人都可以在 Famiverse 的星球市场搜索并下载自己感兴趣的星球放进自己的家庭星球。可以在市场中查看该星球的评分和其他家庭的实际使用感受，也可以分享自己对该星球的实际体验感受并打分供其他家庭参考。
   - 星球与星球之间存在星链。星链是相关知识、实践之间的跃迁路线，用于对知识的相关性以及顺序性进行抽象。
 - **人工智能 MOSS**：进入这个宇宙的家长和孩子将获得一个人工智能伙伴 MOSS，它将是解读整个宇宙的入口，也是促进家庭教育落地和有效化的关键所在。
 - **探索度系统**：包含迷雾系统和轨迹系统等。记录孩子在宇宙中的探索轨迹、兴趣等，并由 MOSS 进行科学的分析和评估。These insights will be shared with the child to foster self-awareness, and with parents for thoughtful guidance.MOSS 还将通过对这些数据的分析，为孩子自己以及家长分别提供个性化建议。
