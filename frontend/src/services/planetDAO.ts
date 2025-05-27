@@ -12,26 +12,38 @@ export interface Planet {
 // 获取所有 Planet
 export const getPlanets = async (): Promise<Planet[]> => {
   try {
-    const response = await apiClient.collection('planets').find({
-      populate: {
-        galaxy: {
-          fields: ['id', 'name'],
+    let allPlanets: Planet[] = [];
+    let page = 1;
+    let hasMore = true;
+    
+    while (hasMore) {
+      const response = await apiClient.collection('planets').find({
+        populate: {
+          galaxy: {
+            fields: ['id', 'name'],
+          }
+        },
+        pagination: {
+          page: page,
+          pageSize: 100
         }
-      }
-    });
-
-    const planets: Planet[] = [];
-
-    for (const item of response.data) {
-      planets.push({
+      });
+      
+      const planets = response.data.map(item => ({
         id: item.id,
         name: item.name,
         description: item.description,
         galaxy: item.galaxy
-      })
+      }));
+      
+      allPlanets = [...allPlanets, ...planets];
+      
+      // 检查是否还有更多页
+      hasMore = (response.meta?.pagination?.page ?? 0) < (response.meta?.pagination?.pageCount ?? 0);
+      page++;
     }
 
-    return planets;
+    return allPlanets;
   } catch (error) {
     console.error('Error fetching planets:', error);
     throw error;
