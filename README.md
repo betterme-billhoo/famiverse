@@ -1,14 +1,14 @@
-# 家教宇宙 | Famiverse
+# 家庭星球 | Famiverse
 
 [![访问 Demo](https://img.shields.io/badge/演示-Demo-green?style=for-the-badge)](https://famiverse.vercel.app/)
 
-一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面、综合发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭小宇宙。与家长一起培养幸福的孩子，而不是教育内卷的牺牲品。
+一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育及实践全面、综合发展的家庭教育开源平台。是一群有爱的父母用代码为孩子编织的家庭教育小宇宙。与家长一起培养幸福的孩子。
 
 它致力于激发孩子的内驱力，培养他们自主探索的能力和终身学习的好习惯。在 **德行、智慧、身体、心灵、美育与实践** 六大星系中，孩子将与家长一起组队，像星际探险者一样自由探索，全面、综合地发展。  
 
 <br/>
 
-This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children, not mere victims of the educational rat race.
+This is not just a platform—it's a home-spun galaxy, an open-source family education platform designed to foster the comprehensive development of **Character, Wisdom, Physical Well-being, Aesthetics, and Hands-on Practice**—woven from lines of code by loving parents. It's a constellation built for those they cherish most, helping parents nurture happy children.
 
 Born for family education, this universe invites children not only to learn, but to awaken—to ignite their inner drive, explore the vast cosmos of curiosity, and plant the seeds of lifelong learning beneath stars filled with wonder. Across five luminous galaxies — **Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice** — children and their parents journey as explorers, side by side, charting their own constellations of meaning. They grow whole not through pressure, but through play, purpose, and shared discovery.
 
@@ -19,9 +19,9 @@ Born for family education, this universe invites children not only to learn, but
   
 - **教育的目的不是分数** 我们坚信，家庭教育的目的不是灌输知识，也不是内卷成绩，而是赋予孩子：**追求幸福、感知美好以及面对未来的勇气、能力与信心**。当所有的知识都被遗忘，那些仍然沉淀在孩子心底的真实、美好和温暖，才是家庭教育真正的意义。
   
-- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在 “家教宇宙（Famiverse）” ，我们共建、共学、共享。你可以学习、借鉴其他家庭的宝贵经验，也可以贡献自己家的教育智慧。让我们用每个家庭的微光，照亮自己及更多家庭的未来。
+- **共建共享教育宇宙：** 我们坚信，每个家庭都是独一无二的闪亮星球，在 “家庭星球（Famiverse）” ，我们共建、共学、共享。你可以学习、借鉴其他家庭的宝贵经验，也可以贡献自己的教育智慧。让我们用每个家庭的微光，照亮自己及更多家庭的未来。
   
-- **绝对隐私：** 我们坚信，教育生态应当开源、透明、公正。“家教宇宙（Famiverse）” 不收集或出售任何家庭的隐私数据。隐私数据始终存储在您的个人设备上，不与任何第三方共享。我们以最严苛的方式保障每个家庭的隐私和数据安全。教育可以共建共享，隐私必须得到守护。
+- **绝对隐私：** 我们坚信，教育生态应当开源、透明、公正。“家庭星球（Famiverse）” 不收集或出售任何家庭的隐私数据。隐私数据始终存储在您的个人设备上，不与任何第三方共享。我们以最严苛的方式保障每个家庭的隐私和数据安全。教育可以共建共享，隐私必须得到守护。
 
 <br/>
 
@@ -41,8 +41,8 @@ Born for family education, this universe invites children not only to learn, but
 - 这个平台的用户是：孩子（主要是小学到高中毕业前）和孩子的家长。
 - 这个平台能够有效地激发孩子的内驱力，培养孩子的自学能力，帮助他们养成终身学习的好习惯。
 - 这个平台能够有效地帮助孩子实现德、智、体、心、美、劳全面、均衡发展，引导他们成长为一个幸福的人，而不仅仅是“别人眼中优秀的人”。
-- 这个平台能够有效地培养孩子全面的、综合的、跨学科的思维习惯和实践能力，引导他成长为一个全面的、综合发展的人。
-- 这个平台是一个宇宙，一个真正的、无限延展的宇宙。这个宇宙带给孩子和家长的感觉是“无限的”，“充满未知的”，以及“始终想要继续探索、学习的”。
+- 这个平台能够有效地培养孩子全面、综合的，跨学科的思维习惯和实践能力。
+- 这个平台是一个真正的、无限延展的宇宙。这个宇宙带给孩子和家长的感觉是“无限的”，“充满未知的”，以及“始终想要继续探索、学习的”。
 
 <br/><br/><br/>
 
@@ -50,27 +50,28 @@ Born for family education, this universe invites children not only to learn, but
 
 - [X] [立项，完成基本的 Git 配置和项目结构组织 | Project starts. Git things setup](https://github.com/betterme-billhoo/famiverse/issues/4)
 - [ ] WIP: [头脑风暴：家庭教育中，如何才能系统地将德、智、体、心、美、劳全面、均衡发展落地？](https://github.com/betterme-billhoo/famiverse/discussions/20)
-- [X] 技术架构确定
+- [ ] WIP：技术架构
 - [ ] WIP: 原型设计
 - [ ] WIP: MVP 开发
 
 <br/><br/><br/>
   
 ## 核心架构 | Core Architecture ([English](README-en.md#Core-Architecture))
-- **六大星系**：这个宇宙由六大星系组成：德行、智慧（包括但限于智力）、身体、心灵、美育和实践。各星系的具体名称待定。
+- **六大星系**：这个宇宙由六大星系组成：德行、智慧、身体、心灵、美育和实践。各星系的具体名称待定。
   - 德行星系：包括但不限于谦逊、诚实、守信、礼让、廉洁等等。
-  - 智慧星系：包括但不限于智力、人际关系、非暴力沟通、跨学科思维、生活知识、常识、人生哲学等等。
-  - 身体星系：包括但不限于身体健康、体格健硕、性教育、性健康等等。
+  - 智慧星系：包括但不限于智力、沟通能力、迁移能力、人际关系、跨学科思维、时间管理、生活常识、人生哲学等等。
+  - 身体星系：包括但不限于身体健康、性教育、性健康等等。
   - 心灵星系：包括但不限于心理健康、性格健康、人格健全、认识自己、与自己独处等等。
   - 美育星系：包括但不限于感知美、创造美、分享美、赞美美等等。
-  - 实践星系：包括但不限于动手实验、家务、劳作、项目管理等等。
-- **家庭星球**：这是孩子进入这个宇宙的起点，家长和孩子将在这里起航，并可以随时返回。这里将记录这个家庭的点点滴滴，成为家庭私有的知识库和记忆宝库，满藏家庭的私有数据、回忆和珍贵记录。类似私有化的 QQ 空间。
+  - 实践星系：包括但不限于智慧星系中所有需要实践落地的内容、实验、劳作、家务、项目管理、时间管理等等。
+- **家庭星球**：这是孩子进入这个宇宙的起点，家长和孩子将在这里起航，并可以随时返回。这里将记录这个家庭的点点滴滴，成为家庭私有的知识库和记忆宝库，满藏家庭的私有数据、成长回忆和珍贵记录。类似私有化的 QQ 空间。
 - **无限星球**：
   - 每个星系中有无数的星球，每个星球代表一个知识点、实践内容、亲子互动或一套结构化的课程。星球与星球之间、星球与星系之间，有着千丝万缕的联系和谜题挑战，培养孩子进行跨学科思考的习惯。
-  - 技术上，每个星球是一个插件。Famiverse 官方将标配最初的、最实用的一些插件。后续将开放插件系统，允许开发者，甚至是不懂技术的教育人士，自行提供教育内容。最终形成无限的、结构化的知识宇宙。
-  - 星球与星球之间存在星链。星链是相关的知识、实践之间的跃迁路线，用于对相关性以及顺序性进行有效地抽象。
-- **人工智能 MOSS**：进入这个宇宙的孩子将获得一个人工智能伙伴 MOSS，它将陪伴孩子探索整个宇宙。
-- **探索系统**：包含迷雾系统和轨迹记录系统。记录孩子在宇宙中的探索轨迹、兴趣等，并进行科学的分析和评估。将报告及时反馈给孩子自己，也供家长参考。人工智能 MOSS 将通过对这些数据的分析，为孩子自己以及家长分别提供个性化建议。
+  - 每个星球是一个独立的包。每个人都可以在自己的电脑上轻松制作自己的星球并放进宇宙。如果愿意，每个人，不论是普通家长、开发者、教育人士，还是官方机构，都可以上传自己的星球到 Famiverse 服务器，将教育经验共享给其他家庭。
+  - 每个人都可以在 Famiverse 的星球市场搜索并下载自己感兴趣的星球放进自己的家庭星球。可以在市场中查看该星球的评分和其他家庭的实际使用感受，也可以分享自己对该星球的实际体验感受并打分供其他家庭参考。
+  - 星球与星球之间存在星链。星链是相关知识、实践之间的跃迁路线，用于对知识的相关性以及顺序性进行抽象。
+- **人工智能 MOSS**：进入这个宇宙的家长和孩子将获得一个人工智能伙伴 MOSS，它将是解读整个宇宙的入口，也是促进家庭教育落地和有效化的关键所在。
+- **探索度系统**：包含迷雾系统和轨迹系统等。记录孩子在宇宙中的探索轨迹、兴趣等，并由 MOSS 进行科学的分析和评估。将报告及时反馈给孩子自己，也供家长参考。MOSS 还将通过对这些数据的分析，为孩子自己以及家长分别提供个性化建议。
 
 <br/><br/><br/>
 
@@ -143,8 +144,8 @@ mindmap
 <br/><br/><br/>
 
 ## 用户 | Who Is It For? ([English](README-en.md#Who-Is-It-For))
-- **孩子**：小学到高中阶段为主，大学以后依然可以继续使用宇宙进行更高阶的探索。
-- **家长**：与孩子共同进入宇宙，共同完成家庭任务和实践挑战，引导进行良性循环的亲子教育。
+- **孩子**：小学到高中阶段为主，但仍支持成年后继续使用宇宙进行更高阶知识的探索。
+- **家长**：与孩子共同进入宇宙，共同完成家庭任务和实践挑战，引导家庭进行良性循环的亲子教育。
 
 <br/><br/><br/>
 
@@ -174,6 +175,16 @@ mindmap
 - 👩‍🏫 家长、老师、教育部门
 
 请阅读完整的 [贡献者指南 (TO DO)](CONTRIBUTION.md) 了解如何参与进来。
+
+<br/><br/><br/>
+
+## 贡献者列表
+
+<div align="center">
+    <a href="https://github.com/betterme-billhoo/famiverse/graphs/contributors">
+        <img src="https://contrib.rocks/image?repo=betterme-billhoo/famiverse" />
+    </a>
+</div>
 
 <br/><br/><br/>
 

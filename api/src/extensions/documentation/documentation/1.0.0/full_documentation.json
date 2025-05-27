@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-05-15T02:21:20.358Z"
+    "x-generation-date": "2025-05-26T14:19:15.036Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4233,6 +4233,18 @@
                 "color": {
                   "type": "string"
                 },
+                "Type": {
+                  "type": "string",
+                  "enum": [
+                    "What",
+                    "Where",
+                    "When",
+                    "Who",
+                    "Why",
+                    "How",
+                    "Free"
+                  ]
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -4827,7 +4839,8 @@
         "properties": {
           "data": {
             "required": [
-              "name"
+              "name",
+              "Type"
             ],
             "type": "object",
             "properties": {
@@ -4864,6 +4877,18 @@
               },
               "color": {
                 "type": "string"
+              },
+              "Type": {
+                "type": "string",
+                "enum": [
+                  "What",
+                  "Where",
+                  "When",
+                  "Who",
+                  "Why",
+                  "How",
+                  "Free"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -4924,7 +4949,8 @@
       "Planet": {
         "type": "object",
         "required": [
-          "name"
+          "name",
+          "Type"
         ],
         "properties": {
           "id": {
@@ -5669,6 +5695,18 @@
                     "color": {
                       "type": "string"
                     },
+                    "Type": {
+                      "type": "string",
+                      "enum": [
+                        "What",
+                        "Where",
+                        "When",
+                        "Who",
+                        "Why",
+                        "How",
+                        "Free"
+                      ]
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -5795,6 +5833,18 @@
           },
           "color": {
             "type": "string"
+          },
+          "Type": {
+            "type": "string",
+            "enum": [
+              "What",
+              "Where",
+              "When",
+              "Who",
+              "Why",
+              "How",
+              "Free"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -6767,6 +6817,18 @@
               },
               "color": {
                 "type": "string"
+              },
+              "Type": {
+                "type": "string",
+                "enum": [
+                  "What",
+                  "Where",
+                  "When",
+                  "Who",
+                  "Why",
+                  "How",
+                  "Free"
+                ]
               },
               "createdAt": {
                 "type": "string",
