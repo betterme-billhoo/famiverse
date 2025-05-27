@@ -81,9 +81,10 @@ export default function FamiverseGraph() {
 
     const nodeData = node as NodeData;
 
+    // 先保存节点信息，但不立即显示 MOSS
     if (nodeData && nodeData.name && nodeData.description !== undefined) {
         setMossPlanetInfo({ name: nodeData.name, description: nodeData.description });
-        setMossVisible(true);
+
     }
 
     // Focus on the node
@@ -91,12 +92,20 @@ export default function FamiverseGraph() {
       const distance = 50;
       const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
       const newPos = { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio };
+      const animationDuration = 3000; // 点击星球的动画时长
 
       fgRef.current?.cameraPosition(
         newPos,
         { x: node.x, y: node.y, z: node.z },
-        2500
+        animationDuration
       );
+      
+      // 在动画完成后显示 MOSS 弹窗
+      if (nodeData && nodeData.name && nodeData.description !== undefined) {
+        setTimeout(() => {
+          setMossVisible(true);
+        }, animationDuration + 100); // 稍微延迟一点确保动画完成
+      }
     } else {
       console.warn('Node coordinates are not available yet for focusing.');
     }
