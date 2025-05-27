@@ -44,7 +44,7 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => 
                 background: 'rgba(51, 51, 51, 0.8)', // 修改为深灰色半透明，透明度80%
                 boxShadow: '0 8px 40px rgba(0,0,0,0.25)'
               }
-            : { height: '60%', maxHeight: '90vh' }
+            : { height: '85%', maxHeight: '90vh' }
         }
       >
         <div className={`relative bg-gray-800/80 w-full h-full rounded-t-xl shadow-2xl border-t border-gray-700 p-6 flex flex-col items-start ${isMaximized ? 'rounded-2xl border-t-0' : ''}`}>
