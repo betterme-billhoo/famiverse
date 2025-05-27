@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface MOSSProps {
   visible: boolean;
@@ -12,6 +12,7 @@ interface MOSSProps {
 
 const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => {
   const [isMaximized, setIsMaximized] = useState(false);
+  const mossRef = useRef<HTMLDivElement>(null);
 
   // 封装关闭逻辑，确保每次关闭都重置为抽屉状态
   const handleClose = () => {
@@ -19,10 +20,28 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => 
     onClose();
   };
 
+  // 添加点击外部区域关闭弹窗的处理函数
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (visible && mossRef.current && !mossRef.current.contains(event.target as Node)) {
+        handleClose();
+      }
+    };
+
+    // 添加全局点击事件监听器
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // 清理函数
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [visible, onClose]);
+
   return (
     <>
       {/* 弹窗 */}
       <div
+        ref={mossRef}
         className={
           isMaximized
             ? `fixed top-1/2 left-1/2 z-50 transition-all duration-300 ${
