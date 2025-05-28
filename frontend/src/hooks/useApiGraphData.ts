@@ -13,11 +13,11 @@ async function fetchApiRawData(): Promise<{ nodes: NodeData[]; links: LinkData[]
 
   // TODO：后续需要使用 DAO 层获取家庭星球的数据，目前写死，仅作为测试使用
   nodes.push({
-    id: 'home-planet',
+    documentId: 'home-planet', // 暂时手动指定 homePlanet 的 documentId
     name: '我的家园',
     description: '这里是我们的家园。',
     color: '#FFFFFF',
-    galaxyId: 'none',
+    galaxyDocumentId: 'none',
     galaxyName: 'none',
     isCentre: false
   });
@@ -29,16 +29,15 @@ async function fetchApiRawData(): Promise<{ nodes: NodeData[]; links: LinkData[]
   // 针对每一个星系，遍历其所有星球并加入到节点列表
   for (const galaxy of galaxies) {
     galaxy.planets.forEach((planet, index) => {
-
-      const thePlanet = planets.find(p => p.id === planet.id);
+      const thePlanet = planets.find(p => p.documentId === planet.documentId);
 
       if (thePlanet) {
         nodes.push({
-          id: thePlanet.id,
+          documentId: thePlanet.documentId, // 添加documentId字段
           name: thePlanet.name,
           description: thePlanet.description,
           color: galaxy.color, // 当前默认使用星系颜色，未来优化为基于星系主色调进行颜色随机微调
-          galaxyId: galaxy.id,
+          galaxyDocumentId: galaxy.documentId, // 添加galaxyDocumentId字段
           galaxyName: galaxy.name,
           isCentre: index === 0 // 我们默认每个星系的第一个星球为中心节点，其余星球将围绕这个中心节点进行分布
         });
@@ -69,7 +68,7 @@ function genGraphCoordinates(nodes: NodeData[], links: LinkData[], galaxies: Gal
   // 随机倾斜角度
   const clusterTiltsInDegrees: { [key: string]: number } = {};
   centreNodes.forEach(planet => {
-    clusterTiltsInDegrees[planet.id] = 360 * (Math.random() - 0.5);
+    clusterTiltsInDegrees[planet.documentId] = 360 * (Math.random() - 0.5);
   });
 
   // 将角度转换为弧度
@@ -84,7 +83,7 @@ function genGraphCoordinates(nodes: NodeData[], links: LinkData[], galaxies: Gal
 
   centreNodes.forEach((node, index) => {
     const angle = index * angleStep;
-    calculatedRootPositions[node.id] = {
+    calculatedRootPositions[node.documentId] = {
       x: homePlanetPos.x + rootDistributionRadius * Math.cos(angle),
       y: homePlanetPos.y, // 中心本身保持在 y=0 平面
       z: homePlanetPos.z + rootDistributionRadius * Math.sin(angle),
@@ -100,12 +99,12 @@ function genGraphCoordinates(nodes: NodeData[], links: LinkData[], galaxies: Gal
     };
 
     // 1. 处理家园节点
-    if (node.id === homePlanetId) {
+    if (node.documentId === homePlanetId) {
       position = homePlanetPos;
     }
     // 2. 处理中心节点
-    else if (calculatedRootPositions[node.id]) {
-      position = calculatedRootPositions[node.id];
+    else if (calculatedRootPositions[node.documentId]) {
+      position = calculatedRootPositions[node.documentId];
     }
     // 3. 处理其余所有节点
     else {
@@ -113,8 +112,8 @@ function genGraphCoordinates(nodes: NodeData[], links: LinkData[], galaxies: Gal
 
       // 获取该节点对应的中心节点 ID（默认为该星系所有星球的第一个）
       for (const galaxy of galaxies) {
-        if (node.galaxyId === galaxy.id) {
-          rootNodeId = galaxy.planets[0].id;
+        if (node.galaxyDocumentId === galaxy.documentId) { // 使用documentId比较
+          rootNodeId = galaxy.planets[0].documentId; // 使用documentId
           break;
         }
       }

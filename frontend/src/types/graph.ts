@@ -3,11 +3,11 @@ import { NodeObject, LinkObject, ForceGraphMethods } from 'react-force-graph-3d'
 
 // 节点数据接口
 export interface NodeData {
-  id: string;
+  documentId: string;
   name: string;
   color: string;
   description: string;
-  galaxyId: string; 
+  galaxyDocumentId: string;
   galaxyName: string;
   isCentre: boolean;
 

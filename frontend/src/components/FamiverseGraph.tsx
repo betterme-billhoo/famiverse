@@ -22,7 +22,7 @@ export default function FamiverseGraph() {
   // 初始化完毕后，聚焦到 home-planet 节点
   const handleEngineStop = useCallback(() => {
     if (!initialFocusDone && fgRef.current && graphData.nodes.length > 0) {
-      const homePlanetNode = graphData.nodes.find(node => node.id === 'home-planet');
+      const homePlanetNode = graphData.nodes.find(node => node.documentId === 'home-planet');
 
       if (homePlanetNode && typeof homePlanetNode.x === 'number' && typeof homePlanetNode.y === 'number' && typeof homePlanetNode.z === 'number') {
         const distance = 10;
@@ -64,7 +64,7 @@ export default function FamiverseGraph() {
       color: node.color
     });
     const mesh = new THREE.Mesh(geometry, material);
-    mesh.userData = { nodeId: node.id };
+    mesh.userData = { nodeId: node.documentId };
 
     const animate = () => {
       mesh.rotation.y += 0.001;
@@ -83,7 +83,7 @@ export default function FamiverseGraph() {
       return;
 
     const nodeData = node as NodeData;
-    const nodeId = nodeData.id as string;
+    const nodeId = nodeData.documentId as string;
 
     // 先保存节点信息，但不立即显示 MOSS
     if (nodeData && nodeData.name && nodeData.description !== undefined) {

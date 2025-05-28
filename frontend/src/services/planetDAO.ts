@@ -2,11 +2,12 @@ import apiClient from './strapiClient';
 
 // 定义返回的 Planet 数据类型
 export interface Planet {
+  documentId: string; 
   id: string;
   name: string;
   description: string;
-  galaxy: { id: string; };
-  topics?: { id: string; attributes: { name: string } }[];
+  galaxy: { documentId: string; }; 
+  topics?: { documentId: string; attributes: { name: string } }[]; 
 }
 
 // 获取所有 Planet
@@ -20,7 +21,7 @@ export const getPlanets = async (): Promise<Planet[]> => {
       const response = await apiClient.collection('planets').find({
         populate: {
           galaxy: {
-            fields: ['id', 'name'],
+            fields: ['documentId', 'name'], 
           }
         },
         pagination: {
@@ -30,10 +31,11 @@ export const getPlanets = async (): Promise<Planet[]> => {
       });
       
       const planets = response.data.map(item => ({
+        documentId: item.documentId, 
         id: item.id,
         name: item.name,
         description: item.description,
-        galaxy: item.galaxy
+        galaxy: { documentId: item.galaxy?.documentId || '' } 
       }));
       
       allPlanets = [...allPlanets, ...planets];
@@ -51,21 +53,23 @@ export const getPlanets = async (): Promise<Planet[]> => {
 };
 
 // 获取单个 Planet
-export const getPlanetById = async (id: string): Promise<Planet> => {
+export const getPlanetByDocumentId = async (documentId: string): Promise<Planet> => {
   try {
-    const response = await apiClient.collection('planets').findOne(id);
+
+    const response = await apiClient.collection('planets').findOne(documentId);
     const planet = {
+      documentId: response.data.documentId, 
       id: response.data.id,
       name: response.data.attributes.name,
       description: response.data.attributes.description,
       galaxy: response.data.attributes.galaxy?.data
-        ? { id: response.data.attributes.galaxy.data.id }
-        : { id: '' },
+        ? { documentId: response.data.attributes.galaxy.data.documentId } 
+        : { documentId: '' }, 
     };
 
     return planet;
   } catch (error) {
-    console.error(`Error fetching planet with id ${id}:`, error);
+    console.error(`Error fetching planet with documentId ${documentId}:`, error);
     throw error;
   }
 };
