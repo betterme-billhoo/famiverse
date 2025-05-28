@@ -65,8 +65,8 @@ export function useStarBackground(fgRef: ForceGraphRef): void {
         const starsBaseSizes: number[] = []; // Renamed
         const starsBaseOpacities: number[] = []; // Renamed
         const starsFlickerSpeeds: number[] = [];
-        const starCount = 200000; // 增加星星数量
-        const sphereRadius = 20000;
+        const starCount = 100000; // 星星数量
+        const sphereRadius = 35000;
 
         for (let i = 0; i < starCount; i++) {
           const u = Math.random();
