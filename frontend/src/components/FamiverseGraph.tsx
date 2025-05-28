@@ -149,7 +149,11 @@ export default function FamiverseGraph() {
         nodeThreeObject={nodeObject}
         backgroundColor="#000000"
         onNodeClick={handleNodeClick}
-        nodeLabel={(node: NodeObject<NodeData>) => `${node.name}`}
+        nodeLabel={(node: NodeObject<NodeData>) => {
+          const name = node.name || '';
+          const description = node.description || '';
+          return `<div style="text-align: center;">${name}</div><div style="text-align: left;">${description}</div>`;
+        }}
         linkDirectionalParticles={1}
         linkDirectionalParticleWidth={0.1}
         enableNodeDrag={!isInteractingDisabled}

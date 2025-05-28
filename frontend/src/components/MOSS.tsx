@@ -101,12 +101,10 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onOpen }) => 
           </div>
           {planetInfo ? (
             <>
-              <div className="mb-2">
-                <span className="font-semibold">星球名称：</span>
-                <span>{planetInfo.name}</span>
+              <div className="w-full text-center mb-2">
+                <span className="font-semibold text-lg">{planetInfo.name}</span>
               </div>
-              <div className="mb-4">
-                <span className="font-semibold">简介：</span>
+              <div className="w-full text-left mb-4">
                 <span>{planetInfo.description || '暂无简介'}</span>
               </div>
             </>
