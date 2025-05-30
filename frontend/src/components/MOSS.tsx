@@ -19,6 +19,50 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
   const [showOptions, setShowOptions] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  // Calculate option button positions in 90° arc on top-left
+  const calculateOptionPositions = () => {
+    const options = [
+      { ref: homeButtonRef, icon: '🏠', title: '回家', onClick: handleGoHome },
+      { ref: createButtonRef, icon: '🌍', title: '创建星球', onClick: handleCreatePlanet }
+    ];
+    
+    const radius = 64; // Main button diameter as radius (16 * 4 = 64px)
+    const totalAngle = 90; // 90 degrees arc
+    const optionCount = options.length;
+    
+    return options.map((option, index) => {
+      let angle;
+      if (optionCount === 1) {
+        // Single button at 45° (middle of 90° arc)
+        angle = 45;
+      } else {
+        // Multiple buttons distributed evenly in 90° arc
+        // Start from 0° and end at 90°, distribute evenly
+        angle = (totalAngle / (optionCount - 1)) * index;
+      }
+      
+      // Convert angle to radians and calculate position
+      // Note: CSS coordinates have Y increasing downward, so we adjust
+      const radian = (angle * Math.PI) / 180;
+      const x = -Math.cos(radian) * radius; // Negative for left direction
+      const y = -Math.sin(radian) * radius; // Negative for upward direction
+      
+      return {
+        ...option,
+        style: {
+          bottom: `calc(2rem + 32px + ${-y}px)`, // 2rem base + half button height + offset
+          right: `calc(2rem + 32px + ${-x}px)`,  // 2rem base + half button width + offset
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          animationDelay: `${index * 50}ms`,
+          transform: isAnimating 
+            ? 'scale(0) translate(10px, 10px)' 
+            : 'scale(1) translate(0, 0)',
+          transition: `all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${index * 0.05}s`
+        }
+      };
+    });
+  };
+
   // Handle close logic
   const handleClose = () => {
     onClose();
@@ -132,56 +176,25 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
         </div>
       </div>
       
-      {/* 圆形选项按钮 - 围绕主按钮均匀分布 */}
+      {/* 圆形选项按钮 - 围绕主按钮在左上角90°圆弧上均匀分布 */}
       {showOptions && !visible && (
         <>
-          {/* 回家按钮 - 位于主按钮上方 */}
-          <button 
-            ref={homeButtonRef}
-            onClick={handleGoHome}
-            className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
-              isAnimating 
-                ? 'animate-bounce scale-0 opacity-0' 
-                : 'scale-100 opacity-100'
-            }`}
-            style={{ 
-              bottom: '8rem',
-              right: '8rem',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              animationDelay: '0ms',
-              transform: isAnimating 
-                ? 'scale(0) translateY(20px)' 
-                : 'scale(1) translateY(0)',
-              transition: 'all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
-            }}
-            title="回家"
-          >
-            <span className="text-xl">🏠</span>
-          </button>
-          
-          {/* 创建星球按钮 - 位于主按钮左侧 */}
-          <button 
-            ref={createButtonRef}
-            onClick={handleCreatePlanet}
-            className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
-              isAnimating 
-                ? 'animate-bounce scale-0 opacity-0' 
-                : 'scale-100 opacity-100'
-            }`}
-            style={{ 
-              bottom: '5.5rem',
-              right: '10.5rem',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              animationDelay: '50ms',
-              transform: isAnimating 
-                ? 'scale(0) translateX(20px)' 
-                : 'scale(1) translateX(0)',
-              transition: 'all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s'
-            }}
-            title="创建星球"
-          >
-            <span className="text-xl">🌍</span>
-          </button>
+          {calculateOptionPositions().map((option, index) => (
+            <button 
+              key={index}
+              ref={option.ref}
+              onClick={option.onClick}
+              className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
+                isAnimating 
+                  ? 'animate-bounce scale-0 opacity-0' 
+                  : 'scale-100 opacity-100'
+              }`}
+              style={option.style}
+              title={option.title}
+            >
+              <span className="text-xl">{option.icon}</span>
+            </button>
+          ))}
         </>
       )}
       
