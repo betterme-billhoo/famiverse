@@ -1,4 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+
+// Option button configuration interface
+interface OptionButton {
+  id: string;
+  icon: string;
+  title: string;
+  onClick: () => void;
+}
 
 interface MOSSProps {
   visible: boolean;
@@ -14,54 +22,11 @@ interface MOSSProps {
 const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) => {
   const mossRef = useRef<HTMLDivElement>(null);
   const mossButtonRef = useRef<HTMLButtonElement>(null);
-  const homeButtonRef = useRef<HTMLButtonElement>(null);
-  const createButtonRef = useRef<HTMLButtonElement>(null);
   const [showOptions, setShowOptions] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-
-  // Calculate option button positions in 90° arc on top-left
-  const calculateOptionPositions = () => {
-    const options = [
-      { ref: homeButtonRef, icon: '🏠', title: '回家', onClick: handleGoHome },
-      { ref: createButtonRef, icon: '🌍', title: '创建星球', onClick: handleCreatePlanet }
-    ];
-    
-    const radius = 64; // Main button diameter as radius (16 * 4 = 64px)
-    const totalAngle = 90; // 90 degrees arc
-    const optionCount = options.length;
-    
-    return options.map((option, index) => {
-      let angle;
-      if (optionCount === 1) {
-        // Single button at 45° (middle of 90° arc)
-        angle = 45;
-      } else {
-        // Multiple buttons distributed evenly in 90° arc
-        // Start from 0° and end at 90°, distribute evenly
-        angle = (totalAngle / (optionCount - 1)) * index;
-      }
-      
-      // Convert angle to radians and calculate position
-      // Note: CSS coordinates have Y increasing downward, so we adjust
-      const radian = (angle * Math.PI) / 180;
-      const x = -Math.cos(radian) * radius; // Negative for left direction
-      const y = -Math.sin(radian) * radius; // Negative for upward direction
-      
-      return {
-        ...option,
-        style: {
-          bottom: `calc(2rem + 32px + ${-y}px)`, // 2rem base + half button height + offset
-          right: `calc(2rem + 32px + ${-x}px)`,  // 2rem base + half button width + offset
-          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-          animationDelay: `${index * 50}ms`,
-          transform: isAnimating 
-            ? 'scale(0) translate(10px, 10px)' 
-            : 'scale(1) translate(0, 0)',
-          transition: `all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${index * 0.05}s`
-        }
-      };
-    });
-  };
+  
+  // Create refs for option buttons dynamically - Fixed type definition
+  const optionRefs = useRef<{ [key: string]: React.RefObject<HTMLButtonElement | null> }>({});
 
   // Handle close logic
   const handleClose = () => {
@@ -102,6 +67,80 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
     // Future implementation for creating planets
   };
 
+  // ===== OPTION BUTTONS CONFIGURATION =====
+  // Centralized configuration for all option buttons
+  // Add, remove, or modify buttons here
+  const getOptionButtons = (): OptionButton[] => {
+    return [
+      {
+        id: 'home',
+        icon: '🏠',
+        title: '回家',
+        onClick: handleGoHome
+      },
+      {
+        id: 'create',
+        icon: '🌍',
+        title: '创建星球',
+        onClick: handleCreatePlanet
+      }
+    ];
+  };
+  // ===== END OPTION BUTTONS CONFIGURATION =====
+
+  // Initialize refs for option buttons
+  const initializeOptionRefs = () => {
+    const buttons = getOptionButtons();
+    buttons.forEach(button => {
+      if (!optionRefs.current[button.id]) {
+        optionRefs.current[button.id] = React.createRef<HTMLButtonElement>();
+      }
+    });
+  };
+
+  // Calculate option button positions in 90° arc on top-left
+  const calculateOptionPositions = () => {
+    const options = getOptionButtons();
+    initializeOptionRefs();
+    
+    const radius = 64; // Main button diameter as radius (16 * 4 = 64px)
+    const totalAngle = 90; // 90 degrees arc
+    const optionCount = options.length;
+    
+    return options.map((option, index) => {
+      let angle;
+      if (optionCount === 1) {
+        // Single button at 45° (middle of 90° arc)
+        angle = 45;
+      } else {
+        // Multiple buttons distributed evenly in 90° arc
+        // Start from 0° and end at 90°, distribute evenly
+        angle = (totalAngle / (optionCount - 1)) * index;
+      }
+      
+      // Convert angle to radians and calculate position
+      // Note: CSS coordinates have Y increasing downward, so we adjust
+      const radian = (angle * Math.PI) / 180;
+      const x = -Math.cos(radian) * radius; // Negative for left direction
+      const y = -Math.sin(radian) * radius; // Negative for upward direction
+      
+      return {
+        ...option,
+        ref: optionRefs.current[option.id],
+        style: {
+          bottom: `calc(2rem + 32px + ${-y}px)`, // 2rem base + half button height + offset
+          right: `calc(2rem + 32px + ${-x}px)`,  // 2rem base + half button width + offset
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          animationDelay: `${index * 50}ms`,
+          transform: isAnimating 
+            ? 'scale(0) translate(10px, 10px)' 
+            : 'scale(1) translate(0, 0)',
+          transition: `all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${index * 0.05}s`
+        }
+      };
+    });
+  };
+
   // Handle click outside to close popup and hide options
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -115,12 +154,15 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
       
       // Hide options if clicking outside the options area when options are shown
       if (showOptions && !visible) {
-        // Check if click is on any of the option buttons or main MOSS button using refs
+        // Check if click is on main MOSS button
         const isClickOnMossButton = mossButtonRef.current?.contains(target);
-        const isClickOnHomeButton = homeButtonRef.current?.contains(target);
-        const isClickOnCreateButton = createButtonRef.current?.contains(target);
         
-        if (isClickOnMossButton || isClickOnHomeButton || isClickOnCreateButton) {
+        // Check if click is on any option button
+        const isClickOnOptionButton = Object.values(optionRefs.current).some(
+          ref => ref.current?.contains(target)
+        );
+        
+        if (isClickOnMossButton || isClickOnOptionButton) {
           return; // Don't hide if clicking on any of the buttons
         }
         
@@ -179,9 +221,9 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
       {/* 圆形选项按钮 - 围绕主按钮在左上角90°圆弧上均匀分布 */}
       {showOptions && !visible && (
         <>
-          {calculateOptionPositions().map((option, index) => (
+          {calculateOptionPositions().map((option) => (
             <button 
-              key={index}
+              key={option.id}
               ref={option.ref}
               onClick={option.onClick}
               className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
