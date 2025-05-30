@@ -5,7 +5,7 @@ import React, { useRef, useState, useCallback } from 'react';
 import ForceGraph3D, { NodeObject } from 'react-force-graph-3d';
 
 import { useStarBackground } from '../hooks/useStarBackground';
-import { NodeData, LinkData, ForceGraphRef } from '../types/graph';
+import { NodeData, ForceGraphRef } from '../types/graph';
 import { useApiGraphData } from '@/hooks/useApiGraphData';
 import MOSS from './MOSS';
 
@@ -129,10 +129,6 @@ export default function FamiverseGraph() {
       }
     }
   }, [isInteractingDisabled, currentFocusedNodeId]); // 添加 currentFocusedNodeId 作为依赖
-
-  const handleMossClose = () => {
-      setMossVisible(false);
-  };
 
   // Add function to focus on home planet
   const focusOnHomePlanet = useCallback(() => {
