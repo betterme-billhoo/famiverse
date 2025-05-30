@@ -106,7 +106,7 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
           {/* 回家按钮 - 位于主按钮上方 */}
           <button 
             onClick={handleGoHome}
-            className="fixed z-40 w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 shadow-lg flex items-center justify-center transition-all"
+            className="fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all"
             style={{ 
               bottom: '8rem', // 主按钮位置 + 32px
               right: '8rem',
@@ -120,7 +120,7 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
           {/* 创建星球按钮 - 位于主按钮左侧 */}
           <button 
             onClick={handleCreatePlanet}
-            className="fixed z-40 w-12 h-12 rounded-full bg-purple-500 hover:bg-purple-600 shadow-lg flex items-center justify-center transition-all"
+            className="fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all"
             style={{ 
               bottom: '5.5rem', // 主按钮中心位置
               right: '10.5rem', // 主按钮位置 + 32px
