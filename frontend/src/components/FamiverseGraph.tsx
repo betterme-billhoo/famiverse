@@ -134,16 +134,17 @@ export default function FamiverseGraph() {
       setMossVisible(false);
   };
 
-  return (
-    <div className="w-full h-screen relative overflow-hidden">
-      <MOSS 
-        visible={mossVisible} 
-        planetInfo={mossPlanetInfo} 
-        onClose={handleMossClose}
-        onOpen={() => setMossVisible(true)} 
-      />
+  // Add function to focus on home planet
+  const focusOnHomePlanet = useCallback(() => {
+    const homePlanetNode = graphData.nodes.find(node => node.documentId === 'home-planet');
+    if (homePlanetNode) {
+      handleNodeClick(homePlanetNode);
+    }
+  }, [graphData.nodes, handleNodeClick]);
 
-      <ForceGraph3D<NodeData, LinkData>
+  return (
+    <div className="w-full h-screen">
+      <ForceGraph3D
         ref={fgRef}
         graphData={graphData}
         nodeThreeObject={nodeObject}
@@ -161,6 +162,14 @@ export default function FamiverseGraph() {
         enableNavigationControls={!isInteractingDisabled}
         cooldownTicks={100}
         onEngineStop={handleEngineStop}
+      />
+      
+      <MOSS 
+        visible={mossVisible} 
+        planetInfo={mossPlanetInfo} 
+        onClose={() => setMossVisible(false)}
+        onOpen={() => setMossVisible(true)}
+        onGoHome={focusOnHomePlanet}
       />
     </div>
   );

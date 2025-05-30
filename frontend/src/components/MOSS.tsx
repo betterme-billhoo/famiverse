@@ -8,9 +8,10 @@ interface MOSSProps {
   };
   onClose: () => void;
   onOpen: () => void;
+  onGoHome?: () => void; // Add new prop for home navigation
 }
 
-const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose }) => {
+const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) => {
   const mossRef = useRef<HTMLDivElement>(null);
   const [showOptions, setShowOptions] = useState(false);
 
@@ -26,11 +27,15 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose }) => {
   };
 
   // 处理回家选项
+  // Handle go home option - trigger same effect as clicking home-planet
   const handleGoHome = () => {
-    // 这里可以添加导航到家庭星球的逻辑
     console.log("导航到家庭星球");
     setShowOptions(false); // 隐藏选项界面
-    // 这里需要实现导航到家庭星球的逻辑
+    
+    // Call the function to focus on home planet (same as clicking it)
+    if (onGoHome) {
+      onGoHome();
+    }
   };
 
   // 处理创建星球选项
@@ -45,11 +50,6 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose }) => {
     const handleClickOutside = (event: MouseEvent) => {
       if (visible && mossRef.current && !mossRef.current.contains(event.target as Node)) {
         handleClose();
-      }
-      
-      // 点击外部区域时也关闭选项界面
-      if (showOptions && !mossRef.current?.contains(event.target as Node)) {
-        setShowOptions(false);
       }
     };
 
