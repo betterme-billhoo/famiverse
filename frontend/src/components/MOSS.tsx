@@ -13,6 +13,9 @@ interface MOSSProps {
 
 const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) => {
   const mossRef = useRef<HTMLDivElement>(null);
+  const mossButtonRef = useRef<HTMLButtonElement>(null);
+  const homeButtonRef = useRef<HTMLButtonElement>(null);
+  const createButtonRef = useRef<HTMLButtonElement>(null);
   const [showOptions, setShowOptions] = useState(false);
 
   // 封装关闭逻辑
@@ -58,16 +61,12 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
       
       // Hide options if clicking outside the options area when options are shown
       if (showOptions && !visible) {
-        // Check if click is not on any of the option buttons or main MOSS button
-        const isClickOnButton = (target as Element).closest('button');
-        const buttonArea = document.querySelector('[aria-label="唤醒 MOSS"]');
-        const homeButton = document.querySelector('[title="回家"]');
-        const createButton = document.querySelector('[title="创建星球"]');
+        // Check if click is on any of the option buttons or main MOSS button using refs
+        const isClickOnMossButton = mossButtonRef.current?.contains(target);
+        const isClickOnHomeButton = homeButtonRef.current?.contains(target);
+        const isClickOnCreateButton = createButtonRef.current?.contains(target);
         
-        if (isClickOnButton && 
-            (buttonArea?.contains(target) || 
-             homeButton?.contains(target) || 
-             createButton?.contains(target))) {
+        if (isClickOnMossButton || isClickOnHomeButton || isClickOnCreateButton) {
           return; // Don't hide if clicking on any of the buttons
         }
         
@@ -127,10 +126,11 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
         <>
           {/* 回家按钮 - 位于主按钮上方 */}
           <button 
+            ref={homeButtonRef}
             onClick={handleGoHome}
             className="fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all"
             style={{ 
-              bottom: '8rem', // 主按钮位置 + 32px
+              bottom: '8rem',
               right: '8rem',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)' 
             }}
@@ -141,11 +141,12 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
           
           {/* 创建星球按钮 - 位于主按钮左侧 */}
           <button 
+            ref={createButtonRef}
             onClick={handleCreatePlanet}
             className="fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all"
             style={{ 
-              bottom: '5.5rem', // 主按钮中心位置
-              right: '10.5rem', // 主按钮位置 + 32px
+              bottom: '5.5rem',
+              right: '10.5rem',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)' 
             }}
             title="创建星球"
@@ -158,6 +159,7 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
       {/* 右下角圆形头像按钮 */}
       {!visible && (
         <button
+          ref={mossButtonRef}
           className={`fixed bottom-8 right-8 z-40 w-16 h-16 rounded-full ${showOptions ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} shadow-lg flex items-center justify-center transition-all`}
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.15)' }}
           onClick={handleMossButtonClick}
