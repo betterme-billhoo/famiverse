@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface MOSSProps {
   visible: boolean;
@@ -17,22 +17,32 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
   const homeButtonRef = useRef<HTMLButtonElement>(null);
   const createButtonRef = useRef<HTMLButtonElement>(null);
   const [showOptions, setShowOptions] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  // 封装关闭逻辑
+  // Handle close logic
   const handleClose = () => {
     onClose();
-    setShowOptions(false); // 关闭时也隐藏选项界面
+    setShowOptions(false); // Hide options when closing
   };
 
-  // 处理MOSS按钮点击
+  // Handle MOSS button click with animation
   const handleMossButtonClick = () => {
-    setShowOptions(!showOptions); // 切换选项界面显示状态
+    if (!showOptions) {
+      setIsAnimating(true);
+      setShowOptions(true);
+      // Reset animation state after animation completes - reduced to 100ms
+      setTimeout(() => setIsAnimating(false), 100);
+    } else {
+      setShowOptions(false);
+      setIsAnimating(false);
+    }
   };
 
-  // 处理回家选项
+  // Handle go home option
   const handleGoHome = () => {
     console.log("导航到家庭星球");
-    setShowOptions(false); // 隐藏选项界面
+    setShowOptions(false); // Hide options
+    setIsAnimating(false);
     
     // Call the function to focus on home planet (same as clicking it)
     if (onGoHome) {
@@ -40,14 +50,14 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
     }
   };
 
-  // 处理创建星球选项
+  // Handle create planet option
   const handleCreatePlanet = () => {
     console.log("创建星球功能待开发");
     setShowOptions(false);
-    // 这里将来会实现创建星球的逻辑
+    setIsAnimating(false);
+    // Future implementation for creating planets
   };
 
-  // 添加点击外部区域关闭弹窗的处理函数
   // Handle click outside to close popup and hide options
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -71,6 +81,7 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
         }
         
         setShowOptions(false);
+        setIsAnimating(false);
       }
     };
 
@@ -128,11 +139,20 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
           <button 
             ref={homeButtonRef}
             onClick={handleGoHome}
-            className="fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all"
+            className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
+              isAnimating 
+                ? 'animate-bounce scale-0 opacity-0' 
+                : 'scale-100 opacity-100'
+            }`}
             style={{ 
               bottom: '8rem',
               right: '8rem',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)' 
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              animationDelay: '0ms',
+              transform: isAnimating 
+                ? 'scale(0) translateY(20px)' 
+                : 'scale(1) translateY(0)',
+              transition: 'all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
             }}
             title="回家"
           >
@@ -143,11 +163,20 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
           <button 
             ref={createButtonRef}
             onClick={handleCreatePlanet}
-            className="fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all"
+            className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
+              isAnimating 
+                ? 'animate-bounce scale-0 opacity-0' 
+                : 'scale-100 opacity-100'
+            }`}
             style={{ 
               bottom: '5.5rem',
               right: '10.5rem',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)' 
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              animationDelay: '50ms',
+              transform: isAnimating 
+                ? 'scale(0) translateX(20px)' 
+                : 'scale(1) translateX(0)',
+              transition: 'all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s'
             }}
             title="创建星球"
           >
@@ -160,7 +189,9 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
       {!visible && (
         <button
           ref={mossButtonRef}
-          className={`fixed bottom-8 right-8 z-40 w-16 h-16 rounded-full ${showOptions ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} shadow-lg flex items-center justify-center transition-all`}
+          className={`fixed bottom-8 right-8 z-40 w-16 h-16 rounded-full ${showOptions ? 'bg-blue-600' : 'bg-blue-500 hover:bg-blue-600'} shadow-lg flex items-center justify-center transition-all duration-200 ${
+            showOptions ? 'scale-110' : 'scale-100 hover:scale-105'
+          }`}
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.15)' }}
           onClick={handleMossButtonClick}
           aria-label="唤醒 MOSS"
