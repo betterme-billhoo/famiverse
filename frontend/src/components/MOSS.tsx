@@ -27,7 +27,6 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
   };
 
   // 处理回家选项
-  // Handle go home option - trigger same effect as clicking home-planet
   const handleGoHome = () => {
     console.log("导航到家庭星球");
     setShowOptions(false); // 隐藏选项界面
@@ -41,15 +40,38 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
   // 处理创建星球选项
   const handleCreatePlanet = () => {
     console.log("创建星球功能待开发");
-    setShowOptions(false); // 隐藏选项界面
+    setShowOptions(false);
     // 这里将来会实现创建星球的逻辑
   };
 
   // 添加点击外部区域关闭弹窗的处理函数
+  // Handle click outside to close popup and hide options
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (visible && mossRef.current && !mossRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      
+      // Close popup if clicking outside when visible
+      if (visible && mossRef.current && !mossRef.current.contains(target)) {
         handleClose();
+        return;
+      }
+      
+      // Hide options if clicking outside the options area when options are shown
+      if (showOptions && !visible) {
+        // Check if click is not on any of the option buttons or main MOSS button
+        const isClickOnButton = (target as Element).closest('button');
+        const buttonArea = document.querySelector('[aria-label="唤醒 MOSS"]');
+        const homeButton = document.querySelector('[title="回家"]');
+        const createButton = document.querySelector('[title="创建星球"]');
+        
+        if (isClickOnButton && 
+            (buttonArea?.contains(target) || 
+             homeButton?.contains(target) || 
+             createButton?.contains(target))) {
+          return; // Don't hide if clicking on any of the buttons
+        }
+        
+        setShowOptions(false);
       }
     };
 
