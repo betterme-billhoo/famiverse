@@ -13,14 +13,7 @@
 // limitations under the License.
 
 import React, { useRef, useState, useEffect } from 'react';
-
-// Option button configuration interface
-interface OptionButton {
-  id: string;
-  icon: string;
-  title: string;
-  onClick: () => void;
-}
+import OptionsButton, { OptionButton } from './MOSSOptionsButton';
 
 interface MOSSProps {
   visible: boolean;
@@ -102,20 +95,9 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
   };
   // ===== END OPTION BUTTONS CONFIGURATION =====
 
-  // Initialize refs for option buttons
-  const initializeOptionRefs = () => {
-    const buttons = getOptionButtons();
-    buttons.forEach(button => {
-      if (!optionRefs.current[button.id]) {
-        optionRefs.current[button.id] = React.createRef<HTMLButtonElement>();
-      }
-    });
-  };
-
   // Calculate option button positions in 90° arc on top-left
   const calculateOptionPositions = () => {
     const options = getOptionButtons();
-    initializeOptionRefs();
     
     const radius = 64; // Main button diameter as radius (16 * 4 = 64px)
     const totalAngle = 90; // 90 degrees arc
@@ -232,26 +214,15 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
         </div>
       </div>
       
-      {/* 圆形选项按钮 - 围绕主按钮在左上角90°圆弧上均匀分布 */}
-      {showOptions && !visible && (
-        <>
-          {calculateOptionPositions().map((option) => (
-            <button 
-              key={option.id}
-              ref={option.ref}
-              onClick={option.onClick}
-              className={`fixed z-40 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-gray-700/80 shadow-lg flex items-center justify-center transition-all duration-200 ease-out ${
-                isAnimating 
-                  ? 'animate-bounce scale-0 opacity-0' 
-                  : 'scale-100 opacity-100'
-              }`}
-              style={option.style}
-              title={option.title}
-            >
-              <span className="text-xl">{option.icon}</span>
-            </button>
-          ))}
-        </>
+      {/* 选项按钮组件 - 仅在MOSS未显示时展示 */}
+      {!visible && (
+        <OptionsButton 
+          options={getOptionButtons()}
+          showOptions={showOptions}
+          isAnimating={isAnimating}
+          optionRefs={optionRefs}
+          calculateOptionPositions={calculateOptionPositions}
+        />
       )}
       
       {/* 右下角圆形头像按钮 */}

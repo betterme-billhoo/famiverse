@@ -21,7 +21,7 @@ import ForceGraph3D, { NodeObject } from 'react-force-graph-3d';
 import { useStarBackground } from '../hooks/useStarBackground';
 import { NodeData, ForceGraphRef } from '../types/graph';
 import { useApiGraphData } from '@/hooks/useApiGraphData';
-import MOSS from './MOSS';
+import MOSS from './MOSS/MOSS';
 
 export default function FamiverseGraph() {
   const fgRef: ForceGraphRef = useRef(undefined);
