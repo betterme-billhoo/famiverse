@@ -24,5 +24,5 @@ jobs:
             npm run build
             pm2 restart famiverse || pm2 start npm --name famiverse -- run start
             cd /var/www/famiverse/api
-            npm install --prefer-offline
+            npm install
             npm run build
