@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "家教宇宙 | Famiverse",
-  description: "一个专注于德行、智慧（不仅仅是智力）、身体、心灵、美育、实践全面发展的家庭教育开源平台。帮助家长培养幸福的孩子，而不是教育内卷的牺牲品 | An open-source family education platform focused on the comprehensive development of Character, Wisdom, Physical Well-being, Inner Well-being, Aesthetics, and Hands-on Practice. Nurturing happy children, not victims of the educational rat race.",
+  title: "家庭星球",
+  description: "专注于德行、智慧（不仅仅是智力）、身体、心灵、美育、实践全面发展。",
 };
 
 export default function RootLayout({
