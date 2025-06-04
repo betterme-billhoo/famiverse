@@ -16,7 +16,7 @@ import { strapi } from '@strapi/client';
 
 const apiClient = strapi({
   baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337/api',
-  auth: "34883110f2b4fc6d3693327413359fa36975dc7503f9662bf3e614224422e1ceb1c483ac35eb4bf2ce061b76a9aa5d93985e084460d60b7eb6c3cfa02dee2a4f92020d402a6c4fded75799652fdc4d90f10195deeb9450c9d8144cfce2966b36b97c40eeebf20ee368659256aa40fe237c6461e5f7945e2409715f2357141d15"
+  auth: "6768ac7095ce866fb94c02ece800b42c24dc587e863e37cdc58234790a115552b0051e8b4ab3c845aba81c4966e66188c35dece96eef5ccfce5bc6e41373dbb9965b95053afeb68fdcc5efdbea6a15cacf189d0b9084c99f499ecf6547bfdd35c13fb2c4a58462b9f3a33407b3965af2288d515b4b2e1dbf0d1e6ac42bcc4df5"
 });
 
 export default apiClient;
