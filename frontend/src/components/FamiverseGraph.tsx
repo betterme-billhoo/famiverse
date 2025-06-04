@@ -153,7 +153,7 @@ export default function FamiverseGraph() {
   }, [graphData.nodes, handleNodeClick]);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-screen h-screen overflow-hidden">
       <ForceGraph3D
         ref={fgRef}
         graphData={graphData}
