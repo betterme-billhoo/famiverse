@@ -16,6 +16,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            git config --global --add safe.directory /var/www/famiverse
             cd /var/www/famiverse/frontend
             git pull
             npm install
