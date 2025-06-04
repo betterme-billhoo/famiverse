@@ -24,3 +24,5 @@ jobs:
             pm2 restart famiverse || pm2 start npm --name famiverse -- run start
             cd /var/www/famiverse/api
             git pull
+            npm install
+            npm run build
