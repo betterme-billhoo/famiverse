@@ -20,12 +20,12 @@ jobs:
             cd /var/www/famiverse
             git pull
 
-            // Start Strapi
+            # Start backend API first
             cd /var/www/famiverse/api
             npm install
             pm2 restart famiverse-api || pm2 start npm --name famiverse-api -- run dev
 
-            // Start Next.js
+            # Then start frontend
             cd /var/www/famiverse/frontend
             npm install
             npm run build
