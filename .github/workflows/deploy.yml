@@ -25,4 +25,4 @@ jobs:
             pm2 restart famiverse || pm2 start npm --name famiverse -- run start
             cd /var/www/famiverse/api
             npm install
-            npm run build
+            NODE_OPTIONS="--max-old-space-size=512" npm run build
