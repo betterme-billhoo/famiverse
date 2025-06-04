@@ -17,12 +17,12 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             git config --global --add safe.directory /var/www/famiverse
-            cd /var/www/famiverse/frontend
+            cd /var/www/famiverse
             git pull
+            cd /var/www/famiverse/frontend
             npm install
             npm run build
             pm2 restart famiverse || pm2 start npm --name famiverse -- run start
             cd /var/www/famiverse/api
-            git pull
             npm install --prefer-offline
             npm run build
