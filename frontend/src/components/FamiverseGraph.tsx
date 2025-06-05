@@ -170,6 +170,7 @@ export default function FamiverseGraph() {
         enableNodeDrag={!isInteractingDisabled}
         enablePointerInteraction={!isInteractingDisabled}
         enableNavigationControls={!isInteractingDisabled}
+        showNavInfo={false}
         cooldownTicks={100}
         onEngineStop={handleEngineStop}
       />
