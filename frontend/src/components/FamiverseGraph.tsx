@@ -28,12 +28,14 @@ export default function FamiverseGraph() {
   const [initialFocusDone, setInitialFocusDone] = useState(false);
   const [isInteractingDisabled, setIsInteractingDisabled] = useState(true);
   const [currentFocusedNodeId, setCurrentFocusedNodeId] = useState<string | null>(null);
+  // Add new state for showing welcome guide
+  const [showWelcomeGuide, setShowWelcomeGuide] = useState(false);
 
   const graphData = useApiGraphData();
 
   useStarBackground(fgRef);
 
-  // 初始化完毕后，聚焦到 home-planet 节点
+  // Initialize and focus on home-planet node after engine stops
   const handleEngineStop = useCallback(() => {
     if (!initialFocusDone && fgRef.current && graphData.nodes.length > 0) {
       const homePlanetNode = graphData.nodes.find(node => node.documentId === 'home-planet');
@@ -41,11 +43,11 @@ export default function FamiverseGraph() {
       if (homePlanetNode && typeof homePlanetNode.x === 'number' && typeof homePlanetNode.y === 'number' && typeof homePlanetNode.z === 'number') {
         const distance = 10;
         const camX = homePlanetNode.x;
-        const camY = homePlanetNode.y - distance / 2; // 稍微降低视角，使得星球挡住一部分
+        const camY = homePlanetNode.y - distance / 2; // Slightly lower the view angle so the planet blocks part of the view
         const camZ = homePlanetNode.z + distance;
-        const animationDuration = 6000; // 动画时长
+        const animationDuration = 6000; // Animation duration
 
-        // 开始动画前确认交互是禁用的 (虽然默认是 true，但明确一下)
+        // Ensure interaction is disabled before starting animation (although it's true by default, make it explicit)
         setIsInteractingDisabled(true);
 
         fgRef.current.cameraPosition(
@@ -54,20 +56,26 @@ export default function FamiverseGraph() {
           animationDuration
         );
 
-        // 动画结束后启用交互
+        // Enable interaction and show welcome guide after animation completes
         setTimeout(() => {
           setIsInteractingDisabled(false);
-          // 设置当前对准的星球为 home-planet
+          // Set current focused planet to home-planet
           setCurrentFocusedNodeId('home-planet');
-        }, animationDuration + 100); // 稍微延迟一点确保动画完成
+          // Set planet info for MOSS and show welcome guide
+          if (homePlanetNode && homePlanetNode.name && homePlanetNode.description !== undefined) {
+            setMossPlanetInfo({ name: homePlanetNode.name, description: homePlanetNode.description });
+          }
+          setShowWelcomeGuide(true);
+          setMossVisible(true);
+        }, animationDuration + 100); // Slightly delay to ensure animation completion
 
         setInitialFocusDone(true);
       } else {
          console.warn('Home planet node or its position not found after engine stop.');
-         setIsInteractingDisabled(false); // 如果找不到节点或位置无效，也解除禁用
+         setIsInteractingDisabled(false); // If node or position is not found, also remove the disable
       }
     } else if (!initialFocusDone) {
-        // 如果引擎停止时条件不满足（例如没有节点），也解除禁用
+        // If conditions are not met when engine stops (e.g., no nodes), also remove the disable
         setIsInteractingDisabled(false);
     }
   }, [graphData.nodes, initialFocusDone]);
@@ -90,7 +98,7 @@ export default function FamiverseGraph() {
   }, []);
 
   const [mossVisible, setMossVisible] = useState(false);
-  const [mossPlanetInfo, setMossPlanetInfo] = useState<{ name: string; description: string } | undefined>(undefined); // 新增：MOSS 展示内容
+  const [mossPlanetInfo, setMossPlanetInfo] = useState<{ name: string; description: string } | undefined>(undefined); // New: MOSS display content
 
   const handleNodeClick = useCallback((node: NodeObject<NodeData>) => {
     if (isInteractingDisabled)
@@ -152,6 +160,13 @@ export default function FamiverseGraph() {
     }
   }, [graphData.nodes, handleNodeClick]);
 
+  const getWelcomeGuideContent = () => {
+    return {
+      name: "欢迎来到家庭星球",
+      description: "这里是您的家庭宇宙中心！以下是一些操作指南：\n\n🖱️ 左键点击：选择和查看星球详情\n🖱️ 右键拖拽：移动和旋转视角\n🔍 滚轮：缩放视图\n🏠 点击MOSS助手可以快速回到家庭星球\n\n开始探索您的家庭宇宙吧！"
+    };
+  };
+
   return (
     <div className="w-screen h-screen overflow-hidden">
       <ForceGraph3D
@@ -177,8 +192,11 @@ export default function FamiverseGraph() {
       
       <MOSS 
         visible={mossVisible} 
-        planetInfo={mossPlanetInfo} 
-        onClose={() => setMossVisible(false)}
+        planetInfo={showWelcomeGuide ? getWelcomeGuideContent() : mossPlanetInfo} 
+        onClose={() => {
+          setMossVisible(false);
+          setShowWelcomeGuide(false);
+        }}
         onOpen={() => setMossVisible(true)}
         onGoHome={focusOnHomePlanet}
       />
