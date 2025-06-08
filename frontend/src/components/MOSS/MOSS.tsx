@@ -210,7 +210,7 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
                   <span className="font-semibold text-2xl">{planetInfo.name}</span>
                 </div>
                 <div className="flex-1 overflow-y-auto scrollbar-hide">
-                  <div className="text-left">
+                  <div className="text-left whitespace-pre-line">
                     <span>{planetInfo.description || '暂无简介'}</span>
                   </div>
                 </div>
