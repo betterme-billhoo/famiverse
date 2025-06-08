@@ -206,8 +206,8 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
               
               {/* Content area - 2/4 width with scrollable content */}
               <div className="flex-2 flex flex-col h-full">
-                <div className="text-center mb-2">
-                  <span className="font-semibold text-lg">{planetInfo.name}</span>
+                <div className="text-center mb-6">
+                  <span className="font-semibold text-2xl">{planetInfo.name}</span>
                 </div>
                 <div className="flex-1 overflow-y-auto scrollbar-hide">
                   <div className="text-left">
