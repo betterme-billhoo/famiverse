@@ -184,11 +184,11 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
         }`}
         style={{ height: '85%', maxHeight: '90vh' }}
       >
-        <div className="relative bg-gray-800/80 w-full h-full rounded-t-xl shadow-2xl border-t border-gray-700 p-6 flex flex-col items-start">
+        <div className="relative bg-gray-800/80 w-full h-full rounded-t-xl shadow-2xl border-t border-gray-700 p-4 md:p-6 flex flex-col items-start">
           {/* 右上角关闭按钮 */}
           <div className="absolute top-3 right-3 flex gap-2">
             <button
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-red-400 hover:bg-red-500 text-white transition"
+              className="w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-red-400 hover:bg-red-500 text-white transition"
               title="关闭"
               onClick={handleClose}
             >
@@ -196,41 +196,41 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
             </button>
           </div>
           <div className="flex items-center mb-3 mt-2">
-            <span className="text-2xl mr-2">🤖</span>
-            <span className="font-bold text-lg">MOSS</span>
+            <span className="text-xl md:text-2xl mr-2">🤖</span>
+            <span className="font-bold text-base md:text-lg">MOSS</span>
           </div>
           {planetInfo ? (
             <div className="w-full flex-1 flex">
-              {/* Left spacer - 1/4 width */}
-              <div className="flex-1"></div>
+              {/* Mobile: No left spacer, Desktop: 1/4 width */}
+              <div className="hidden md:block md:flex-1"></div>
               
-              {/* Content area - 2/4 width with scrollable content */}
-              <div className="flex-2 flex flex-col h-full">
-                <div className="text-center mb-6">
-                  <span className="font-semibold text-2xl">{planetInfo.name}</span>
+              {/* Content area - Full width on mobile, 2/4 width on desktop */}
+              <div className="flex-1 md:flex-2 flex flex-col h-full px-2 md:px-0">
+                <div className="text-center mb-4 md:mb-6">
+                  <span className="font-semibold text-xl md:text-2xl">{planetInfo.name}</span>
                 </div>
                 <div className="flex-1 overflow-y-auto scrollbar-hide">
-                  <div className="text-left whitespace-pre-line">
+                  <div className="text-left whitespace-pre-line text-sm md:text-base leading-relaxed">
                     <span>{planetInfo.description || '暂无简介'}</span>
                   </div>
                 </div>
               </div>
               
-              {/* Right spacer - 1/4 width */}
-              <div className="flex-1"></div>
+              {/* Mobile: No right spacer, Desktop: 1/4 width */}
+              <div className="hidden md:block md:flex-1"></div>
             </div>
           ) : (
             <div className="w-full flex-1 flex">
-              {/* Left spacer - 1/4 width */}
-              <div className="flex-1"></div>
+              {/* Mobile: No left spacer, Desktop: 1/4 width */}
+              <div className="hidden md:block md:flex-1"></div>
               
-              {/* Content area - 2/4 width */}
-              <div className="flex-2 flex items-center justify-center">
-                <div className="text-gray-500">点击任意星球，MOSS 会为你介绍它的基本信息。</div>
+              {/* Content area - Full width on mobile, 2/4 width on desktop */}
+              <div className="flex-1 md:flex-2 flex items-center justify-center px-4 md:px-0">
+                <div className="text-gray-500 text-sm md:text-base text-center">点击任意星球，MOSS 会为你介绍它的基本信息。</div>
               </div>
               
-              {/* Right spacer - 1/4 width */}
-              <div className="flex-1"></div>
+              {/* Mobile: No right spacer, Desktop: 1/4 width */}
+              <div className="hidden md:block md:flex-1"></div>
             </div>
           )}
         </div>
