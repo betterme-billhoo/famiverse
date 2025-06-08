@@ -200,16 +200,38 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
             <span className="font-bold text-lg">MOSS</span>
           </div>
           {planetInfo ? (
-            <>
-              <div className="w-full text-center mb-2">
-                <span className="font-semibold text-lg">{planetInfo.name}</span>
+            <div className="w-full flex-1 flex">
+              {/* Left spacer - 1/4 width */}
+              <div className="flex-1"></div>
+              
+              {/* Content area - 2/4 width with scrollable content */}
+              <div className="flex-2 flex flex-col h-full">
+                <div className="text-center mb-2">
+                  <span className="font-semibold text-lg">{planetInfo.name}</span>
+                </div>
+                <div className="flex-1 overflow-y-auto scrollbar-hide">
+                  <div className="text-left">
+                    <span>{planetInfo.description || '暂无简介'}</span>
+                  </div>
+                </div>
               </div>
-              <div className="w-full text-left mb-4">
-                <span>{planetInfo.description || '暂无简介'}</span>
-              </div>
-            </>
+              
+              {/* Right spacer - 1/4 width */}
+              <div className="flex-1"></div>
+            </div>
           ) : (
-            <div className="mb-4 text-gray-500">点击任意星球，MOSS 会为你介绍它的基本信息。</div>
+            <div className="w-full flex-1 flex">
+              {/* Left spacer - 1/4 width */}
+              <div className="flex-1"></div>
+              
+              {/* Content area - 2/4 width */}
+              <div className="flex-2 flex items-center justify-center">
+                <div className="text-gray-500">点击任意星球，MOSS 会为你介绍它的基本信息。</div>
+              </div>
+              
+              {/* Right spacer - 1/4 width */}
+              <div className="flex-1"></div>
+            </div>
           )}
         </div>
       </div>
