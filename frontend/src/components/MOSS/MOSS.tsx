@@ -74,11 +74,25 @@ const MOSS: React.FC<MOSSProps> = ({ visible, planetInfo, onClose, onGoHome }) =
     // Future implementation for creating planets
   };
 
+  // Handle chat option
+  const handleChat = () => {
+    console.log("开启对话功能");
+    setShowOptions(false);
+    setIsAnimating(false);
+    // Future implementation for chat functionality
+  };
+
   // ===== OPTION BUTTONS CONFIGURATION =====
   // Centralized configuration for all option buttons
   // Add, remove, or modify buttons here
   const getOptionButtons = (): OptionButton[] => {
     return [
+      {
+        id: 'chat',
+        icon: '💬',
+        title: '对话',
+        onClick: handleChat
+      },
       {
         id: 'home',
         icon: '🏠',
